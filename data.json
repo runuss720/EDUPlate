@@ -1,0 +1,21 @@
+{
+  "title": "Cooking Quiz",
+  "questions": [
+    {
+      "question": "What is the most common oil to toss your veggies with?",
+      "options": ["Olive Oil", "Vegetable Oil", "Canola Oil", "Sesame Oil"],
+      "answer": "Olive Oil"
+    },
+    {
+      "question": "At what temperature is it most dangerous to prepare food?",
+      "options": ["41° F to 50 F", "Over 135° F", "41° F to 135° F", "Under 41° F"],
+      "answer": "41° F to 135° F"
+    },
+    {
+      "question": "What types of vegetables should NOT be roasted in the oven",
+      "options": ["Broccoli", "Zucchini", "Lettuce", "Asparagus"],
+      "answer": "Lettuce"
+    }
+  ]
+}
+
