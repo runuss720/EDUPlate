@@ -61,7 +61,7 @@ struct HomeView: View {
                                                 .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
                                                 .padding()
                                                 .overlay {
-                                                    Text("Test 2 - Food Safety")
+                                                    Text("Test 2 - Food Safety (UPDATE)")
                                                         .kerning(2.0)
                                                         .font(.custom("Anton SC", size: 29))
                                                         .foregroundStyle(.white)
