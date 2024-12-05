@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainTabView: View {
     @StateObject var testManager = TestManager()
+    
     var body: some View {
         TabView {
             
@@ -38,4 +39,5 @@ struct MainTabView: View {
         )
     }
 }
+
 

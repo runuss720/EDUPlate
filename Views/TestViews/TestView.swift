@@ -11,7 +11,6 @@ struct TestView: View {
     @StateObject private var viewModel = TestManager()
     
     var category: String
-
     var body: some View {
         VStack {
             if !viewModel.questions.isEmpty {
@@ -105,18 +104,14 @@ struct TestView: View {
                     }
                     .padding()
                 }
-            } else {
-                // Show loading message while the quiz is being loaded
-                ProgressView("Loading Questions...")
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .padding()
             }
         }
         .onAppear {
+            
             // Load quiz for the given category when the view appears
             viewModel.loadQuiz(forCategory: category)
         }
-        .navigationBarBackButtonHidden(true) // Hide the back button
+        .navigationBarBackButtonHidden(true)
     }
 }
 
