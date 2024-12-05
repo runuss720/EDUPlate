@@ -23,32 +23,31 @@ struct Question: Codable {
     let fake3: String
 }
 
+// user scores will be stored
+struct Score: Codable {
+    let score: Int
+    let date: Date
+}
+
 class TestManager: ObservableObject {
+    
+    // all questions stored in array for ease of use
     @Published var questions: [Question] = []
     @Published var questionsIndex: Int = 0
     @Published var score: Int = 0
     @Published var isQuizCompleted: Bool = false
     
-    private let scoreKey = "userScores"
+    // used for accessing json file
+    private let fileManager = FileManagerHelper()
+    private let scoreFileName = "userScores.json"
     
+    // default category for loading quiz it "tools"
+    // can be changed in individual test calls
     init() {
-       // loadScore()
-        //resetScore()  // Reset score on app launch
         loadQuiz(forCategory: "Tools")
     }
 
-    func loadScore() {
-           // Load the saved score from UserDefaults (if available)
-           if let savedScores = UserDefaults.standard.array(forKey: scoreKey) as? [Int], let lastScore = savedScores.last {
-               score = lastScore  // Use the last score from UserDefaults
-           }
-       }
-    
-    func resetScore() {
-        print("score before reset = ", score)
-        score = 0  // Reset score on initialization
-    }
-
+    // read questions/answers from json file depending on category and present to user
     func loadQuiz(forCategory category: String) {
         guard let url = Bundle.main.url(forResource: "f5", withExtension: "json") else {
             return
@@ -57,36 +56,38 @@ class TestManager: ObservableObject {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
             let decodedQuestions = try decoder.decode([Question].self, from: data)
-            
             self.questions = decodedQuestions.filter { $0.category == category }
         } catch {
             print("Error decoding JSON")
         }
     }
 
+    // function for handling individual questions
     func answerQuestion(with option: String) {
         let currentQuestion = questions[questionsIndex]
+        
+        // check if user got question correct and increment score
         if option == currentQuestion.answer {
             score += 1
         }
 
+        // check for end of quiz
         if questionsIndex < questions.count - 1 {
             questionsIndex += 1
         } else {
             isQuizCompleted = true
             saveScore()
-            print("saving score, score = ", score)
         }
     }
 
+    // save the score/date and append to json file
     func saveScore() {
-        var savedScores = loadSavedScores()
-        savedScores.append(score)  // Add the score to the list
-        UserDefaults.standard.set(savedScores, forKey: scoreKey)  // Save to UserDefaults
+        let newScore = Score(score: score, date: Date())
+        fileManager.appendScoreToFile(newScore)
     }
 
-    func loadSavedScores() -> [Int] {
-        return UserDefaults.standard.array(forKey: scoreKey) as? [Int] ?? []
+    // Load saved scores from the file
+    func loadSavedScores() -> [Score] {
+        return fileManager.loadScoresFromFile()
     }
 }
-

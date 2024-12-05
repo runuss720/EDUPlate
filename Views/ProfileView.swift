@@ -22,8 +22,7 @@ struct ProfileView: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 100, height: 100)
                     .clipShape(Circle())
-             
-                .padding()
+                    .padding()
                 VStack(spacing: 4) {
                     Text("Ruby Nuss")
                         .font(.headline)
@@ -39,7 +38,6 @@ struct ProfileView: View {
                 .clipped()
                 HStack {
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]) {
-                        
                     }
                 }
                 .foregroundStyle(.secondary)
@@ -48,9 +46,6 @@ struct ProfileView: View {
                 .padding(.bottom, 8)
                 .padding(.horizontal, 4)
                 LazyVGrid(columns: [GridItem(.flexible(), spacing: 1), GridItem(.flexible(), spacing: 1), GridItem(.flexible(), spacing: 1)], spacing: 1) {
-                    ForEach(0..<5) { _ in // Replace with your data model here
-                        
-                    }
                 }
             }
             .frame(maxWidth: .infinity)

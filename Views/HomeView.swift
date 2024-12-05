@@ -26,72 +26,78 @@ struct HomeView: View {
                                 .foregroundStyle(.secondary)
                         }
                         .padding(.bottom)
-                            VStack(spacing: 16) {
-                                Text("Test your knowledge".uppercased())
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .clipped()
-                                    .font(.system(.subheadline, weight: .medium).width(.expanded))
-                                    .foregroundStyle(.black)
-                                ScrollView(.horizontal, showsIndicators: false) {
-                                    HStack() {
-                                        NavigationLink(destination: Test1View()) {
-                                            Image("utensils-unsplash")
-                                                .renderingMode(.original)
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                                .frame(maxWidth: 350, maxHeight: 300)
-                                                .clipped()
-                                                .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
-                                                .padding()
-                                                .overlay {
-                                                    Text("Tools")
-                                                        .kerning(2.0)
-                                                        .font(.custom("Anton SC", size: 29))
-                                                        .foregroundStyle(.white)
-                                                        .shadow(color: Color.black, radius: 18, x: 0, y: 0)
-                                                }
-                                        }
-                                        NavigationLink(destination: Test2View()) {
-                                            Image("ingredients-unsplash")
-                                                .renderingMode(.original)
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                                .frame(maxWidth: 350, maxHeight: 300)
-                                                .clipped()
-                                                .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
-                                                .padding()
-                                                .overlay {
-                                                    Text("Ingredients")
-                                                        .kerning(2.0)
-                                                        .font(.custom("Anton SC", size: 29))
-                                                        .foregroundStyle(.white)
-                                                        .shadow(color: Color.black, radius: 18, x: 0, y: 0)
-                                                }
-                                        }
-                                        NavigationLink(destination: Test3View()) {
-                                            Image("jez-timms-DVRXFIH42d0-unsplash (1)")
-                                                .renderingMode(.original)
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                                .frame(maxWidth: 350, maxHeight: 300)
-                                                .clipped()
-                                                .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
-                                                .padding()
-                                                .overlay {
-                                                    Text("French Terms")
-                                                        .kerning(2.0) // Adjusts the spacing between characters
-                                                        .font(.custom("Anton SC", size: 29))
-                                                        .foregroundStyle(.white)
-                                                        .shadow(color: Color.black, radius: 18, x: 0, y: 0)
-                                                }
-                                        }
+                        VStack(spacing: 16) {
+                            Text("Test your knowledge".uppercased())
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .clipped()
+                                .font(.system(.subheadline, weight: .medium).width(.expanded))
+                                .foregroundStyle(.black)
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack() {
+                                    
+                                    // Tools test
+                                    NavigationLink(destination: Test1View()) {
+                                        Image("utensils-unsplash")
+                                            .renderingMode(.original)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(maxWidth: 350, maxHeight: 300)
+                                            .clipped()
+                                            .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
+                                            .padding()
+                                            .overlay {
+                                                Text("Tools")
+                                                    .kerning(2.0)
+                                                    .font(.custom("Anton SC", size: 29))
+                                                    .foregroundStyle(.white)
+                                                    .shadow(color: Color.black, radius: 18, x: 0, y: 0)
+                                            }
+                                    }
+                                    
+                                    // Ingredients test
+                                    NavigationLink(destination: Test2View()) {
+                                        Image("ingredients-unsplash")
+                                            .renderingMode(.original)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(maxWidth: 350, maxHeight: 300)
+                                            .clipped()
+                                            .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
+                                            .padding()
+                                            .overlay {
+                                                Text("Ingredients")
+                                                    .kerning(2.0)
+                                                    .font(.custom("Anton SC", size: 29))
+                                                    .foregroundStyle(.white)
+                                                    .shadow(color: Color.black, radius: 18, x: 0, y: 0)
+                                            }
+                                    }
+                                    
+                                    // French terms test
+                                    NavigationLink(destination: Test3View()) {
+                                        Image("jez-timms-DVRXFIH42d0-unsplash (1)")
+                                            .renderingMode(.original)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(maxWidth: 350, maxHeight: 300)
+                                            .clipped()
+                                            .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
+                                            .padding()
+                                            .overlay {
+                                                Text("French Terms")
+                                                    .kerning(2.0) // Adjusts the spacing between characters
+                                                    .font(.custom("Anton SC", size: 29))
+                                                    .foregroundStyle(.white)
+                                                    .shadow(color: Color.black, radius: 18, x: 0, y: 0)
+                                            }
                                     }
                                 }
                             }
                         }
-                        .padding(.horizontal)
-                        Divider()
-                        Spacer().frame(height: 30)
+                    }
+                    .padding(.horizontal)
+                    Divider()
+                    Spacer().frame(height: 30)
                     
                     VStack(spacing: 16) {
                         Text("Lessons".uppercased())
@@ -103,6 +109,7 @@ struct HomeView: View {
                         // New Section for Cooking Articles
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 16) {
+                                
                                 // Button 1: Knife Skills
                                 NavigationLink(destination: KnifeSkillView()) {
                                     VStack(spacing: 0) {
@@ -137,7 +144,7 @@ struct HomeView: View {
                                             .padding(.top, 5)
                                     }
                                 }
-                            
+                                
                                 // Button 3: Soups
                                 NavigationLink(destination: SoupsView()) {
                                     VStack(spacing: 0) {
@@ -157,16 +164,15 @@ struct HomeView: View {
                             }
                         }
                     }
-                        .padding(.horizontal)
+                    .padding(.horizontal)
                 }
             }
-                // text color
-                .accentColor(.black)
+            .accentColor(.black)
         }
-        // Hide the back button
         .navigationBarBackButtonHidden(true)
     }
 }
+
 #Preview {
     HomeView()
 }

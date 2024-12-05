@@ -10,58 +10,52 @@ import Charts
 
 struct ChartData: Identifiable {
     let id = UUID()
-    let views: Int
+    let score: Int
     let date: Date
 }
 
 class ChartViewModel: ObservableObject {
     @Published var chartData = [ChartData]()
-
-    // Generate chart data for the last 3 days, using today's score
-    func generateChartData(todayScore: Int) {
-        var tempChartData = [ChartData]()
+    
+    // Load scores from the file and convert them into ChartData
+    func loadScores() {
+        let fileManagerHelper = FileManagerHelper()
+        let scores = fileManagerHelper.loadScoresFromFile()
         
-        // Loop through the last 3 days (including today)
-        for i in 0..<3 {
-            let date = Calendar.current.date(byAdding: .day, value: -i, to: .now)!
-            
-            // Set today's score at 0 for testing
-            let views = (i == 0) ? todayScore : 0
-            
-            let chartItem = ChartData(views: views, date: date)
-            tempChartData.append(chartItem)
-        }
+        // Convert the scores into ChartData and sort by date
+        chartData = scores.map { ChartData(score: $0.score, date: $0.date) }
         
-        // Reverse the data to make it in chronological order
-        chartData = tempChartData.reversed()
+        // Sort by date in ascending order
+        chartData.sort { $0.date < $1.date }
     }
 }
 
 struct StatsView: View {
-    @ObservedObject var testManager: TestManager  // Use @ObservedObject to observe the passed instance
+    @ObservedObject var testManager: TestManager
     @StateObject var vm = ChartViewModel()
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Current Score: \(testManager.score)")
-                Text("Ruby's Progress")
+                //Text("Current Score: \(testManager.score)")
+                Text("Your Accuracy")
                     .font(.title)
                     .padding()
                     .foregroundStyle(.pink)
             }
-            // Bar Chart
+            
+            // Line Chart
             Chart(vm.chartData) { item in
-                BarMark(
-                    x: .value("Date", item.date, unit: .day),
-                    y: .value("Views", item.views)
+                LineMark(
+                    x: .value("Date", item.date, unit: .second),
+                    y: .value("Score", item.score)
                 )
                 .foregroundStyle(.pink)
-                .cornerRadius(5)
+                .lineStyle(StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
             }
             .frame(height: 200)
             .padding(.bottom, 20)
-
+            
             // Level text
             Text("Your progress will be kept here, make sure to check in often to see your improvement! Future updates will let you level up, so stay tuned.")
                 .font(.system(size: 25))
@@ -70,14 +64,11 @@ struct StatsView: View {
         }
         .padding()
         .onAppear {
-            print("StatsView appeared")
-            // Generate chart data with today's score
-            vm.generateChartData(todayScore: testManager.score)
-            print("Chart data generated with score: \(testManager.score)")
+            vm.loadScores()
         }
     }
 }
 
 #Preview {
-    StatsView(testManager: TestManager())  
+    StatsView(testManager: TestManager())
 }

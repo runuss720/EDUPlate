@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		770405012D01014900E50641 /* f5.json in Resources */ = {isa = PBXBuildFile; fileRef = 770405002D01014900E50641 /* f5.json */; };
 		770405032D01149100E50641 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770405022D01149100E50641 /* TestView.swift */; };
+		770405072D02579600E50641 /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770405062D02579600E50641 /* FileManagerHelper.swift */; };
 		77A6BF022CEA7DE1008EE5A1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BF012CEA7DE1008EE5A1 /* HomeView.swift */; };
 		77A6BF2D2CEA7EC9008EE5A1 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BF2C2CEA7EC9008EE5A1 /* WelcomeView.swift */; };
 		77A6BF2F2CEA8784008EE5A1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BF2E2CEA8784008EE5A1 /* ProfileView.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		770405002D01014900E50641 /* f5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = f5.json; sourceTree = "<group>"; };
 		770405022D01149100E50641 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		770405062D02579600E50641 /* FileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHelper.swift; sourceTree = "<group>"; };
 		77A6BEFC2CEA7DE1008EE5A1 /* EDUPlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EDUPlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A6BF012CEA7DE1008EE5A1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		77A6BF0C2CEA7DE2008EE5A1 /* EDUPlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EDUPlateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 				77A6BF2E2CEA8784008EE5A1 /* ProfileView.swift */,
 				77A6BF302CEA8792008EE5A1 /* StatsView.swift */,
 				77A6BF322CEA9021008EE5A1 /* MainTabView.swift */,
+				770405062D02579600E50641 /* FileManagerHelper.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				77A6BF2F2CEA8784008EE5A1 /* ProfileView.swift in Sources */,
 				77B4634A2CEB14EA007E631C /* Test2View.swift in Sources */,
 				77A6BF312CEA8792008EE5A1 /* StatsView.swift in Sources */,
+				770405072D02579600E50641 /* FileManagerHelper.swift in Sources */,
 				77A6BF022CEA7DE1008EE5A1 /* HomeView.swift in Sources */,
 				77B4634C2CEB1522007E631C /* Test3View.swift in Sources */,
 				77A6BF2D2CEA7EC9008EE5A1 /* WelcomeView.swift in Sources */,

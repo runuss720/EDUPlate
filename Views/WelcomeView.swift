@@ -6,13 +6,10 @@
 //
 
 import SwiftUI
-//import CoreLocationUI
-
-import SwiftUI
 
 struct WelcomeView: View {
     @Binding var isVisible: Bool
-
+    
     var body: some View {
         if isVisible {
             VStack(spacing: 14) {
@@ -52,7 +49,6 @@ struct WelcomeView: View {
 }
 
 #Preview {
-    // Provide a default value for the `isWelcomeViewVisible` state variable
     WelcomeView(isVisible: .constant(true))
 }
 
