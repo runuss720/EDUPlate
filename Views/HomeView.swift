@@ -27,7 +27,7 @@ struct HomeView: View {
                         }
                         .padding(.bottom)
                             VStack(spacing: 16) {
-                                Text("Upcoming Tests".uppercased())
+                                Text("Test your knowledge".uppercased())
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .clipped()
                                     .font(.system(.subheadline, weight: .medium).width(.expanded))
@@ -35,7 +35,7 @@ struct HomeView: View {
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     HStack() {
                                         NavigationLink(destination: Test1View()) {
-                                            Image("christina-rumpf-gUU4MF87Ipw-unsplash")
+                                            Image("utensils-unsplash")
                                                 .renderingMode(.original)
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fill)
@@ -44,7 +44,7 @@ struct HomeView: View {
                                                 .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
                                                 .padding()
                                                 .overlay {
-                                                    Text("Test 1 - Basics")
+                                                    Text("Tools")
                                                         .kerning(2.0)
                                                         .font(.custom("Anton SC", size: 29))
                                                         .foregroundStyle(.white)
@@ -52,7 +52,7 @@ struct HomeView: View {
                                                 }
                                         }
                                         NavigationLink(destination: Test2View()) {
-                                            Image("walter-otto-PT70CT6mATQ-unsplash")
+                                            Image("ingredients-unsplash")
                                                 .renderingMode(.original)
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fill)
@@ -61,7 +61,7 @@ struct HomeView: View {
                                                 .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
                                                 .padding()
                                                 .overlay {
-                                                    Text("Test 2 - Food Safety (UPDATE)")
+                                                    Text("Ingredients")
                                                         .kerning(2.0)
                                                         .font(.custom("Anton SC", size: 29))
                                                         .foregroundStyle(.white)
@@ -78,7 +78,7 @@ struct HomeView: View {
                                                 .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
                                                 .padding()
                                                 .overlay {
-                                                    Text("Test 3 - Meat and Fish")
+                                                    Text("French Terms")
                                                         .kerning(2.0) // Adjusts the spacing between characters
                                                         .font(.custom("Anton SC", size: 29))
                                                         .foregroundStyle(.white)

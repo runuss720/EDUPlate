@@ -16,22 +16,13 @@ struct ProfileView: View {
                     
                 }
                 .font(.system(.headline, weight: .medium))
-                Image("pfp")
+                Image("ryan-walton-AbNO2iejoXA-unsplash")
                     .renderingMode(.original)
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
                     .frame(width: 100, height: 100)
-                    .clipped()
-                    .mask { RoundedRectangle(cornerRadius: 67, style: .continuous) }
-                HStack(spacing: 4) {
-                    ForEach(0..<5) { _ in // Replace with your data model here
-                        VStack {
-                            
-                        }
-                        .frame(width: 80)
-                        .clipped()
-                    }
-                }
+                    .clipShape(Circle())
+             
                 .padding()
                 VStack(spacing: 4) {
                     Text("Ruby Nuss")

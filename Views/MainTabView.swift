@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @StateObject var testManager = TestManager()
     var body: some View {
         TabView {
             
@@ -18,7 +19,7 @@ struct MainTabView: View {
                 }
             
             // Stat View Tab
-            StatsView()
+            StatsView(testManager: testManager)
                 .tabItem {
                     Label("Stats", systemImage: "chart.bar.xaxis")
                 }
@@ -37,3 +38,4 @@ struct MainTabView: View {
         )
     }
 }
+
