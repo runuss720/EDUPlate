@@ -161,6 +161,23 @@ struct HomeView: View {
                                             .padding(.top, 5)
                                     }
                                 }
+                                
+                                // Button 4: Soups
+                                NavigationLink(destination: StockView()) {
+                                    VStack(spacing: 0) {
+                                        Image("stocks")
+                                            .renderingMode(.original)
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: 150, height: 150)
+                                            .clipped()
+                                            .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
+                                            .padding()
+                                        Text("Stocks")
+                                            .font(.headline)
+                                            .padding(.top, 5)
+                                    }
+                                }
                             }
                         }
                     }

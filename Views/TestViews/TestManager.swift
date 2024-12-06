@@ -57,11 +57,12 @@ class TestManager: ObservableObject {
             let decoder = JSONDecoder()
             let decodedQuestions = try decoder.decode([Question].self, from: data)
             self.questions = decodedQuestions.filter { $0.category == category }
+
         } catch {
             print("Error decoding JSON")
         }
     }
-
+    
     // function for handling individual questions
     func answerQuestion(with option: String) {
         let currentQuestion = questions[questionsIndex]
