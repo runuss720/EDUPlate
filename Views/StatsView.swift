@@ -11,7 +11,8 @@ import Charts
 struct ChartData: Identifiable {
     let id = UUID()
     let score: Int
-    let date: Date
+    //let date: Date
+    let index: Int
 }
 
 class ChartViewModel: ObservableObject {
@@ -22,11 +23,12 @@ class ChartViewModel: ObservableObject {
         let fileManagerHelper = FileManagerHelper()
         let scores = fileManagerHelper.loadScoresFromFile()
         
-        // Convert the scores into ChartData and sort by date
-        chartData = scores.map { ChartData(score: $0.score, date: $0.date) }
-        
+        // Convert the scores into ChartData
+        chartData = scores.enumerated().map { index, score in
+                    ChartData(score: score.score, index: index) 
+                }
         // Sort by date in ascending order
-        chartData.sort { $0.date < $1.date }
+        chartData.sort { $0.index < $1.index }
     }
 }
 
@@ -47,7 +49,7 @@ struct StatsView: View {
             // Line Chart
             Chart(vm.chartData) { item in
                 LineMark(
-                    x: .value("Date", item.date, unit: .second),
+                    x: .value("Date", item.index),
                     y: .value("Score", item.score)
                 )
                 .foregroundStyle(.pink)
