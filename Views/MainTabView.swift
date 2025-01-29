@@ -4,11 +4,10 @@
 //
 //  Created by Ruby Nuss on 11/17/24.
 //
-
 import SwiftUI
 
 struct MainTabView: View {
-    @StateObject var testManager = TestManager()
+    @ObservedObject var userProgress: UserProgress
     
     var body: some View {
         TabView {
@@ -20,7 +19,7 @@ struct MainTabView: View {
                 }
             
             // Stat View Tab
-            StatsView(testManager: testManager)
+            StatsView(userProgress: userProgress) // Pass the same instance
                 .tabItem {
                     Label("Stats", systemImage: "chart.bar.xaxis")
                 }
@@ -39,5 +38,3 @@ struct MainTabView: View {
         )
     }
 }
-
-

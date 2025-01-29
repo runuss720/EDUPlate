@@ -9,16 +9,18 @@ import SwiftUI
 
 @main
 struct EDUPlateApp: App {
-    
-    // state variable control visibility of welcome screen
+    // State variable to control the visibility of the welcome screen
     @State private var isVisible = true
+    
+    // Create a shared UserProgress instance
+    @StateObject private var userProgress = UserProgress()
+    
     var body: some Scene {
         WindowGroup {
-            
             if isVisible {
                 WelcomeView(isVisible: $isVisible)
             } else {
-                MainTabView()
+                MainTabView(userProgress: userProgress) // Pass the UserProgress instance
             }
         }
     }

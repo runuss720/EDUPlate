@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct Test1View: View {
+    @ObservedObject var userProgress: UserProgress
     var body: some View {
-        TestView(category: "Tools")
+        TestView(category: "Tools", userProgress: userProgress)
     }
 }
 
 #Preview {
-    Test1View()
+    Test1View(userProgress: UserProgress())
 }
 

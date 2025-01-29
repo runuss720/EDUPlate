@@ -37,15 +37,21 @@ class TestManager: ObservableObject {
     @Published var score: Int = 0
     @Published var isQuizCompleted: Bool = false
     
+    @ObservedObject var userProgress: UserProgress
+    
     // used for accessing json file
     private let fileManager = FileManagerHelper()
     private let scoreFileName = "userScores.json"
     
+    init(userProgress: UserProgress) {
+            self.userProgress = userProgress
+            loadQuiz(forCategory: "Tools")
+        }
     // default category for loading quiz it "tools"
     // can be changed in individual test calls
-    init() {
+  /*  init() {
         loadQuiz(forCategory: "Tools")
-    }
+    }*/
 
     // read questions/answers from json file depending on category and present to user
     func loadQuiz(forCategory category: String) {
@@ -77,11 +83,13 @@ class TestManager: ObservableObject {
             questionsIndex += 1
         } else {
             isQuizCompleted = true
+            userProgress.addPoints(score)
             saveScore()
         }
     }
-
+    
     // save the score/date and append to json file
+    // edit: also saves user points
     func saveScore() {
         let newScore = Score(score: score, date: Date())
         fileManager.appendScoreToFile(newScore)

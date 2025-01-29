@@ -11,45 +11,54 @@ import Charts
 struct ChartData: Identifiable {
     let id = UUID()
     let score: Int
-    //let date: Date
     let index: Int
 }
 
 class ChartViewModel: ObservableObject {
     @Published var chartData = [ChartData]()
-    
+
     // Load scores from the file and convert them into ChartData
     func loadScores() {
         let fileManagerHelper = FileManagerHelper()
         let scores = fileManagerHelper.loadScoresFromFile()
-        
+
         // Convert the scores into ChartData
         chartData = scores.enumerated().map { index, score in
-                    ChartData(score: score.score, index: index) 
-                }
-        // Sort by date in ascending order
+            ChartData(score: score.score, index: index)
+        }
+
+        // Sort by index in ascending order
         chartData.sort { $0.index < $1.index }
     }
 }
 
 struct StatsView: View {
-    @ObservedObject var testManager: TestManager
+    @ObservedObject var userProgress: UserProgress // Use UserProgress instead of TestManager
     @StateObject var vm = ChartViewModel()
-    
+
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                //Text("Current Score: \(testManager.score)")
-                Text("Your Accuracy")
-                    .font(.title)
-                    .padding()
+            // Display user level and current points
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Your Stats")
+                    .font(.largeTitle)
+                    .padding(.bottom, 8)
                     .foregroundStyle(.pink)
+
+               /* Text("Current Level: \(userProgress.level)")
+                    .font(.headline)
+                    .foregroundStyle(.black)
+
+                Text("Points: \(userProgress.points)/\(userProgress.pointsToNextLevel)")
+                    .font(.headline)
+                    .foregroundStyle(.black)*/
             }
-            
-            // Line Chart
+            .padding(.leading)
+
+            // Line Chart for past scores
             Chart(vm.chartData) { item in
                 LineMark(
-                    x: .value("Date", item.index),
+                    x: .value("Attempt", item.index + 1),
                     y: .value("Score", item.score)
                 )
                 .foregroundStyle(.pink)
@@ -57,10 +66,10 @@ struct StatsView: View {
             }
             .frame(height: 200)
             .padding(.bottom, 20)
-            
-            // Level text
-            Text("Your progress will be kept here, make sure to check in often to see your improvement! Future updates will let you level up, so stay tuned.")
-                .font(.system(size: 25))
+
+            // Encouragement text
+            Text("Your progress will be tracked here. Keep practicing to see your scores improve! Level up by earning points from quizzes.")
+                .font(.system(size: 20))
                 .padding(.leading)
                 .foregroundStyle(.black)
         }
@@ -72,5 +81,5 @@ struct StatsView: View {
 }
 
 #Preview {
-    StatsView(testManager: TestManager())
+    StatsView(userProgress: UserProgress())
 }
