@@ -69,7 +69,7 @@ struct TestView: View {
                                     Text(answer)
                                         .font(.title2)
                                         .padding()
-                                        .background(Color.green)
+                                        .background(Color.indigo)
                                         .foregroundColor(.white)
                                         .cornerRadius(8)
                                         .padding(.bottom, 10)

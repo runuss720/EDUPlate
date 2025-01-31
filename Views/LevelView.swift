@@ -28,16 +28,10 @@ struct LevelView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .clipped()
                     .padding(.bottom, 8)
-                    .foregroundStyle(.pink)
-
-                Text("Hello, User!")
-                    .font(.system(.body, weight: .medium))
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(.indigo)
             }
 
             VStack(alignment: .leading) {
-                Text("Level Progress")
-                    .bold()
 
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: 3)

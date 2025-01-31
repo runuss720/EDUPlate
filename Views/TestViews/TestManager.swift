@@ -47,11 +47,6 @@ class TestManager: ObservableObject {
             self.userProgress = userProgress
             loadQuiz(forCategory: "Tools")
         }
-    // default category for loading quiz it "tools"
-    // can be changed in individual test calls
-  /*  init() {
-        loadQuiz(forCategory: "Tools")
-    }*/
 
     // read questions/answers from json file depending on category and present to user
     func loadQuiz(forCategory category: String) {
