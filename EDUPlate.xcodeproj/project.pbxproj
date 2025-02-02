@@ -10,6 +10,10 @@
 		770405012D01014900E50641 /* f5.json in Resources */ = {isa = PBXBuildFile; fileRef = 770405002D01014900E50641 /* f5.json */; };
 		770405032D01149100E50641 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770405022D01149100E50641 /* TestView.swift */; };
 		770405072D02579600E50641 /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770405062D02579600E50641 /* FileManagerHelper.swift */; };
+		770CD4092D46B93B007F4E14 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770CD4082D46B93B007F4E14 /* LevelView.swift */; };
+		770CD40B2D46EFCA007F4E14 /* UserProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770CD40A2D46EFCA007F4E14 /* UserProgress.swift */; };
+		773D8C3B2D4EEBA80012E686 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D8C3A2D4EEBA80012E686 /* LessonView.swift */; };
+		773D8C3D2D4EEDC50012E686 /* LessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D8C3C2D4EEDC50012E686 /* LessonManager.swift */; };
 		77A6BF022CEA7DE1008EE5A1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BF012CEA7DE1008EE5A1 /* HomeView.swift */; };
 		77A6BF2D2CEA7EC9008EE5A1 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BF2C2CEA7EC9008EE5A1 /* WelcomeView.swift */; };
 		77A6BF2F2CEA8784008EE5A1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BF2E2CEA8784008EE5A1 /* ProfileView.swift */; };
@@ -43,6 +47,10 @@
 		770405002D01014900E50641 /* f5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = f5.json; sourceTree = "<group>"; };
 		770405022D01149100E50641 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		770405062D02579600E50641 /* FileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHelper.swift; sourceTree = "<group>"; };
+		770CD4082D46B93B007F4E14 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		770CD40A2D46EFCA007F4E14 /* UserProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgress.swift; sourceTree = "<group>"; };
+		773D8C3A2D4EEBA80012E686 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		773D8C3C2D4EEDC50012E686 /* LessonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonManager.swift; sourceTree = "<group>"; };
 		77A6BEFC2CEA7DE1008EE5A1 /* EDUPlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EDUPlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A6BF012CEA7DE1008EE5A1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		77A6BF0C2CEA7DE2008EE5A1 /* EDUPlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EDUPlateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,11 +151,15 @@
 				77B463462CEB14B0007E631C /* TestViews */,
 				77B4633D2CEB11B9007E631C /* SkillViews */,
 				77A6BF012CEA7DE1008EE5A1 /* HomeView.swift */,
+				773D8C3A2D4EEBA80012E686 /* LessonView.swift */,
 				77A6BF2C2CEA7EC9008EE5A1 /* WelcomeView.swift */,
 				77A6BF2E2CEA8784008EE5A1 /* ProfileView.swift */,
 				77A6BF302CEA8792008EE5A1 /* StatsView.swift */,
 				77A6BF322CEA9021008EE5A1 /* MainTabView.swift */,
 				770405062D02579600E50641 /* FileManagerHelper.swift */,
+				770CD4082D46B93B007F4E14 /* LevelView.swift */,
+				773D8C3C2D4EEDC50012E686 /* LessonManager.swift */,
+				770CD40A2D46EFCA007F4E14 /* UserProgress.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,15 +325,19 @@
 			files = (
 				770405032D01149100E50641 /* TestView.swift in Sources */,
 				77B463482CEB14C8007E631C /* Test1View.swift in Sources */,
+				773D8C3B2D4EEBA80012E686 /* LessonView.swift in Sources */,
 				77A6BF2F2CEA8784008EE5A1 /* ProfileView.swift in Sources */,
 				77B4634A2CEB14EA007E631C /* Test2View.swift in Sources */,
+				773D8C3D2D4EEDC50012E686 /* LessonManager.swift in Sources */,
 				77A6BF312CEA8792008EE5A1 /* StatsView.swift in Sources */,
 				770405072D02579600E50641 /* FileManagerHelper.swift in Sources */,
 				77A6BF022CEA7DE1008EE5A1 /* HomeView.swift in Sources */,
 				77B4634C2CEB1522007E631C /* Test3View.swift in Sources */,
 				77A6BF2D2CEA7EC9008EE5A1 /* WelcomeView.swift in Sources */,
+				770CD4092D46B93B007F4E14 /* LevelView.swift in Sources */,
 				77A6BF332CEA9021008EE5A1 /* MainTabView.swift in Sources */,
 				77B463502CEBCFD6007E631C /* TestManager.swift in Sources */,
+				770CD40B2D46EFCA007F4E14 /* UserProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

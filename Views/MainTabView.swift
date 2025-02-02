@@ -1,43 +1,33 @@
-//
-//  MainTabView.swift
-//  EDUPlate
-//
-//  Created by Ruby Nuss on 11/17/24.
-//
-
 import SwiftUI
 
 struct MainTabView: View {
-    @StateObject var testManager = TestManager()
+    @ObservedObject var userProgress: UserProgress
     
     var body: some View {
         TabView {
             
-            // Example: Home View
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
             
-            // Stat View Tab
-            StatsView(testManager: testManager)
+                .tabItem {
+                    Label("Lessons", systemImage: "carrot")
+                }
+            
+            StatsView(userProgress: userProgress) // Pass the same instance
                 .tabItem {
                     Label("Stats", systemImage: "chart.bar.xaxis")
                 }
             
-            // Profile View Tab
             ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.fill")
                 }
-            
-            // Add other views here
         }
-        .accentColor(.pink)
+        .accentColor(.indigo)
         .background(
-            Color.white.shadow(radius: 5) // Custom background for the tab bar
+            Color.white.shadow(radius: 5)
         )
     }
 }
-
-
