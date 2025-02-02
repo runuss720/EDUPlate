@@ -1,10 +1,3 @@
-//
-//  StatsView.swift
-//  EDUPlate
-//
-//  Created by Ruby Nuss on 11/17/24.
-//
-
 import SwiftUI
 import Charts
 
@@ -43,15 +36,7 @@ struct StatsView: View {
                 Text("Your Stats")
                     .font(.largeTitle)
                     .padding(.bottom, 8)
-                    .foregroundStyle(.pink)
-
-               /* Text("Current Level: \(userProgress.level)")
-                    .font(.headline)
-                    .foregroundStyle(.black)
-
-                Text("Points: \(userProgress.points)/\(userProgress.pointsToNextLevel)")
-                    .font(.headline)
-                    .foregroundStyle(.black)*/
+                    .foregroundStyle(.indigo)
             }
             .padding(.leading)
 
@@ -61,13 +46,12 @@ struct StatsView: View {
                     x: .value("Attempt", item.index + 1),
                     y: .value("Score", item.score)
                 )
-                .foregroundStyle(.pink)
+                .foregroundStyle(.indigo)
                 .lineStyle(StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
             }
             .frame(height: 200)
             .padding(.bottom, 20)
-
-            // Encouragement text
+            
             Text("Your progress will be tracked here. Keep practicing to see your scores improve! Level up by earning points from quizzes.")
                 .font(.system(size: 20))
                 .padding(.leading)

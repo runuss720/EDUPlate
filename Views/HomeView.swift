@@ -9,12 +9,8 @@ struct HomeView: View {
             ScrollView {
                 VStack {
                     HStack {
-                        Text("Hi, Ruby!")   .font(.system(size: 39, weight: .light, design: .default))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .clipped()
-                            .padding(.top, 10)
-                            .foregroundStyle(.black)
                         
+                        // profile picture
                         Image("ryan-walton-AbNO2iejoXA-unsplash")
                             .renderingMode(.original)
                             .resizable()
@@ -22,29 +18,45 @@ struct HomeView: View {
                             .frame(width: 70, height: 70)
                             .clipShape(Circle())
                             .padding()
-                        
-                    } // end of HStack
-                       
-                    LevelView(level: $userLevel)
-                
-                    VStack(spacing: 16) {
-                       /* Text("Test your knowledge".uppercased())
+                        VStack {
+                            
+                            // TODO: change to user name
+                            Text("Hi, Ruby!")
+                                .font(.system(size: 25, weight: .bold, design: .rounded))
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .clipped()
+                                .padding(.top, 10)
+                                .foregroundStyle(.black)
+                            
+                            // Display level progress bar
+                            LevelView(level: $userLevel)
+                        }
+                    }
+                    
+                    HStack {
+                        Text("Dashboard")
+                            .font(.system(size: 30, weight: .bold, design: .rounded))
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(.system(.subheadline, weight: .medium))
-                            .foregroundColor(.black)*/
-
+                            .clipped()
+                            .padding(.top, 10)
+                            .foregroundStyle(.black)
+                    }
+                    
+                    VStack(spacing: 16) {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
+                                
+                                // TODO: add to testmanager
                                 NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                    TestCategoryCard( title: "Tools")
+                                    TestCategoryCard(title: "Tools", time: 5, imageName: "becca-tapert-hneG0Illco4-unsplash")
                                 }
 
                                 NavigationLink(destination: Test2View(userProgress: userProgress)) {
-                                    TestCategoryCard(title: "Ingredients")
+                                    TestCategoryCard(title: "Ingredients", time: 5, imageName: "ingredients-unsplash")
                                 }
 
                                 NavigationLink(destination: Test3View(userProgress: userProgress)) {
-                                    TestCategoryCard( title: "French Terms")
+                                    TestCategoryCard(title: "French Terms", time: 5, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)")
                                 }
                             }
                         }
@@ -60,25 +72,8 @@ struct HomeView: View {
                             .padding(.bottom, 8)
                             .foregroundStyle(.indigo)
 
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            VStack {
-                                if userLevel >= 1 {
-                                    NavigationLink(destination: KnifeSkillView()) {
-                                        LessonCard(title: "Knife Skills")
-                                    }
-                                    NavigationLink(destination: RoastingView()) {
-                                        LessonCard(title: "Roasting")
-                                    }
-                                    NavigationLink(destination: SoupsView()) {
-                                        LessonCard(title: "Soups")
-                                    }
-                                    NavigationLink(destination: StockView()) {
-                                        LessonCard(title: "Stocks")
-                                    }
-                                    
-                                } //end of checking user level
-                            } // end of vstack
-                        } // end of scrollview
+                        // display shortened list of available lessons
+                        LessonManager(length: 1)
                     }
                 }
                 .padding(.horizontal)
@@ -88,10 +83,9 @@ struct HomeView: View {
     }
 }
 
+
 struct LessonCard: View {
-
     let title: String
-
     var body: some View {
     VStack {
                 Text(title)
@@ -110,28 +104,46 @@ struct LessonCard: View {
 
 struct TestCategoryCard: View {
     let title: String
-    
+    let time: Int
+    let imageName: String // Now accepts an image name
+
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             VStack {
+                Image(imageName)
+                    .renderingMode(.original)
+                    .resizable()
+                    .frame(width: 325, height: 200)
+                    .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                    .shadow(color: Color.black.opacity(0.3), radius: 8, x: 0, y: 4)
+                    .offset(y: 2)
+
                 Text(title)
-                    .font(.system(.largeTitle, weight: .bold))
+                    .font(.system(size: 30, weight: .bold))
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundColor(.white)
-                    .padding(.top, 10)
+                    .foregroundStyle(.white)
+                    .padding(.top, 20)
                     .padding(.leading, 20)
+                
+                Text("Estimated Time: \(time) min")
+                    .font(.system(size: 19, weight: .bold, design: .rounded))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundStyle(.white)
+                    .padding(.leading, 20)
+                
                 Spacer()
             }
-            .frame(width: 200, height: 270)
-            .background(Color(red: 0.6, green: 0.7, blue: 1.0))
+            .frame(width: 330, height: 320)
+            .background(Color(red: 0.6, green: 0.7, blue: 1.1))
             .cornerRadius(20)
-            
+            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+
             Image(systemName: "play.circle")
                 .foregroundStyle(.white)
                 .font(.system(size: 70))
-                .offset(x: 10, y: -19)
+                .offset(x: 235, y: -19)
         }
-        .frame(width: 200, height: 270) // Ensures correct sizing
+        .frame(width: 330, height: 340)
     }
 }
 

@@ -22,26 +22,17 @@ struct LevelView: View {
 
     var body: some View {
         VStack {
-            HStack {
-                Text("Level: \(level)")
-                    .font(.system(.largeTitle, weight: .bold))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .clipped()
-                    .padding(.bottom, 8)
-                    .foregroundStyle(.indigo)
-            }
-
             VStack(alignment: .leading) {
-
                 ZStack(alignment: .leading) {
-                    RoundedRectangle(cornerRadius: 3)
+                    RoundedRectangle(cornerRadius: 5)
                         .fill(Color(.systemGray6))
-                        .frame(width: 250, height: 12)
+                        .frame(width: 250, height: 19)
 
-                    RoundedRectangle(cornerRadius: 3)
+                    RoundedRectangle(cornerRadius: 5)
                         .fill(.indigo.gradient)
-                        .frame(width: CGFloat(totalPoints) / 300 * 250, height: 12)
+                        .frame(width: CGFloat(totalPoints) / 300 * 260, height: 16) // Adjusted width dynamically
                 }
+                .offset(x: -6)
             }
         }
         .onAppear {
