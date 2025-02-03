@@ -34,7 +34,7 @@ struct HomeView: View {
                     }
                     
                     HStack {
-                        Text("Dashboard")
+                        Text("Upcoming Quizzes")
                             .font(.system(size: 30, weight: .bold, design: .rounded))
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .clipped()
@@ -48,32 +48,54 @@ struct HomeView: View {
                                 
                                 // TODO: add to testmanager
                                 NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                    TestCategoryCard(title: "Tools", time: 5, imageName: "becca-tapert-hneG0Illco4-unsplash")
+                                    TestCategoryCard(title: "Tools", time: 5/*, imageName: "becca-tapert-hneG0Illco4-unsplash"*/)
                                 }
 
                                 NavigationLink(destination: Test2View(userProgress: userProgress)) {
-                                    TestCategoryCard(title: "Ingredients", time: 5, imageName: "ingredients-unsplash")
+                                    TestCategoryCard(title: "Ingredients", time: 5/*, imageName: "ingredients-unsplash"*/)
                                 }
 
                                 NavigationLink(destination: Test3View(userProgress: userProgress)) {
-                                    TestCategoryCard(title: "French Terms", time: 5, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)")
+                                    TestCategoryCard(title: "French Terms", time: 5/*, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)"*/)
                                 }
                             }
                         }
                     }
                     Divider()
-                        .padding(.vertical, 20)
+                        .padding(.vertical, 10)
 
                     VStack(spacing: 16) {
-                        Text("Lessons")
-                            .font(.system(.largeTitle, weight: .bold))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .clipped()
-                            .padding(.bottom, 8)
-                            .foregroundStyle(.indigo)
+                                            HStack {
+                                                Text("Lessons")
+                                                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                                    .clipped()
+                                                    .padding(.top, 10)
+                                                    .foregroundStyle(.black)
 
-                        // display shortened list of available lessons
-                        LessonManager(length: 1)
+                                                Spacer()
+
+                                                NavigationLink(destination: LessonView()) {
+                                                    // "See all" with right arrow icon
+                                                    HStack {
+                                                        Text("See all")
+                                                            .font(.system(size: 25, weight: .bold, design: .rounded))
+                                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                                            .clipped()
+                                                            .padding(.top, 10)
+                                                            .foregroundStyle(.black)
+                                                            .padding(.leading, 40)
+                                                        Image(systemName: "arrow.right")
+                                                            .foregroundColor(.blue)
+                                                            .font(.system(size: 25))
+                                                            .padding(.top, 5)
+                                                    }
+                                                    .padding(.trailing)
+                                                }
+                                            }
+
+                                            // display shortened list of available lessons
+                                            LessonManager(length: 1)
                     }
                 }
                 .padding(.horizontal)
@@ -83,40 +105,21 @@ struct HomeView: View {
     }
 }
 
-
-struct LessonCard: View {
-    let title: String
-    var body: some View {
-    VStack {
-                Text(title)
-                .font(.system(.largeTitle, weight: .bold))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                      .foregroundColor(.white)
-                      .padding(.top, 10)
-                      .padding(.leading, 20)
-                  Spacer()
-              }
-              .frame(width: 350, height: 100)
-              .background(Color(red: 0.6, green: 0.7, blue: 1.1))
-              .cornerRadius(20)
-    }
-}
-
 struct TestCategoryCard: View {
     let title: String
     let time: Int
-    let imageName: String // Now accepts an image name
+    //let imageName: String
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             VStack {
-                Image(imageName)
+               /* Image(imageName)
                     .renderingMode(.original)
                     .resizable()
                     .frame(width: 325, height: 200)
                     .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
                     .shadow(color: Color.black.opacity(0.3), radius: 8, x: 0, y: 4)
-                    .offset(y: 2)
+                    .offset(y: 2)*/
 
                 Text(title)
                     .font(.system(size: 30, weight: .bold))
@@ -133,7 +136,7 @@ struct TestCategoryCard: View {
                 
                 Spacer()
             }
-            .frame(width: 330, height: 320)
+            .frame(width: 230, height: 220)
             .background(Color(red: 0.6, green: 0.7, blue: 1.1))
             .cornerRadius(20)
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
@@ -141,9 +144,9 @@ struct TestCategoryCard: View {
             Image(systemName: "play.circle")
                 .foregroundStyle(.white)
                 .font(.system(size: 70))
-                .offset(x: 235, y: -19)
+                .offset(x: 135, y: -19)
         }
-        .frame(width: 330, height: 340)
+        .frame(width: 230, height: 240)
     }
 }
 

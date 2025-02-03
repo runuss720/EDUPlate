@@ -11,10 +11,6 @@ struct MainTabView: View {
                     Label("Home", systemImage: "house.fill")
                 }
             
-                .tabItem {
-                    Label("Lessons", systemImage: "carrot")
-                }
-            
             StatsView(userProgress: userProgress) // Pass the same instance
                 .tabItem {
                     Label("Stats", systemImage: "chart.bar.xaxis")
