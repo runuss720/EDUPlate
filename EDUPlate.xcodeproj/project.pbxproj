@@ -13,9 +13,7 @@
 		770CD4092D46B93B007F4E14 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770CD4082D46B93B007F4E14 /* LevelView.swift */; };
 		770CD40B2D46EFCA007F4E14 /* UserProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770CD40A2D46EFCA007F4E14 /* UserProgress.swift */; };
 		773D8C3D2D4EEDC50012E686 /* LessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D8C3C2D4EEDC50012E686 /* LessonManager.swift */; };
-		77B463482CEB14C8007E631C /* Test1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B463472CEB14C8007E631C /* Test1View.swift */; };
-		77B4634A2CEB14EA007E631C /* Test2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B463492CEB14EA007E631C /* Test2View.swift */; };
-		77B4634C2CEB1522007E631C /* Test3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B4634B2CEB1522007E631C /* Test3View.swift */; };
+		77B4634A2CEB14EA007E631C /* TestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B463492CEB14EA007E631C /* TestListView.swift */; };
 		77B4634E2CEBCD98007E631C /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 77B4634D2CEBCD40007E631C /* data.json */; };
 		77B463502CEBCFD6007E631C /* TestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B4634F2CEBCFD6007E631C /* TestManager.swift */; };
 /* End PBXBuildFile section */
@@ -47,9 +45,7 @@
 		77A6BEFC2CEA7DE1008EE5A1 /* EDUPlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EDUPlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A6BF0C2CEA7DE2008EE5A1 /* EDUPlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EDUPlateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A6BF162CEA7DE2008EE5A1 /* EDUPlateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EDUPlateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		77B463472CEB14C8007E631C /* Test1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test1View.swift; sourceTree = "<group>"; };
-		77B463492CEB14EA007E631C /* Test2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2View.swift; sourceTree = "<group>"; };
-		77B4634B2CEB1522007E631C /* Test3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3View.swift; sourceTree = "<group>"; };
+		77B463492CEB14EA007E631C /* TestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListView.swift; sourceTree = "<group>"; };
 		77B4634D2CEBCD40007E631C /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		77B4634F2CEBCFD6007E631C /* TestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,9 +151,7 @@
 		77B463462CEB14B0007E631C /* TestViews */ = {
 			isa = PBXGroup;
 			children = (
-				77B463472CEB14C8007E631C /* Test1View.swift */,
-				77B463492CEB14EA007E631C /* Test2View.swift */,
-				77B4634B2CEB1522007E631C /* Test3View.swift */,
+				77B463492CEB14EA007E631C /* TestListView.swift */,
 				77B4634F2CEBCFD6007E631C /* TestManager.swift */,
 				770405022D01149100E50641 /* TestView.swift */,
 			);
@@ -313,11 +307,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				770405032D01149100E50641 /* TestView.swift in Sources */,
-				77B463482CEB14C8007E631C /* Test1View.swift in Sources */,
-				77B4634A2CEB14EA007E631C /* Test2View.swift in Sources */,
+				77B4634A2CEB14EA007E631C /* TestListView.swift in Sources */,
 				773D8C3D2D4EEDC50012E686 /* LessonManager.swift in Sources */,
 				770405072D02579600E50641 /* FileManagerHelper.swift in Sources */,
-				77B4634C2CEB1522007E631C /* Test3View.swift in Sources */,
 				770CD4092D46B93B007F4E14 /* LevelView.swift in Sources */,
 				77B463502CEBCFD6007E631C /* TestManager.swift in Sources */,
 				770CD40B2D46EFCA007F4E14 /* UserProgress.swift in Sources */,

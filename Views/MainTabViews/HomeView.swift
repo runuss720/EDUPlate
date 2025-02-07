@@ -19,15 +19,22 @@ struct HomeView: View {
                             .clipShape(Circle())
                             .padding()
                         VStack {
-                            
-                            // TODO: change to user name
-                            Text("Hi, Ruby!")
-                                .font(.system(size: 25, weight: .bold, design: .rounded))
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .clipped()
-                                .padding(.top, 10)
-                                .foregroundStyle(.black)
-                            
+                            HStack {
+                                // TODO: change to user name
+                                Text("Hi, Ruby!")
+                                    .font(.system(size: 25, weight: .bold, design: .rounded))
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .clipped()
+                                    .padding(.top, 10)
+                                    .foregroundStyle(.black)
+                                Text("Level \(userLevel)")
+                                    .font(.system(size: 23, weight: .bold, design: .rounded))
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .clipped()
+                                    .padding(.top, 10)
+                                    .padding(.leading, 40)
+                                    .foregroundStyle(.indigo)
+                            }
                             // Display level progress bar
                             LevelView(level: $userLevel)
                         }
@@ -100,8 +107,9 @@ struct HomeView: View {
                 }
                 .padding(.horizontal)
             }
-            .navigationBarBackButtonHidden(true)
+            //.navigationBarBackButtonHidden(true)
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
