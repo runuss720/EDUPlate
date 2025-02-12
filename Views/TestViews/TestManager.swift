@@ -11,6 +11,7 @@ import SwiftUI
 struct Quiz: Codable {
     let category: String
     let questions: [Question]
+    let concentration: String
 }
 
 // all questions are separated by category ex) "tools", "french terms"
@@ -27,6 +28,7 @@ struct Question: Codable {
 struct Score: Codable {
     let score: Int
     let date: Date
+    let concentration: String
 }
 
 class TestManager: ObservableObject {
@@ -64,30 +66,26 @@ class TestManager: ObservableObject {
         }
     }
     
-    // function for handling individual questions
-    func answerQuestion(with option: String) {
+    func answerQuestion(with option: String, concentration: String) {
         let currentQuestion = questions[questionsIndex]
         
-        // check if user got question correct and increment score
         if option == currentQuestion.answer {
             score += 1
         }
 
-        // check for end of quiz
         if questionsIndex < questions.count - 1 {
             questionsIndex += 1
         } else {
             isQuizCompleted = true
             userProgress.addPoints(score)
-            saveScore()
+            saveScore(forConcentration: concentration) // Save score with concentration
         }
     }
-    
-    // save the score/date and append to json file
-    // edit: also saves user points
-    func saveScore() {
-        let newScore = Score(score: score, date: Date())
+
+    func saveScore(forConcentration concentration: String) {
+        let newScore = Score(score: score, date: Date(), concentration: concentration)
         fileManager.appendScoreToFile(newScore)
+        print("Saved score: \(newScore)") // Debugging: Print the saved score
     }
 
     // Load saved scores from the file

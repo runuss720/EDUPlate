@@ -65,6 +65,23 @@ struct HomeView: View {
                                 NavigationLink(destination: Test3View(userProgress: userProgress)) {
                                     TestCategoryCard(title: "French Terms", time: 5/*, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)"*/)
                                 }
+                                
+                                NavigationLink(destination: Test4View(userProgress: userProgress)) {
+                                    TestCategoryCard(title: "Food Safety", time: 5/*, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)"*/)
+                                }
+                                
+                                NavigationLink(destination: Test5View(userProgress: userProgress)) {
+                                    TestCategoryCard(title: "Basic Techniques", time: 2/*, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)"*/)
+                                }
+                                
+                                NavigationLink(destination: Test5View(userProgress: userProgress)) {
+                                    TestCategoryCard(title: "Grilling", time: 2/*, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)"*/)
+                                }
+                                
+                                NavigationLink(destination: Test5View(userProgress: userProgress)) {
+                                    TestCategoryCard(title: "Knife Skills", time: 2/*, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)"*/)
+                                }
+
                             }
                         }
                     }
