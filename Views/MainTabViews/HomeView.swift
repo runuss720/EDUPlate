@@ -1,9 +1,12 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject private var userProgress = UserProgress()
+  //  @StateObject private var userProgress = UserProgress()
+    @EnvironmentObject private var userProgress: UserProgress
     @State private var userLevel: Int = 1
+    @State private var displayedUsername: String = "" // Local state variable for username
 
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -20,14 +23,14 @@ struct HomeView: View {
                             .padding()
                         VStack {
                             HStack {
-                                // TODO: change to user name
-                                Text("Hi, Ruby!")
+                               // Text("Hi, \(displayedUsername)!")
+                                Text("Hi \(userProgress.username)")
                                     .font(.system(size: 25, weight: .bold, design: .rounded))
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .clipped()
                                     .padding(.top, 10)
                                     .foregroundStyle(.black)
-                                Text("Level \(userLevel)")
+                                Text("Level \(userProgress.currentLevel)")
                                     .font(.system(size: 23, weight: .bold, design: .rounded))
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .clipped()
@@ -55,31 +58,35 @@ struct HomeView: View {
                                 
                                 // TODO: add to testmanager
                                 NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                    TestCategoryCard(title: "Tools", time: 5/*, imageName: "becca-tapert-hneG0Illco4-unsplash"*/)
+                                    TestCategoryCard(title: "Tools", time: 5, category: "Food Prep")
                                 }
 
                                 NavigationLink(destination: Test2View(userProgress: userProgress)) {
-                                    TestCategoryCard(title: "Ingredients", time: 5/*, imageName: "ingredients-unsplash"*/)
+                                    TestCategoryCard(title: "Ingredients", time: 5, category: "Food Prep")
                                 }
 
                                 NavigationLink(destination: Test3View(userProgress: userProgress)) {
-                                    TestCategoryCard(title: "French Terms", time: 5/*, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)"*/)
+                                    TestCategoryCard(title: "French Terms", time: 5, category: "International")
                                 }
                                 
                                 NavigationLink(destination: Test4View(userProgress: userProgress)) {
-                                    TestCategoryCard(title: "Food Safety", time: 5/*, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)"*/)
+                                    TestCategoryCard(title: "Food Safety", time: 5, category: "Safety")
                                 }
                                 
                                 NavigationLink(destination: Test5View(userProgress: userProgress)) {
-                                    TestCategoryCard(title: "Basic Techniques", time: 2/*, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)"*/)
+                                    TestCategoryCard(title: "Basic Techniques", time: 2, category: "Food Prep")
                                 }
                                 
-                                NavigationLink(destination: Test5View(userProgress: userProgress)) {
-                                    TestCategoryCard(title: "Grilling", time: 2/*, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)"*/)
+                                NavigationLink(destination: Test6View(userProgress: userProgress)) {
+                                    TestCategoryCard(title: "Grilling", time: 2, category: "Food Prep")
                                 }
                                 
-                                NavigationLink(destination: Test5View(userProgress: userProgress)) {
-                                    TestCategoryCard(title: "Knife Skills", time: 2/*, imageName: "jez-timms-DVRXFIH42d0-unsplash (1)"*/)
+                                NavigationLink(destination: Test7View(userProgress: userProgress)) {
+                                    TestCategoryCard(title: "Knife Skills", time: 2, category: "Food Prep")
+                                }
+                                
+                                NavigationLink(destination: Test8View(userProgress: userProgress)) {
+                                    TestCategoryCard(title: "Personal Hygiene", time: 2, category: "Safety")
                                 }
 
                             }
@@ -123,29 +130,26 @@ struct HomeView: View {
                     }
                 }
                 .padding(.horizontal)
+            
+                .onAppear {
+                   // print("HomeView loaded with username: \(userProgress.username)")
+                    //displayedUsername = userProgress.username
+                    userProgress.fetchUserData()
+                }
             }
-            //.navigationBarBackButtonHidden(true)
         }
         .navigationBarBackButtonHidden(true)
     }
+    
 }
-
 struct TestCategoryCard: View {
     let title: String
     let time: Int
-    //let imageName: String
-
+    let category: String
+    
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             VStack {
-               /* Image(imageName)
-                    .renderingMode(.original)
-                    .resizable()
-                    .frame(width: 325, height: 200)
-                    .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                    .shadow(color: Color.black.opacity(0.3), radius: 8, x: 0, y: 4)
-                    .offset(y: 2)*/
-
                 Text(title)
                     .font(.system(size: 30, weight: .bold))
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -158,6 +162,12 @@ struct TestCategoryCard: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .foregroundStyle(.white)
                     .padding(.leading, 20)
+                Text("\(category)")
+                    .font(.system(size: 17, weight: .bold, design: .rounded))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundStyle(.white)
+                    .padding(.leading, 20)
+                    .offset(x: -10, y: 110)
                 
                 Spacer()
             }

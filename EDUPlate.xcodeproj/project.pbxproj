@@ -71,6 +71,11 @@
 			path = EDUPlateUITests;
 			sourceTree = "<group>";
 		};
+		77B079B22D628827008E730C /* CoreData */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		77B4633D2CEB11B9007E631C /* SkillViews */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SkillViews;
@@ -108,6 +113,7 @@
 			children = (
 				770405002D01014900E50641 /* f5.json */,
 				77B4634D2CEBCD40007E631C /* data.json */,
+				77B079B22D628827008E730C /* CoreData */,
 				77A6BF2B2CEA7E55008EE5A1 /* Views */,
 				77A6BEFE2CEA7DE1008EE5A1 /* EDUPlate */,
 				77A6BF0F2CEA7DE2008EE5A1 /* EDUPlateTests */,
@@ -176,6 +182,7 @@
 			fileSystemSynchronizedGroups = (
 				773D8C3E2D510A890012E686 /* MainTabViews */,
 				77A6BEFE2CEA7DE1008EE5A1 /* EDUPlate */,
+				77B079B22D628827008E730C /* CoreData */,
 				77B4633D2CEB11B9007E631C /* SkillViews */,
 			);
 			name = EDUPlate;
@@ -473,6 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EDUPlate/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -501,6 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EDUPlate/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

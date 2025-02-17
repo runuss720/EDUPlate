@@ -2,7 +2,11 @@ import SwiftUI
 
 struct WelcomeView: View {
     @Binding var isVisible: Bool
-    
+    @State private var username: String = ""
+    @State private var showTextField: Bool = false
+
+    @EnvironmentObject var userProgress: UserProgress  // Use EnvironmentObject
+
     var body: some View {
         if isVisible {
             VStack {
@@ -21,12 +25,39 @@ struct WelcomeView: View {
                         .lineSpacing(6)
                 }
                 
+                if showTextField {
+                    TextField("Enter your username", text: $username)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal, 40)
+                        .padding(.top, 10)
+                }
+                
                 Button(action: {
-                    withAnimation(.easeInOut(duration: 0.3)) {
-                        isVisible = false
+                    if showTextField {
+                        if !username.isEmpty {
+                            // Reset user progress for the new username
+                            userProgress.resetUserProgress()
+                            userProgress.updateUserData(username: username)  // Update username and Core Data
+                            
+                            // Save the new user profile to Core Data
+                            CoreDataManager.shared.saveUser(username: username, points: 0, level: 1)
+                            
+                            print("Updated username to: \(username)")
+                            print("Current username in UserProgress: \(userProgress.username)")
+                            
+                            // Dismiss the WelcomeView
+                            withAnimation(.easeInOut(duration: 0.3)) {
+                                isVisible = false
+                            }
+                        }
+                    } else {
+                        // Show the username text field
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            showTextField = true
+                        }
                     }
                 }) {
-                    Text("Start Cooking")
+                    Text(showTextField ? "Continue" : "Log In")
                         .font(.system(size: 20, weight: .semibold, design: .rounded))
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
@@ -42,21 +73,24 @@ struct WelcomeView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             .background(
-                            LinearGradient(
-                                gradient: Gradient(colors: [
-                                    Color(red: 212/255, green: 231/255, blue: 250/255), // #d4e7fa
-                                    Color.white
-                                ]),
-                                startPoint: .top,
-                                endPoint: .bottom
-                            )
-                            .ignoresSafeArea()
-                        )
-                        .transition(.opacity)
-                    }
-                }
-            }
+                LinearGradient(
+                    gradient: Gradient(colors: [
+                        Color(red: 212/255, green: 231/255, blue: 250/255),
+                        Color.white
+                    ]),
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                .ignoresSafeArea()
+            )
+            .transition(.opacity)
+        }
+    }
+}
 
+
+/*
 #Preview {
     WelcomeView(isVisible: .constant(true))
 }
+*/

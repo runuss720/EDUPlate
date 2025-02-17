@@ -55,3 +55,10 @@ struct Test7View: View {
         TestView(category: "Knife Skills", userProgress: userProgress, concentration: "Food Preparation")
     }
 }
+
+struct Test8View: View {
+    @ObservedObject var userProgress: UserProgress
+    var body: some View {
+        TestView(category: "Personal Hygiene", userProgress: userProgress, concentration: "Safety")
+    }
+}
