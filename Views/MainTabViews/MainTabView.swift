@@ -22,15 +22,15 @@ struct MainTabView: View {
                     Label("Lessons", systemImage: "book.fill")
                 }
             
-            TestTabView()
+            TestListView()
                 .tabItem {
                     Label("Tests", systemImage: "pencil")
                 }
             
-            ProfileView()
+            /*ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.fill")
-                }
+                }*/
         }
         .accentColor(.indigo)
         .background(

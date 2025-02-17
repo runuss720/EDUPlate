@@ -40,6 +40,15 @@ struct LessonManager: View {
                         NavigationLink(destination: StockView()) {
                             LessonCard(title: "Stocks")
                         }
+                        NavigationLink(destination: GrillingView()) {
+                            LessonCard(title: "Grilling")
+                        }
+                        NavigationLink(destination: FoodSafetyView()) {
+                            LessonCard(title: "Food Safety")
+                        }
+                        NavigationLink(destination: HygeneView()) {
+                            LessonCard(title: "Personal Hygene")
+                        }
                     }
                 }
             }

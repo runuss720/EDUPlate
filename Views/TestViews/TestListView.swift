@@ -7,6 +7,91 @@
 
 import SwiftUI
 
+struct TestListView: View {
+    @EnvironmentObject private var userProgress: UserProgress
+
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 16) {
+                // Food Preparation Section
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Food Preparation")
+                        .font(.system(size: 30, weight: .bold, design: .rounded))
+                        .foregroundStyle(.black)
+                        .padding(.top, 10)
+
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 16) {
+                            NavigationLink(destination: Test1View(userProgress: userProgress)) {
+                                TestCategoryCard(title: "Tools", time: 5, category: "Food Prep")
+                            }
+
+                            NavigationLink(destination: Test1View(userProgress: userProgress)) {
+                                TestCategoryCard(title: "Ingredients", time: 5, category: "Food Prep")
+                            }
+
+                            NavigationLink(destination: Test1View(userProgress: userProgress)) {
+                                TestCategoryCard(title: "Basic Techniques", time: 2, category: "Food Prep")
+                            }
+
+                            NavigationLink(destination: Test1View(userProgress: userProgress)) {
+                                TestCategoryCard(title: "Grilling", time: 2, category: "Food Prep")
+                            }
+
+                            NavigationLink(destination: Test1View(userProgress: userProgress)) {
+                                TestCategoryCard(title: "Knife Skills", time: 2, category: "Food Prep")
+                            }
+                        }
+                        .padding(.horizontal, 16)
+                    }
+                }
+
+                // Food Safety Section
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Food Safety")
+                        .font(.system(size: 30, weight: .bold, design: .rounded))
+                        .foregroundStyle(.black)
+                        .padding(.top, 10)
+
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 16) {
+                            NavigationLink(destination: Test1View(userProgress: userProgress)) {
+                                TestCategoryCard(title: "Personal Hygiene", time: 2, category: "Safety")
+                            }
+
+                            NavigationLink(destination: Test1View(userProgress: userProgress)) {
+                                TestCategoryCard(title: "Food Safety", time: 5, category: "Safety")
+                            }
+                        }
+                        .padding(.horizontal, 16)
+                    }
+                }
+
+                // International Terms Section
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("International Terms")
+                        .font(.system(size: 30, weight: .bold, design: .rounded))
+                        .foregroundStyle(.black)
+                        .padding(.top, 10)
+
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 16) {
+                            NavigationLink(destination: Test1View(userProgress: userProgress)) {
+                                TestCategoryCard(title: "French Terms", time: 5, category: "International")
+                            }
+                        }
+                        .padding(.horizontal, 16)
+                    }
+                }
+
+                Divider()
+                    .padding(.vertical, 10)
+            }
+            .padding(.horizontal, 16)
+        }
+    }
+}
+
 struct Test1View: View {
     @ObservedObject var userProgress: UserProgress
     var body: some View {

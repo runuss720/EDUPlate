@@ -55,6 +55,7 @@ struct HomeView: View {
                     VStack(spacing: 16) {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
+                                //TestListView()
                                 
                                 // TODO: add to testmanager
                                 NavigationLink(destination: Test1View(userProgress: userProgress)) {
@@ -142,6 +143,7 @@ struct HomeView: View {
     }
     
 }
+
 struct TestCategoryCard: View {
     let title: String
     let time: Int
@@ -184,6 +186,7 @@ struct TestCategoryCard: View {
         .frame(width: 230, height: 240)
     }
 }
+
 
 #Preview {
     HomeView()

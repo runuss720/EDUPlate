@@ -126,7 +126,7 @@ struct StatsView: View {
                 .foregroundStyle(.indigo)
 
             // Display the user's current points and level
-            VStack(alignment: .leading, spacing: 10) {
+          /*  VStack(alignment: .leading, spacing: 10) {
                 Text("Points: \(userProgress.currentPoints)")
                     .font(.title2)
                     .foregroundColor(.black)
@@ -134,8 +134,8 @@ struct StatsView: View {
                 Text("Level: \(userProgress.currentLevel)")
                     .font(.title2)
                     .foregroundColor(.black)
-            }
-            .padding()
+            }*/
+            //.padding()
 
             // Pie Chart for concentration scores
             Chart(vm.chartData) { item in
@@ -154,15 +154,11 @@ struct StatsView: View {
             }
             .frame(height: 300)
             .padding(.bottom, 20)
-            
-            Text("Your progress will be tracked here. Keep practicing to see your scores improve! Level up by earning points from quizzes.")
-                .font(.system(size: 20))
-                .padding(.leading)
-                .foregroundStyle(.black)
         }
         .padding()
         .onAppear {
             vm.loadScores() // Load chart data when the view appears
+            userProgress.fetchUserData()
         }
     }
 }
