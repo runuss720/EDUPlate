@@ -4,6 +4,7 @@
 //
 //  Created by Ruby Nuss on 12/4/24.
 //
+
 import SwiftUI
 
 struct TestView: View {
@@ -12,6 +13,9 @@ struct TestView: View {
     var category: String
     var concentration: String
 
+    @State private var selectedAnswer: String? = nil
+    @State private var isCorrect: Bool? = nil
+    
     init(category: String, userProgress: UserProgress, concentration: String) {
         self.category = category
         self.userProgress = userProgress
@@ -32,18 +36,18 @@ struct TestView: View {
                             .font(.title2)
                             .padding()
 
-                        Text("Points Awarded: \(viewModel.score)")
+                       /* Text("Points Awarded: \(viewModel.score)")
                             .font(.title3)
-                            .padding()
+                            .padding()*/
 
                         NavigationLink(destination: HomeView()) {
                             Text("Return to Home")
                                 .font(.title2)
                                 .frame(maxWidth: .infinity)
                                 .padding()
-                                .background(Color.pink.opacity(0.2))
+                                .background(Color.indigo.opacity(0.2))
                                 .cornerRadius(10)
-                                .foregroundColor(.pink)
+                                .foregroundColor(.indigo)
                         }
                     }
                     .padding()
@@ -93,7 +97,6 @@ struct TestView: View {
         .navigationBarBackButtonHidden(true)
     }
 }
-
 #Preview {
     TestView(category: "Tools", userProgress: UserProgress(), concentration: "Food Preparation")
 }

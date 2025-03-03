@@ -4,6 +4,7 @@
 //
 //  Created by Ruby Nuss on 11/18/24.
 //
+
 import Foundation
 import SwiftUI
 
@@ -103,6 +104,31 @@ class TestManager: ObservableObject {
             print("Updated user in Core Data: \(user.username ?? "Unknown") with points: \(newPoints) and level: \(newLevel)")
         } else {
             print("No user found in Core Data.")
+        }
+    }
+    
+    // fetches random vocabulary words to be used in the stats page
+    func fetchRandomQuestion() -> Question? {
+        guard let url = Bundle.main.url(forResource: "f5", withExtension: "json") else {
+            print("Failed to locate f5.json in bundle")
+            return nil
+        }
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let decodedQuestions = try decoder.decode([Question].self, from: data)
+            
+            // Filter questions to include only those with one word
+            let oneWordQuestions = decodedQuestions.filter { question in
+                // Check if the question contains no spaces
+                !question.question.contains(" ")
+            }
+            
+            // Return a random question from the filtered list
+            return oneWordQuestions.randomElement()
+        } catch {
+            print("Error decoding JSON: \(error)")
+            return nil
         }
     }
 }
