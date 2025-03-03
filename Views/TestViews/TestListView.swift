@@ -79,6 +79,14 @@ struct TestListView: View {
                             NavigationLink(destination: Test1View(userProgress: userProgress)) {
                                 TestCategoryCard(title: "French Terms", time: 5, category: "International")
                             }
+                            
+                            NavigationLink(destination: Test1View(userProgress: userProgress)) {
+                                TestCategoryCard(title: "Spanish Terms", time: 5, category: "International")
+                            }
+                            
+                            NavigationLink(destination: Test1View(userProgress: userProgress)) {
+                                TestCategoryCard(title: "Japanese Terms", time: 5, category: "International")
+                            }
                         }
                         .padding(.horizontal, 16)
                     }
@@ -145,5 +153,20 @@ struct Test8View: View {
     @ObservedObject var userProgress: UserProgress
     var body: some View {
         TestView(category: "Personal Hygiene", userProgress: userProgress, concentration: "Safety")
+    }
+    
+}
+
+struct Test9View: View {
+    @ObservedObject var userProgress: UserProgress
+    var body: some View {
+        TestView(category: "Spanish Cooking", userProgress: userProgress, concentration: "International")
+    }
+}
+
+struct Test10View: View {
+    @ObservedObject var userProgress: UserProgress
+    var body: some View {
+        TestView(category: "Japanese Cooking", userProgress: userProgress, concentration: "International")
     }
 }

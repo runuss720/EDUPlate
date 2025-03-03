@@ -100,6 +100,7 @@ struct StatsView: View {
                            .cornerRadius(20)
                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
                            .padding(.top, 20)
+                           .padding(.leading, 20)
             }
         }
         .padding()

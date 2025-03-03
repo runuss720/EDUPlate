@@ -574,6 +574,32 @@
         "fake1": "Tasting food with your fingers",
         "fake2": "Chewing gum to keep your breath fresh",
         "fake3": "Using a cloth towel to dry hands after washing"
-    }
-
+    },
+    
+      {"category": "Spanish Cooking", "question": "Sofrito", "answer": "A mixture of sautéed onions, garlic, and tomatoes", "fake1": "A type of soup", "fake2": "A grilling technique", "fake3": "A type of pastry"},
+      {"category": "Spanish Cooking", "question": "Empanar", "answer": "Breading food before frying", "fake1": "Wrapping food in a dough", "fake2": "Cooking over an open flame", "fake3": "Marinating meat in citrus juice"},
+      {"category": "Spanish Cooking", "question": "Asado", "answer": "Grilled or roasted", "fake1": "Steamed", "fake2": "Fermented", "fake3": "Braised"},
+      {"category": "Spanish Cooking", "question": "Plancha", "answer": "Cooking on a flat-top grill or griddle", "fake1": "Deep-frying in oil", "fake2": "Stewing in broth", "fake3": "Baking in the oven"},
+      {"category": "Spanish Cooking", "question": "Escabeche", "answer": "A vinegar-based marinade or pickling method", "fake1": "A type of smoked meat", "fake2": "A technique for roasting peppers", "fake3": "A method for making cheese"},
+      {"category": "Spanish Cooking", "question": "Flambear", "answer": "Setting alcohol on fire to enhance flavor", "fake1": "Cooking food in a clay pot", "fake2": "Using a water bath to cook dishes evenly", "fake3": "Covering food in salt before baking"},
+      {"category": "Spanish Cooking", "question": "Hornear", "answer": "To bake", "fake1": "To boil", "fake2": "To grill", "fake3": "To steam"},
+      {"category": "Spanish Cooking", "question": "Churrasco", "answer": "A grilled or barbecued meat dish", "fake1": "A type of stew", "fake2": "A seafood soup", "fake3": "A type of flatbread"},
+      {"category": "Spanish Cooking", "question": "Rebozar", "answer": "Coating food in batter or breadcrumbs before frying", "fake1": "Blending ingredients to make a sauce", "fake2": "Simmering food in a pot for hours", "fake3": "Smoking meats over wood"},
+      {"category": "Spanish Cooking", "question": "Pochado", "answer": "Poached or gently cooked in liquid", "fake1": "Deep-fried until golden brown", "fake2": "Aged with spices for weeks", "fake3": "Stuffed with cheese and vegetables"},
+      {"category": "Spanish Cooking", "question": "Estofar", "answer": "Cooking food slowly in a covered pot with liquid", "fake1": "Frying food at a high temperature", "fake2": "Mixing ingredients in a blender", "fake3": "Smoking food over low heat"},
+      {"category": "Spanish Cooking", "question": "Caramelizar", "answer": "Slowly cooking sugar until it turns brown", "fake1": "Coating food in flour", "fake2": "Cooking food directly over a flame", "fake3": "Blending ingredients into a paste"},
+      
+      {"category": "Japanese Cooking", "question": "Yakimono", "answer": "Grilled or pan-fried dishes", "fake1": "Fermented vegetables", "fake2": "Steamed rice dishes", "fake3": "Cold noodle soups"},
+      {"category": "Japanese Cooking", "question": "Tempura", "answer": "Deep-fried battered seafood or vegetables", "fake1": "Raw fish over rice", "fake2": "Simmered meat and vegetables", "fake3": "Pickled vegetables"},
+      {"category": "Japanese Cooking", "question": "Sashimi", "answer": "Sliced raw fish or seafood", "fake1": "Grilled fish", "fake2": "Rice porridge", "fake3": "Fried tofu"},
+      {"category": "Japanese Cooking", "question": "Nimono", "answer": "Simmered dishes with broth", "fake1": "Stir-fried noodles", "fake2": "Breaded and fried pork", "fake3": "Raw seafood over rice"},
+      {"category": "Japanese Cooking", "question": "Teriyaki", "answer": "A cooking method using a sweet soy glaze", "fake1": "A soup-based dish", "fake2": "A deep-fried rice ball", "fake3": "A sushi rolling technique"},
+      {"category": "Japanese Cooking", "question": "Tataki", "answer": "Lightly seared fish or meat", "fake1": "A type of miso soup", "fake2": "A noodle dish with cold dipping sauce", "fake3": "A method of pickling vegetables"},
+      {"category": "Japanese Cooking", "question": "Katsu", "answer": "Breaded and deep-fried cutlets", "fake1": "A thickened sauce", "fake2": "A type of fish broth", "fake3": "A rolling technique for sushi"},
+      {"category": "Japanese Cooking", "question": "Shabu-shabu", "answer": "A hot pot dish with thinly sliced meat", "fake1": "A stir-frying technique", "fake2": "A type of soy-based dipping sauce", "fake3": "A fermented soybean dish"},
+      {"category": "Japanese Cooking", "question": "Tsukemono", "answer": "Japanese pickles", "fake1": "Fermented miso paste", "fake2": "A type of rice cake", "fake3": "Deep-fried tofu"},
+      {"category": "Japanese Cooking", "question": "Okonomiyaki", "answer": "A savory Japanese pancake", "fake1": "A sushi wrapping technique", "fake2": "A type of seafood stew", "fake3": "A sweet rice dessert"},
+      {"category": "Japanese Cooking", "question": "Furikake", "answer": "A rice seasoning mix", "fake1": "A method of grilling fish", "fake2": "A style of ramen broth", "fake3": "A type of fermented soybean"},
+      {"category": "Japanese Cooking", "question": "Yakitori", "answer": "Skewered grilled chicken", "fake1": "A type of sushi roll", "fake2": "A soup-based hot pot", "fake3": "A method of fermenting miso"}
+    
 ]
