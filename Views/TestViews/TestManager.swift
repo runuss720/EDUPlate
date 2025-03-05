@@ -99,7 +99,7 @@ class TestManager: ObservableObject {
             let totalPoints = Int(user.points) + score // Add the quiz score to the current points
             
             // Recalculate level based on total points
-            let newLevel = totalPoints / 100 // Example level-up logic: 100 points per level
+            let newLevel = max(1, totalPoints / 100)// Example level-up logic: 100 points per level
             
             // Update the user's points and level in Core Data
             CoreDataManager.shared.updateUser(username: userProgress.username, points: totalPoints, level: newLevel)
