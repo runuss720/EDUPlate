@@ -23,23 +23,23 @@ struct TestListView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 16) {
                             NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                TestCategoryCard(title: "Tools", time: 5, category: "Food Prep")
+                                TestCategoryCard(title: "Tools", time: 5, category: "Food Prep", levelRequired: 1)
                             }
 
                             NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                TestCategoryCard(title: "Ingredients", time: 5, category: "Food Prep")
+                                TestCategoryCard(title: "Ingredients", time: 5, category: "Food Prep", levelRequired: 1)
                             }
 
                             NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                TestCategoryCard(title: "Basic Techniques", time: 2, category: "Food Prep")
+                                TestCategoryCard(title: "Basic Techniques", time: 2, category: "Food Prep", levelRequired: 1)
                             }
 
                             NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                TestCategoryCard(title: "Grilling", time: 2, category: "Food Prep")
+                                TestCategoryCard(title: "Grilling", time: 2, category: "Food Prep", levelRequired: 1)
                             }
 
                             NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                TestCategoryCard(title: "Knife Skills", time: 2, category: "Food Prep")
+                                TestCategoryCard(title: "Knife Skills", time: 2, category: "Food Prep", levelRequired: 1)
                             }
                         }
                         .padding(.horizontal, 16)
@@ -56,11 +56,11 @@ struct TestListView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 16) {
                             NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                TestCategoryCard(title: "Personal Hygiene", time: 2, category: "Safety")
+                                TestCategoryCard(title: "Personal Hygiene", time: 2, category: "Safety", levelRequired: 1)
                             }
 
                             NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                TestCategoryCard(title: "Food Safety", time: 5, category: "Safety")
+                                TestCategoryCard(title: "Food Safety", time: 5, category: "Safety", levelRequired: 1)
                             }
                         }
                         .padding(.horizontal, 16)
@@ -77,15 +77,15 @@ struct TestListView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 16) {
                             NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                TestCategoryCard(title: "French Terms", time: 5, category: "International")
+                                TestCategoryCard(title: "French Terms", time: 5, category: "International", levelRequired: 1)
                             }
                             
                             NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                TestCategoryCard(title: "Spanish Terms", time: 5, category: "International")
+                                TestCategoryCard(title: "Spanish Terms", time: 5, category: "International", levelRequired: 1)
                             }
                             
                             NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                                TestCategoryCard(title: "Japanese Terms", time: 5, category: "International")
+                                TestCategoryCard(title: "Japanese Terms", time: 5, category: "International", levelRequired: 1)
                             }
                         }
                         .padding(.horizontal, 16)
