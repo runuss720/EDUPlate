@@ -9,18 +9,30 @@ struct ChartData: Identifiable {
 
 class ChartViewModel: ObservableObject {
     @Published var chartData = [ChartData]()
+    @ObservedObject var userProgress: UserProgress // Use userProgress directly
+
+    init(userProgress: UserProgress) {
+        self.userProgress = userProgress
+    }
 
     func loadScores() {
-        let fileManagerHelper = FileManagerHelper()
-        let scores = fileManagerHelper.loadScoresFromFile()
+        let coreDataManager = CoreDataManager.shared
+        let concentrationProgress = coreDataManager.fetchConcentrationProgress(username: userProgress.username)
         
-        print("Loaded scores: \(scores)") // Debugging: Print loaded scores
+        print("Loaded concentration progress: \(concentrationProgress)") // Debugging: Print concentration progress
         
+        // If no concentration progress exists, leave chartData empty for a blank chart
+        if concentrationProgress.isEmpty {
+            chartData = []  // Ensure the chart is blank
+            print("No concentration progress found, chart is blank.")
+            return
+        }
+
         // Aggregate scores by concentration
         var concentrationScores = [String: Int]()
-        for score in scores {
-            let concentration = score.concentration
-            concentrationScores[concentration] = (concentrationScores[concentration] ?? 0) + score.score
+        for progress in concentrationProgress {
+            let concentration = progress.concentration ?? ""
+            concentrationScores[concentration] = (concentrationScores[concentration] ?? 0) + Int(progress.points)
         }
 
         // Convert the aggregated scores into ChartData
@@ -30,11 +42,12 @@ class ChartViewModel: ObservableObject {
         
         print("Chart data: \(chartData)") // Debugging: Print chart data
     }
+
 }
 
 struct StatsView: View {
     @ObservedObject var userProgress: UserProgress
-    @StateObject var vm = ChartViewModel()
+    @StateObject var vm: ChartViewModel
     @StateObject private var testManager = TestManager(userProgress: UserProgress())
     
     @State private var vocabOfTheDay: Question? = nil
@@ -48,59 +61,71 @@ struct StatsView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            // Title
+            // Title with fixed height
             HStack {
                 Text("Your Stats")
                     .font(.largeTitle)
                     .foregroundStyle(.indigo)
+                    .offset(x:0, y:-200)
                 Spacer() // Pushes text to the left
             }
-            .padding(.top, -90) // Adjusted spacing from top
+            .frame(height: 60) // Set a fixed height for the title section
+            .padding(.top, -30) // Adjusted spacing from top
             
-            // Pie Chart for concentration scores
-            Chart(vm.chartData) { item in
-                SectorMark(
-                    angle: .value("Score", item.score),
-                    innerRadius: .ratio(0.5), // Optional: for a donut chart effect
-                    angularInset: 1.5
-                )
-                .foregroundStyle(by: .value("Concentration", item.concentration))
-                .cornerRadius(5)
-                .annotation(position: .overlay) {
-                    Text("\(item.score)")
-                        .font(.headline)
-                        .foregroundStyle(.white)
+            // Check if chartData is empty
+            if vm.chartData.isEmpty {
+                // Show message if no data
+                Text("No data available")
+                    .font(.headline)
+                    .foregroundStyle(.gray)
+                    //.padding(.top, 20)
+                    .offset(x:0, y:-200)
+            } else {
+                // Pie Chart for concentration scores
+                Chart(vm.chartData) { item in
+                    SectorMark(
+                        angle: .value("Score", item.score),
+                        innerRadius: .ratio(0.5), // Optional: for a donut chart effect
+                        angularInset: 1.5
+                    )
+                    .foregroundStyle(by: .value("Concentration", item.concentration))
+                    .cornerRadius(5)
+                    .annotation(position: .overlay) {
+                        Text("\(item.score)")
+                            .font(.headline)
+                            .foregroundStyle(.white)
+                    }
                 }
+                .chartForegroundStyleScale(range: indigoShades) // Apply custom indigo shades
+                .frame(height: 300)
+                .padding(.top, 20)
             }
-            .chartForegroundStyleScale(range: indigoShades) // Apply custom indigo shades
-            .frame(height: 300)
-            .padding(.top, 20)
             
             // "Vocab of the Day" Section
-                       if let vocab = vocabOfTheDay {
-                           VStack(alignment: .leading) {
-                               Text("Vocab of the Day")
-                                   .font(.system(size: 20, weight: .bold))
-                                   .foregroundStyle(.white)
-                                   .padding(.top)
-                                   .padding(.leading)
-                               
-                               Text(vocab.question)
-                                   .font(.title2)
-                                   .foregroundStyle(.white)
-                                   .padding(.leading, 20)
-                               
-                               Text(vocab.answer)
-                                   .font(.title3)
-                                   .foregroundStyle(.white.opacity(0.8))
-                                   .padding(.leading, 20)
-                           }
-                           .frame(width: 330, height: 180)
-                           .background(Color(red: 0.6, green: 0.7, blue: 1.1))
-                           .cornerRadius(20)
-                           .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
-                           .padding(.top, 20)
-                           .padding(.leading, 20)
+            if let vocab = vocabOfTheDay {
+                VStack(alignment: .leading) {
+                    Text("Vocab")
+                        .font(.system(size: 20, weight: .bold))
+                        .foregroundStyle(.white)
+                        .padding(.top)
+                        .padding(.leading)
+                    
+                    Text(vocab.question)
+                        .font(.title2)
+                        .foregroundStyle(.white)
+                        .padding(.leading, 20)
+                    
+                    Text(vocab.answer)
+                        .font(.title3)
+                        .foregroundStyle(.white.opacity(0.8))
+                        .padding(.leading, 20)
+                }
+                .frame(width: 330, height: 180)
+                .background(Color(red: 0.6, green: 0.7, blue: 1.1))
+                .cornerRadius(20)
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+                .padding(.top, 20)
+                .padding(.leading, 20)
             }
         }
         .padding()
@@ -113,5 +138,5 @@ struct StatsView: View {
 }
 
 #Preview {
-    StatsView(userProgress: UserProgress())
+    StatsView(userProgress: UserProgress(), vm: ChartViewModel(userProgress: UserProgress()))
 }

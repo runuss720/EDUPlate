@@ -78,6 +78,7 @@ class TestManager: ObservableObject {
             isQuizCompleted = true
             userProgress.addPoints(score)  // Add score to userProgress
             updateUserPointsInCoreData() // Update points and level in Core Data
+            updateConcentrationProgress(concentration: concentration)
         }
     }
 
@@ -93,20 +94,27 @@ class TestManager: ObservableObject {
         return fileManager.loadScoresFromFile()
     }
 
-    // Update the user's points and level in Core Data directly
     func updateUserPointsInCoreData() {
         if let user = CoreDataManager.shared.fetchUser(username: userProgress.username) {
-            let newPoints = Int(user.points) + score // Add the quiz score to the current points
-            let newLevel = Int(user.level) + (newPoints / 100) // Example level-up logic: 100 points per level
+            let totalPoints = Int(user.points) + score // Add the quiz score to the current points
+            
+            // Recalculate level based on total points
+            let newLevel = totalPoints / 100 // Example level-up logic: 100 points per level
             
             // Update the user's points and level in Core Data
-            CoreDataManager.shared.updateUser(username: userProgress.username, points: newPoints, level: newLevel)
-            print("Updated user in Core Data: \(user.username ?? "Unknown") with points: \(newPoints) and level: \(newLevel)")
+            CoreDataManager.shared.updateUser(username: userProgress.username, points: totalPoints, level: newLevel)
+            print("Updated user in Core Data: \(user.username ?? "Unknown") with points: \(totalPoints) and level: \(newLevel)")
         } else {
             print("No user found in Core Data.")
         }
     }
     
+    func updateConcentrationProgress(concentration: String) {
+        // Directly use the score to update concentration progress
+        CoreDataManager.shared.updateConcentrationProgress(username: userProgress.username, concentration: concentration, earnedPoints: score)
+        print("Updated concentration \(concentration) with \(score) points.")
+    }
+
     // fetches random vocabulary words to be used in the stats page
     func fetchRandomQuestion() -> Question? {
         guard let url = Bundle.main.url(forResource: "f5", withExtension: "json") else {
@@ -131,4 +139,5 @@ class TestManager: ObservableObject {
             return nil
         }
     }
+    
 }

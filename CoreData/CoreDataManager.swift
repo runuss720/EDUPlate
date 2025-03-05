@@ -29,6 +29,14 @@ class CoreDataManager {
         saveContext()
     }
 
+    func updateUser(username: String, points: Int, level: Int) {
+        if let user = fetchUser(username: username) {
+            user.points = Int64(points)
+            user.level = Int64(level)
+            saveContext()
+        }
+    }
+
     // Fetch user data by username
     func fetchUser(username: String) -> UserProfile? {
         let fetchRequest: NSFetchRequest<UserProfile> = UserProfile.fetchRequest()
@@ -41,12 +49,38 @@ class CoreDataManager {
         }
     }
 
-    // Update user's points and level
-    func updateUser(username: String, points: Int, level: Int) {
-        if let user = fetchUser(username: username) {
-            user.points = Int64(points)
-            user.level = Int64(level)
+    // Save or update concentration progress
+    func updateConcentrationProgress(username: String, concentration: String, earnedPoints: Int) {
+        let fetchRequest: NSFetchRequest<ConcentrationProgress> = ConcentrationProgress.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "username == %@ AND concentration == %@", username, concentration)
+
+        do {
+            if let progress = try context.fetch(fetchRequest).first {
+                // Update existing concentration progress
+                progress.points += Int64(earnedPoints)
+            } else {
+                // Create a new concentration progress entry
+                let newProgress = ConcentrationProgress(context: context)
+                newProgress.username = username
+                newProgress.concentration = concentration
+                newProgress.points = Int64(earnedPoints)
+            }
             saveContext()
+        } catch {
+            print("Failed to fetch concentration progress:", error)
+        }
+    }
+
+    // Fetch concentration progress
+    func fetchConcentrationProgress(username: String) -> [ConcentrationProgress] {
+        let fetchRequest: NSFetchRequest<ConcentrationProgress> = ConcentrationProgress.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "username == %@", username)
+
+        do {
+            return try context.fetch(fetchRequest)
+        } catch {
+            print("Failed to fetch concentration progress:", error)
+            return []
         }
     }
 
@@ -59,3 +93,4 @@ class CoreDataManager {
         }
     }
 }
+

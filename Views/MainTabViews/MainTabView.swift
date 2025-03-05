@@ -12,11 +12,11 @@ struct MainTabView: View {
                     Label("Home", systemImage: "house.fill")
                 }
             
-            StatsView(userProgress: userProgress) 
+            StatsView(userProgress: userProgress, vm: ChartViewModel(userProgress: userProgress))
                 .tabItem {
                     Label("Stats", systemImage: "chart.bar.xaxis")
                 }
-            
+
             LessonView()
                 .tabItem {
                     Label("Lessons", systemImage: "book.fill")
