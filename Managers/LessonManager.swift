@@ -40,9 +40,36 @@ struct LessonManager: View {
                         NavigationLink(destination: StockView()) {
                             LessonCard(title: "Stocks")
                         }
+                        NavigationLink(destination: GrillingView()) {
+                            LessonCard(title: "Grilling")
+                        }
+                        NavigationLink(destination: FoodSafetyView()) {
+                            LessonCard(title: "Food Safety")
+                        }
+                        NavigationLink(destination: HygeneView()) {
+                            LessonCard(title: "Personal Hygene")
+                        }
                     }
                 }
             }
         }
+    }
+}
+
+struct LessonCard: View {
+    let title: String
+    var body: some View {
+    VStack {
+                Text(title)
+                .font(.system(.largeTitle, weight: .bold))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                      .foregroundColor(.white)
+                      .padding(.top, 10)
+                      .padding(.leading, 20)
+                  Spacer()
+              }
+              .frame(width: 350, height: 90)
+              .background(Color(red: 0.6, green: 0.7, blue: 1.1))
+              .cornerRadius(20)
     }
 }

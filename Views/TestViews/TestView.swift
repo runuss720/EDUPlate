@@ -11,10 +11,15 @@ struct TestView: View {
     @StateObject private var viewModel: TestManager
     @ObservedObject var userProgress: UserProgress // Pass UserProgress here
     var category: String
+    var concentration: String
 
-    init(category: String, userProgress: UserProgress) {
+    @State private var selectedAnswer: String? = nil
+    @State private var isCorrect: Bool? = nil
+    
+    init(category: String, userProgress: UserProgress, concentration: String) {
         self.category = category
         self.userProgress = userProgress
+        self.concentration = concentration
         _viewModel = StateObject(wrappedValue: TestManager(userProgress: userProgress))
     }
 
@@ -31,18 +36,18 @@ struct TestView: View {
                             .font(.title2)
                             .padding()
 
-                        Text("Points Awarded: \(viewModel.score)")
+                       /* Text("Points Awarded: \(viewModel.score)")
                             .font(.title3)
-                            .padding()
+                            .padding()*/
 
                         NavigationLink(destination: HomeView()) {
                             Text("Return to Home")
                                 .font(.title2)
                                 .frame(maxWidth: .infinity)
                                 .padding()
-                                .background(Color.pink.opacity(0.2))
+                                .background(Color.indigo.opacity(0.2))
                                 .cornerRadius(10)
-                                .foregroundColor(.pink)
+                                .foregroundColor(.indigo)
                         }
                     }
                     .padding()
@@ -64,7 +69,7 @@ struct TestView: View {
                         VStack {
                             ForEach(shuffledAnswers, id: \.self) { answer in
                                 Button(action: {
-                                    viewModel.answerQuestion(with: answer)
+                                    viewModel.answerQuestion(with: answer, concentration: concentration) // Pass concentration here
                                 }) {
                                     Text(answer)
                                         .font(.title2)
@@ -80,15 +85,18 @@ struct TestView: View {
                     }
                     .padding()
                 }
+            } else {
+                ProgressView("Loading Quiz...") // Show a loading indicator while questions are being loaded
+                    .font(.title2)
+                    .padding()
             }
         }
         .onAppear {
-            viewModel.loadQuiz(forCategory: category)
+            viewModel.loadQuiz(forCategory: category) // Load quiz questions when the view appears
         }
         .navigationBarBackButtonHidden(true)
     }
 }
-
 #Preview {
-    TestView(category: "Tools", userProgress: UserProgress())
+    TestView(category: "Tools", userProgress: UserProgress(), concentration: "Food Preparation")
 }
