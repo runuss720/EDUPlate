@@ -10,76 +10,140 @@ import SwiftUI
 struct StockView: View {
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
+            VStack(alignment: .leading, spacing: 16) {
+                
+                // Title
+                Text("Stock Making")
+                    .font(.system(size: 28, weight: .bold, design: .rounded))
+                    .foregroundColor(.black)
+                    .padding(.top)
+                    .frame(maxWidth: .infinity, alignment: .center) // Center title
+                
+                // Main Image
                 Image("stocks")
-                    .renderingMode(.original)
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(maxWidth: .infinity, maxHeight: 300)
-                    .clipped()
-                    .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
-                    .padding()
-                    .overlay {
-                        Text("Stock Making")
-                            .kerning(2.0)
-                            .font(.custom("Anton SC", size: 29))
-                            .foregroundStyle(.white)
-                            .shadow(color: Color.black, radius: 18, x: 0, y: 0)
-                    }
+                    .scaledToFit()
+                    .frame(height: 250) // Adjust height as needed
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .shadow(radius: 5)
+                    .padding(.horizontal, 20)
                 
-                VStack(alignment: .leading, spacing: 16) {
-                    SectionHeader(title: "What is a Stock?")
-                    
-                    Text("A stock is a flavorful liquid used in the preparation of soups, sauces, and stews. Ir is derived by gently simmering various ingredients in water, including meats, fish, vegetables, etc. Of course, store bought stocks are handy and usually do the trick, but if you really want to elevate your dish, keep reading!")
-                        .font(.system(size: 14, weight: .regular, design: .monospaced))
-                        .lineSpacing(4)
-                        .padding(.bottom, 16)
-                    
-                    SectionHeader(title: "The Basics")
-                    
-                    Text("Stocks are often confused with broth, which is a similar liquid derived from boiling meat, while stocks are made from simmering bones. Stocks are rich in both flavor and nutrients such as collagen. This lesson will focus on beef stock, but these techniques can be applied to other meats as well.")
-                        .font(.system(size: 14, weight: .regular, design: .monospaced))
-                        .lineSpacing(4)
-                        .padding(.bottom, 16)
-                    
-                    SectionHeader(title: "Basic Beef Stock Recipe")
-                    
-                    Image("beefbones")
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(maxWidth: .infinity, maxHeight: 300)
-                        .clipped()
-                        .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
-                        .padding(.bottom, 16)
-                    
-                    Text("Start with beef bones. I usually use beef shank and neck, which your local butcher usually supplies. Wash them in cold water to get any excess dirt and grime off. Add them to a pan along with your mirepoix (a mixture of chopped celery, carrot, and onions) then roast them at 400 degrees farenheit until golden brown (this usually takes around 30-60 minutes depending on your oven) You're looking for a deep golden brown color, like this:")
-                        .font(.system(size: 14, weight: .regular, design: .monospaced))
-                        .lineSpacing(4)
-                        .padding(.bottom, 16)
-                    
-                    Image("roastedbeefbones")
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(maxWidth: .infinity, maxHeight: 300)
-                        .clipped()
-                        .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
-                        .padding(.bottom, 16)
-                    
-                    Text("Once the vegetables and meat are done roasting, add them to a large pot and fill with clean water until everything is submerged. Feel free at this point to add other seasonings, such as thyme. Bring to a gentle simmer and let it cook at least 6 hours, but up to 8 if you have time. Make sure your liquid never boils. By this point you should have a beautiful stock, congrats! Drain the liquid into a large container and let it sit overnight. Once it's cooled completely, a layer of fat will appear on top. Scrape it off and you should be left with a a substance that jiggles when you touch it. Feel free to freeze your stock for later use, or use immedietly. ")
-                        .font(.system(size: 14, weight: .regular, design: .monospaced))
-                        .lineSpacing(4)
-                        .padding(.bottom, 16)
+                // Section: What is a Stock?
+                Text("What is a Stock?")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                
+                Text("A **stock** is a flavorful liquid used in **soups, sauces, and stews**. It is made by gently simmering various ingredients in water, such as meats, fish, and vegetables. **Store-bought stocks** are convenient, but if you want to truly **elevate your dish**, making your own stock is the way to go!")
+                    .font(.body)
+                    .foregroundColor(.gray)
+                    .lineSpacing(4)
+                    .padding(.bottom, 16)
+                
+                Divider()
+                
+                // Section: The Basics
+                Text("The Basics")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("• **Stock vs. Broth:** Stocks come from simmering bones, while broths are made by boiling meat.")
+                    Text("• **Stocks are rich in nutrients**, like **collagen**, which gives them a gelatinous texture when cooled.")
+                    Text("• **Slow simmering** (not boiling) extracts maximum flavor and nutrition.")
+                    Text("• This guide focuses on **beef stock**, but the same techniques apply to other meats.")
                 }
+                .font(.body)
+                .foregroundColor(.gray)
+                .padding(.bottom, 16)
                 
-                Spacer().frame(height: 20)
+                Divider()
+                
+                // Section: Basic Beef Stock Recipe
+                Text("Basic Beef Stock Recipe")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                
+                // Beef Bones Image
+                Image("beefbones")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 250)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .shadow(radius: 5)
+                    .padding(.bottom, 16)
+                
+                Text("Start with **beef bones**. I recommend using **beef shank and neck**, which you can usually find at a butcher shop. **Wash them in cold water** to remove excess dirt and grime. Then, place them in a roasting pan along with **mirepoix** (a mixture of chopped celery, carrots, and onions).")
+                    .font(.body)
+                    .foregroundColor(.gray)
+                    .lineSpacing(4)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("• **Preheat oven to 400°F.**")
+                    Text("• **Roast until golden brown** (usually **30–60 minutes**).")
+                    Text("• You're looking for a **deep golden brown** color like this:")
+                }
+                .font(.body)
+                .foregroundColor(.gray)
+                .padding(.bottom, 16)
+                
+                // Roasted Beef Bones Image
+                Image("roastedbeefbones")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 250)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .shadow(radius: 5)
+                    .padding(.bottom, 16)
+                
+                Text("Once the vegetables and bones are roasted, transfer them to a **large pot** and cover with **clean water** until fully submerged. Add **seasonings** like thyme if desired. Bring to a **gentle simmer** and let cook for **at least 6 hours** (up to 8 for best results). **Never let it boil.**")
+                    .font(.body)
+                    .foregroundColor(.gray)
+                    .lineSpacing(4)
+                    .padding(.bottom, 16)
+                
+                Divider()
+                
+                // Section: Final Steps
+                Text("Final Steps")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("• **Strain the stock** into a large container.")
+                    Text("• Let it **cool overnight** in the fridge.")
+                    Text("• A **layer of fat** will form on top—**scrape it off** before using.")
+                    Text("• The stock should have a **gelatinous texture**—this means it's rich in collagen!")
+                    Text("• **Freeze for later use** or enjoy immediately.")
+                }
+                .font(.body)
+                .foregroundColor(.gray)
+                .padding(.bottom, 20)
+                
+                Divider()
+                
+                // Stock Tip
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("🍲 **Stock Tip**")
+                        .font(.headline)
+                        .foregroundColor(.black)
+                    
+                    Text("For extra depth of flavor, **roast your bones and vegetables longer** until they develop a deep, rich color.")
+                        .font(.body)
+                        .foregroundColor(.gray)
+                }
+                .padding(.bottom, 20)
+                
             }
-            .padding(.horizontal)
+            .padding(.horizontal, 20)
         }
     }
 }
 
+// Preview
 #Preview {
     StockView()
 }

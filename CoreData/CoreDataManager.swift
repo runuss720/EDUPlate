@@ -19,16 +19,18 @@ class CoreDataManager {
         return persistentContainer.viewContext
     }
 
-    // Save new user data
-    func saveUser(username: String, points: Int, level: Int) {
+    // Save new user data with password
+    func saveUser(username: String, password: String, points: Int, level: Int) {
         let user = UserProfile(context: context)
         user.username = username
+        user.password = password  // Save the password
         user.points = Int64(points)
         user.level = Int64(level)
 
         saveContext()
     }
 
+    // Update existing user data
     func updateUser(username: String, points: Int, level: Int) {
         if let user = fetchUser(username: username) {
             user.points = Int64(points)
@@ -37,16 +39,24 @@ class CoreDataManager {
         }
     }
 
-    // Fetch user data by username
-    func fetchUser(username: String) -> UserProfile? {
+    // Fetch user data by username and check password
+    func fetchUser(username: String, password: String? = nil) -> UserProfile? {
         let fetchRequest: NSFetchRequest<UserProfile> = UserProfile.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "username == %@", username) // Filter by username
+        fetchRequest.predicate = NSPredicate(format: "username == %@", username)
+        
         do {
-            return try context.fetch(fetchRequest).first
+            let users = try context.fetch(fetchRequest)
+            for user in users {
+                if let password = password, user.password == password {  // Check password if provided
+                    return user
+                } else if password == nil {  // Return user if no password check is needed
+                    return user
+                }
+            }
         } catch {
             print("Failed to fetch user:", error)
-            return nil
         }
+        return nil  // Return nil if no match is found
     }
 
     // Save or update concentration progress
@@ -93,4 +103,3 @@ class CoreDataManager {
         }
     }
 }
-

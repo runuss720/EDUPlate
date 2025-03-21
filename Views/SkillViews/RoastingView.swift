@@ -10,56 +10,96 @@ import SwiftUI
 struct RoastingView: View {
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
+            VStack(alignment: .leading, spacing: 16) {
+                
+                // Title
+                Text("Vegetable Roasting")
+                    .font(.system(size: 28, weight: .bold, design: .rounded))
+                    .foregroundColor(.black)
+                    .padding(.top)
+                    .frame(maxWidth: .infinity, alignment: .center) // Center title
+                
+                // Image
                 Image("christina-rumpf-gUU4MF87Ipw-unsplash")
-                    .renderingMode(.original)
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(maxWidth: .infinity, maxHeight: 300)
-                    .clipped()
-                    .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
-                    .padding()
-                    .overlay {
-                        Text("Vegetable Roasting")
-                            .kerning(2.0)
-                            .font(.custom("Anton SC", size: 29))
-                            .foregroundStyle(.white)
-                            .shadow(color: Color.black, radius: 18, x: 0, y: 0)
-                    }
+                    .scaledToFit()
+                    .frame(height: 250) // Adjust height as needed
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .shadow(radius: 5)
+                    .padding(.horizontal, 20)
                 
-                VStack(alignment: .leading, spacing: 16) {
-                    SectionHeader(title: "Background")
-                    
-                    Text("Roasting Vegetables is surprisingly easy and very good for you. The health benefits of adding a few vegetables to your meals are well-known and worth it.")
-                        .font(.system(size: 14, weight: .regular, design: .monospaced))
-                        .lineSpacing(4)
-                        .padding(.bottom, 16)
-                    
-                    SectionHeader(title: "The Basics")
-                    
-                    Text("Vegetables can be very forgiving, so it doesn't really matter what kind you choose. Just go with your favorite. For me, I like to go with a mix of broccoli and zucchini. Just make sure to coat your veggies evenly in a mixture of salt, olive oil, pepper, and whatever seasoning you feel like. Then roast in the oven for about 20 minutes at 350 degrees Fahrenheit.")
-                        .font(.system(size: 14, weight: .regular, design: .monospaced))
-                        .lineSpacing(4)
-                        .padding(.bottom, 16)
+                // Section: Background
+                Text("Background")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                
+                Text("Roasting vegetables is **surprisingly easy** and packed with **health benefits**. Adding a few roasted vegetables to your meals is a great way to boost nutrition while enhancing flavor.")
+                    .font(.body)
+                    .foregroundColor(.gray)
+                    .lineSpacing(4)
+                    .padding(.bottom, 16)
+                
+                Divider()
+                
+                // Section: The Basics
+                Text("The Basics")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("• **Choose any vegetables you like**—broccoli, zucchini, carrots, or bell peppers all work well.")
+                    Text("• **Coat vegetables evenly** with a mixture of:")
+                    Text("   - **Olive oil**")
+                    Text("   - **Salt and pepper**")
+                    Text("   - **Any additional seasoning** you prefer")
+                    Text("• **Preheat the oven** to **350°F**.")
+                    Text("• **Roast for about 20 minutes** or until vegetables are tender and slightly crispy.")
                 }
+                .font(.body)
+                .foregroundColor(.gray)
+                .padding(.bottom, 16)
                 
-                VStack(alignment: .leading, spacing: 16) {
-                    SectionHeader(title: "Keep in Mind")
-                    
-                    Text("It's important to make sure your veggies don't overcook, or else they will become dry and tasteless. Also, make sure to use a good quality olive oil, and salt and pepper to taste. If you want to add an extra bit of flavor, try adding some parmesan cheese at the end!")
-                        .font(.system(size: 14, weight: .regular, design: .monospaced))
-                        .lineSpacing(4)
-                        .padding(.bottom, 16)
+                Divider()
+                
+                // Section: Keep in Mind
+                Text("Keep in Mind")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("• **Don’t overcook your veggies**—they should be tender, not dry.")
+                    Text("• **Use high-quality olive oil** for the best flavor.")
+                    Text("• **Taste and adjust seasoning** with salt and pepper.")
+                    Text("• **For extra flavor**, sprinkle **parmesan cheese** on top before serving!")
                 }
+                .font(.body)
+                .foregroundColor(.gray)
+                .padding(.bottom, 20)
                 
-                Spacer().frame(height: 20)
+                Divider()
+                
+                // Roasting Tip
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("🔥 **Roasting Tip**")
+                        .font(.headline)
+                        .foregroundColor(.black)
+                    
+                    Text("For even cooking, **spread vegetables out** in a **single layer** on the baking sheet—avoid overcrowding!")
+                        .font(.body)
+                        .foregroundColor(.gray)
+                }
+                .padding(.bottom, 20)
+                
             }
-            .padding(.horizontal)
+            .padding(.horizontal, 20)
         }
     }
 }
 
+// Preview
 #Preview {
     RoastingView()
 }
-

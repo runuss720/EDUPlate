@@ -27,10 +27,10 @@ struct MainTabView: View {
                     Label("Tests", systemImage: "pencil")
                 }
             
-            /*ProfileView()
+            RecipeTabView()
                 .tabItem {
-                    Label("Profile", systemImage: "person.fill")
-                }*/
+                    Label("Recipes", systemImage: "fork.knife")
+                }
         }
         .accentColor(.indigo)
         .background(

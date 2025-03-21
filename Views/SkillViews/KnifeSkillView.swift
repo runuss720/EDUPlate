@@ -2,94 +2,112 @@
 //  KnifeSkillView.swift
 //  EDUPlate
 //
-//  Created by Ruby Nuss on 11/18/24.
+//  Created by Ruby Nuss on 3/20/25.
 //
+
+
 import SwiftUI
 
 struct KnifeSkillView: View {
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
-                Image("becca-tapert-hneG0Illco4-unsplash")
-                    .renderingMode(.original)
+            VStack(alignment: .leading, spacing: 16) {
+                
+                // Title
+                Text("Basic Knife Skills")
+                    .font(.system(size: 28, weight: .bold, design: .rounded))
+                    .foregroundColor(.black)
+                    .padding(.top)
+                    .frame(maxWidth: .infinity, alignment: .center) // Center title
+                
+                // Image
+                Image("29COOKINGKNIFESKILLS25-videoLarge")
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(maxWidth: .infinity, maxHeight: 300)
-                    .clipped()
-                    .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
-                    .padding()
-                    .overlay {
-                        Text("Basic Knife Skills")
-                            .kerning(2.0)
-                            .font(.custom("Anton SC", size: 29))
-                            .foregroundStyle(.white)
-                            .shadow(color: Color.black, radius: 18, x: 0, y: 0)
-                    }
+                    .scaledToFit()
+                    .frame(height: 250) // Adjust height as needed
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .shadow(radius: 5)
+                    .padding(.horizontal, 20)
                 
-                VStack(alignment: .leading, spacing: 12) {
-                    SectionHeader(title: "Background")
-                    
-                    Text("Knives may seem intimidating at first, but they are actually quite simple to use. It's important to master the basic principles to make sure you don't hurt yourself while cooking. Here are some basic knife skills to get you started")
-                        .font(.system(size: 14, weight: .regular, design: .monospaced))
-                        .lineSpacing(4)
-                        .padding(.bottom, 16)
-                    
-                    SectionHeader(title: "The Basics")
-                    
-                    Text("For the knife grip used by most chefs, the palm of the hand chokes up on the handle, while the thumb and index finger grip the top of the blade. This is different from how many home cooks hold a knife, by wrapping the entire hand around the handle. The chef’s grip has evolved that way for a reason: it’s the most efficient way to use the weight of the knife, the sharpness of its blade, and the strength of your arms, which makes for the easiest cutting.")
-                        .font(.system(size: 14, weight: .regular, design: .monospaced))
-                        .lineSpacing(4)
-                        .padding(.bottom, 16)
-                    
-                    Image("29COOKINGKNIFESKILLS25-videoLarge")
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(maxWidth: .infinity, maxHeight: 300)
-                        .clipped()
-                        .mask { RoundedRectangle(cornerRadius: 34, style: .continuous) }
-                        .padding(.bottom, 16)
+                // Section: Background
+                Text("Background")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                
+                Text("Knives may seem intimidating at first, but they are actually quite simple to use. It's important to master the basic principles to ensure safety while cooking. Here are some **basic knife skills** to get you started:")
+                    .font(.body)
+                    .foregroundColor(.gray)
+                    .lineSpacing(4)
+                    .padding(.bottom, 16)
+                
+                Divider()
+                
+                // Section: The Basics
+                Text("The Basics")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("• **Grip:** Most chefs grip the knife by choking up on the handle while the thumb and index finger grip the top of the blade.")
+                    Text("• **Avoid the common mistake** of wrapping the entire hand around the handle.")
+                    Text("• **Use the weight of the knife, sharpness of the blade, and strength of your arms** to make cutting easier.")
+                    Text("• The **chef’s grip** is the most efficient way to handle a knife for precise cutting.")
                 }
+                .font(.body)
+                .foregroundColor(.gray)
+                .padding(.bottom, 16)
                 
-                VStack(alignment: .leading, spacing: 12) {
-                    SectionHeader(title: "Keep in Mind")
+                Divider()
+                
+                // Section: Keep in Mind
+                Text("Keep in Mind")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                
+                Text("Nobody starts out perfect. If the knife seems awkward at first, that’s okay! Just **keep practicing**, and soon you'll be comfortable and confident in your knife skills.")
+                    .font(.body)
+                    .foregroundColor(.gray)
+                    .lineSpacing(4)
+                    .padding(.bottom, 16)
+                
+                Divider()
+                
+                // Section: Try it For Yourself
+                Text("Try it For Yourself")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                
+                Text("Practice your technique! **Grab a piece of fruit** or something similarly soft and try to slice it into uniform pieces. Don’t worry if it’s not perfect at first—just go slow, focus on control, and remember what you’ve learned.")
+                    .font(.body)
+                    .foregroundColor(.gray)
+                    .lineSpacing(4)
+                    .padding(.bottom, 20)
+                
+                Divider()
+                
+                // Knife Skill Tip
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("🔪 **Knife Skill Tip**")
+                        .font(.headline)
+                        .foregroundColor(.black)
                     
-                    Text("Nobody starts out perfect. If the knife seems a bit awkward at first that's ok! Just keep practicing and soon you'll be a master of the knife.")
-                        .font(.system(size: 14, weight: .regular, design: .monospaced))
-                        .lineSpacing(4)
-                        .padding(.bottom, 16)
+                    Text("A **sharp knife** is safer than a dull one! A dull blade requires more force and increases the risk of slipping.")
+                        .font(.body)
+                        .foregroundColor(.gray)
                 }
+                .padding(.bottom, 20)
                 
-                VStack(alignment: .leading, spacing: 12) {
-                    SectionHeader(title: "Try it For Yourself")
-                    
-                    Text("Try using the techniques you learned in real life. Get a piece of fruit (or something similarly soft) and try to slice it into uniform pieces. Don't worry if you don't get it right on your first try, remember practice makes perfect. Just go slow and try to remember everything you've learned")
-                        .font(.system(size: 14, weight: .regular, design: .monospaced))
-                        .lineSpacing(4)
-                        .padding(.bottom, 16)
-                }
-                
-                Spacer().frame(height: 20)
             }
-            .padding(.horizontal)
+            .padding(.horizontal, 20)
         }
     }
 }
 
-struct SectionHeader: View {
-    var title: String
-    
-    var body: some View {
-        HStack {
-            Text(title)
-                .kerning(1.0)
-                .font(.custom("Anton SC", size: 29))
-            Spacer()
-        }
-        .padding(.bottom, 8)
-    }
-}
-
+// Preview
 #Preview {
     KnifeSkillView()
 }
