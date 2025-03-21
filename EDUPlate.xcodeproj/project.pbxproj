@@ -13,6 +13,7 @@
 		770CD4092D46B93B007F4E14 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770CD4082D46B93B007F4E14 /* LevelView.swift */; };
 		770CD40B2D46EFCA007F4E14 /* UserProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770CD40A2D46EFCA007F4E14 /* UserProgress.swift */; };
 		773D8C3D2D4EEDC50012E686 /* LessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D8C3C2D4EEDC50012E686 /* LessonManager.swift */; };
+		77B079E02D8B4DF6008E730C /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B079DF2D8B4DF6008E730C /* RecipeManager.swift */; };
 		77B4634A2CEB14EA007E631C /* TestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B463492CEB14EA007E631C /* TestListView.swift */; };
 		77B463502CEBCFD6007E631C /* TestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B4634F2CEBCFD6007E631C /* TestManager.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		77A6BEFC2CEA7DE1008EE5A1 /* EDUPlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EDUPlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A6BF0C2CEA7DE2008EE5A1 /* EDUPlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EDUPlateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A6BF162CEA7DE2008EE5A1 /* EDUPlateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EDUPlateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77B079DF2D8B4DF6008E730C /* RecipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManager.swift; sourceTree = "<group>"; };
 		77B463492CEB14EA007E631C /* TestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListView.swift; sourceTree = "<group>"; };
 		77B4634F2CEBCFD6007E631C /* TestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,11 @@
 		77B079B22D628827008E730C /* CoreData */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		77B079E12D8B4EC1008E730C /* RecipeViews */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RecipeViews;
 			sourceTree = "<group>";
 		};
 		77B4633D2CEB11B9007E631C /* SkillViews */ = {
@@ -137,6 +144,7 @@
 				770405062D02579600E50641 /* FileManagerHelper.swift */,
 				773D8C3C2D4EEDC50012E686 /* LessonManager.swift */,
 				770CD40A2D46EFCA007F4E14 /* UserProgress.swift */,
+				77B079DF2D8B4DF6008E730C /* RecipeManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -144,6 +152,7 @@
 		77A6BF2B2CEA7E55008EE5A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				77B079E12D8B4EC1008E730C /* RecipeViews */,
 				77B463462CEB14B0007E631C /* TestViews */,
 				77B4633D2CEB11B9007E631C /* SkillViews */,
 				773D8C3E2D510A890012E686 /* MainTabViews */,
@@ -180,6 +189,7 @@
 				773D8C3E2D510A890012E686 /* MainTabViews */,
 				77A6BEFE2CEA7DE1008EE5A1 /* EDUPlate */,
 				77B079B22D628827008E730C /* CoreData */,
+				77B079E12D8B4EC1008E730C /* RecipeViews */,
 				77B4633D2CEB11B9007E631C /* SkillViews */,
 			);
 			name = EDUPlate;
@@ -314,6 +324,7 @@
 				773D8C3D2D4EEDC50012E686 /* LessonManager.swift in Sources */,
 				770405072D02579600E50641 /* FileManagerHelper.swift in Sources */,
 				770CD4092D46B93B007F4E14 /* LevelView.swift in Sources */,
+				77B079E02D8B4DF6008E730C /* RecipeManager.swift in Sources */,
 				77B463502CEBCFD6007E631C /* TestManager.swift in Sources */,
 				770CD40B2D46EFCA007F4E14 /* UserProgress.swift in Sources */,
 			);
