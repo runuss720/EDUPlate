@@ -23,7 +23,11 @@ struct LessonView: View {
             .padding(.horizontal)
         }
     }
+       
 }
+
+
+
 
 #Preview {
     LessonView()

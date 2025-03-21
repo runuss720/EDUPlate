@@ -98,7 +98,7 @@ struct HomeView: View {
                         
                         Spacer()
                         
-                        NavigationLink(destination: LessonView()) {
+                        /*NavigationLink(destination: LessonView()) {
                             HStack {
                                 Text("See all")
                                     .font(.system(size: 25, weight: .bold, design: .rounded))
@@ -112,7 +112,7 @@ struct HomeView: View {
                                     .padding(.top, 5)
                             }
                             .padding(.trailing)
-                        }
+                        }*/
                     }
                     
                     LessonManager(length: 1)
@@ -123,9 +123,9 @@ struct HomeView: View {
                 userProgress.fetchUserData()
             }
         }
-        .navigationBarBackButtonHidden(true)
     }
 }
+
 
 struct TestCategoryCard: View {
     let title: String

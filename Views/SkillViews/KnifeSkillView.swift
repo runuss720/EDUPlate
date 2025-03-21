@@ -21,7 +21,7 @@ struct KnifeSkillView: View {
                     .frame(maxWidth: .infinity, alignment: .center) // Center title
                 
                 // Image
-                Image("becca-tapert-hneG0Illco4-unsplash")
+                Image("29COOKINGKNIFESKILLS25-videoLarge")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 250) // Adjust height as needed
@@ -58,15 +58,6 @@ struct KnifeSkillView: View {
                 .font(.body)
                 .foregroundColor(.gray)
                 .padding(.bottom, 16)
-                
-                // Additional Image
-                Image("29COOKINGKNIFESKILLS25-videoLarge")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 250)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .shadow(radius: 5)
-                    .padding(.bottom, 16)
                 
                 Divider()
                 
