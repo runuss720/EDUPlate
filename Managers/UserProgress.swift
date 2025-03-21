@@ -30,6 +30,7 @@ class UserProgress: ObservableObject {
     @Published var currentLevel: Int = 1
     @Published var currentPoints: Int = 0
     @Published var username: String = "" // Store the username
+    @Published var password: String = "" // Store the password
     let pointsToLevelUp = 300
 
     private let coreDataManager = CoreDataManager.shared
@@ -38,7 +39,7 @@ class UserProgress: ObservableObject {
         loadUserProgress()
     }
 
-    // Fetch user data based on the current username
+    // Fetch user data based on the current username and password
     func fetchUserData() {
         // Guard to prevent unnecessary fetching
         guard !username.isEmpty else {
@@ -46,8 +47,8 @@ class UserProgress: ObservableObject {
             return
         }
 
-        // Fetch user data from Core Data
-        if let user = coreDataManager.fetchUser(username: username) {
+        // Fetch user data from Core Data and validate password
+        if let user = coreDataManager.fetchUser(username: username, password: password) {
             // Update properties only if they have changed
             if self.currentPoints != Int(user.points) || self.currentLevel != Int(user.level) {
                 self.currentPoints = Int(user.points)
@@ -55,9 +56,9 @@ class UserProgress: ObservableObject {
                 print("Fetched user data for \(username): Points = \(currentPoints), Level = \(currentLevel)")
             }
         } else {
-            // If no user exists, create a new one
+            // If no user exists or password is incorrect, create a new one
             resetUserProgress()
-            coreDataManager.saveUser(username: username, points: currentPoints, level: currentLevel)
+            coreDataManager.saveUser(username: username, password: password, points: currentPoints, level: currentLevel)
             print("Created new user profile for \(username)")
         }
     }
@@ -69,16 +70,17 @@ class UserProgress: ObservableObject {
     }
 
     // Update user data when a new username is entered
-    func updateUserData(username: String) {
+    func updateUserData(username: String, password: String) {
         self.username = username
+        self.password = password
         resetUserProgress() // Reset stats for the new user
-        coreDataManager.saveUser(username: username, points: currentPoints, level: currentLevel) // Save new user profile
+        coreDataManager.saveUser(username: username, password: password, points: currentPoints, level: currentLevel) // Save new user profile
         print("Updated user data for \(username)")
     }
 
     // Load user progress from Core Data
     func loadUserProgress() {
-        if let user = coreDataManager.fetchUser(username: username) {
+        if let user = coreDataManager.fetchUser(username: username, password: password) {
             self.currentPoints = Int(user.points)
             self.currentLevel = Int(user.level)
             print("Loaded user progress for \(username): Points = \(currentPoints), Level = \(currentLevel)")
