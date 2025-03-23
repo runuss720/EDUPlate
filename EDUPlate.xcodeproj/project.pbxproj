@@ -10,7 +10,6 @@
 		770405012D01014900E50641 /* f5.json in Resources */ = {isa = PBXBuildFile; fileRef = 770405002D01014900E50641 /* f5.json */; };
 		770405032D01149100E50641 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770405022D01149100E50641 /* TestView.swift */; };
 		770405072D02579600E50641 /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770405062D02579600E50641 /* FileManagerHelper.swift */; };
-		770CD4092D46B93B007F4E14 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770CD4082D46B93B007F4E14 /* LevelView.swift */; };
 		770CD40B2D46EFCA007F4E14 /* UserProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770CD40A2D46EFCA007F4E14 /* UserProgress.swift */; };
 		773D8C3D2D4EEDC50012E686 /* LessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D8C3C2D4EEDC50012E686 /* LessonManager.swift */; };
 		77B079E02D8B4DF6008E730C /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B079DF2D8B4DF6008E730C /* RecipeManager.swift */; };
@@ -39,7 +38,6 @@
 		770405002D01014900E50641 /* f5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = f5.json; sourceTree = "<group>"; };
 		770405022D01149100E50641 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		770405062D02579600E50641 /* FileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHelper.swift; sourceTree = "<group>"; };
-		770CD4082D46B93B007F4E14 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 		770CD40A2D46EFCA007F4E14 /* UserProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgress.swift; sourceTree = "<group>"; };
 		773D8C3C2D4EEDC50012E686 /* LessonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonManager.swift; sourceTree = "<group>"; };
 		77A6BEFC2CEA7DE1008EE5A1 /* EDUPlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EDUPlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,7 +138,7 @@
 		77A6BF292CEA7E1F008EE5A1 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				770CD4082D46B93B007F4E14 /* LevelView.swift */,
+				77B4634F2CEBCFD6007E631C /* TestManager.swift */,
 				770405062D02579600E50641 /* FileManagerHelper.swift */,
 				773D8C3C2D4EEDC50012E686 /* LessonManager.swift */,
 				770CD40A2D46EFCA007F4E14 /* UserProgress.swift */,
@@ -164,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				77B463492CEB14EA007E631C /* TestListView.swift */,
-				77B4634F2CEBCFD6007E631C /* TestManager.swift */,
 				770405022D01149100E50641 /* TestView.swift */,
 			);
 			path = TestViews;
@@ -323,7 +320,6 @@
 				77B4634A2CEB14EA007E631C /* TestListView.swift in Sources */,
 				773D8C3D2D4EEDC50012E686 /* LessonManager.swift in Sources */,
 				770405072D02579600E50641 /* FileManagerHelper.swift in Sources */,
-				770CD4092D46B93B007F4E14 /* LevelView.swift in Sources */,
 				77B079E02D8B4DF6008E730C /* RecipeManager.swift in Sources */,
 				77B463502CEBCFD6007E631C /* TestManager.swift in Sources */,
 				770CD40B2D46EFCA007F4E14 /* UserProgress.swift in Sources */,
@@ -487,7 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EDUPlate/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L8DXSF3YL4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -516,7 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EDUPlate/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L8DXSF3YL4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -99,24 +99,25 @@ struct HomeView: View {
                         Spacer()
                         
                         /*NavigationLink(destination: LessonView()) {
-                            HStack {
-                                Text("See all")
-                                    .font(.system(size: 25, weight: .bold, design: .rounded))
-                                    .padding(.top, 10)
-                                    .foregroundStyle(.black)
-                                    .padding(.leading, 40)
-                                
-                                Image(systemName: "arrow.right")
-                                    .foregroundColor(.blue)
-                                    .font(.system(size: 25))
-                                    .padding(.top, 5)
-                            }
-                            .padding(.trailing)
-                        }*/
+                         HStack {
+                         Text("See all")
+                         .font(.system(size: 25, weight: .bold, design: .rounded))
+                         .padding(.top, 10)
+                         .foregroundStyle(.black)
+                         .padding(.leading, 40)
+                         
+                         Image(systemName: "arrow.right")
+                         .foregroundColor(.blue)
+                         .font(.system(size: 25))
+                         .padding(.top, 5)
+                         }
+                         .padding(.trailing)
+                         }*/
                     }
                     
                     LessonManager(length: 1)
                 }
+                // .background(Color.white)
             }
             .padding(.horizontal)
             .onAppear {
@@ -125,7 +126,6 @@ struct HomeView: View {
         }
     }
 }
-
 
 struct TestCategoryCard: View {
     let title: String

@@ -1,34 +1,28 @@
-//
-//  RecipeManager.swift
-//  EDUPlate
-//
-//  Created by Ruby Nuss on 3/19/25.
-//
-
 import SwiftUI
 
+// used to display all available recipes as buttons the user can click on
 struct RecipeManager: View {
-    /*  @StateObject private var userProgress = UserProgress()
-     @State private var userLevel: Int = 1
-     let length: Int
-     
-     init(length: Int) {
-     self.length = length
-     }
-     */
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             VStack {
                 
                 // display full list of Recipes
-                
                 NavigationLink(destination: SalmonRecipe()) {
                     RecipeCard(title: "Salmon")
+                }
+                
+                NavigationLink(destination: MangoSalsaRecipe()) {
+                    RecipeCard(title: "Mango Salsa")
+                }
+                
+                NavigationLink(destination: ScallopsRecipe()) {
+                    RecipeCard(title: "Seared Scallops")
                 }
             }
         }
     }
     
+    // Displays an individual recipe
     struct RecipeCard: View {
         let title: String
         var body: some View {

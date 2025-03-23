@@ -1,12 +1,10 @@
 import SwiftUI
 
 struct MainTabView: View {
-    //@ObservedObject var userProgress: UserProgress
     @EnvironmentObject var userProgress: UserProgress
     
     var body: some View {
         TabView {
-            
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
@@ -16,7 +14,7 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Stats", systemImage: "chart.bar.xaxis")
                 }
-
+            
             LessonView()
                 .tabItem {
                     Label("Lessons", systemImage: "book.fill")

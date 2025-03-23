@@ -1,9 +1,3 @@
-//
-//  SalmonRecipe.swift
-//  EDUPlate
-//
-//  Created by Ruby Nuss on 3/19/25.
-//
 import SwiftUI
 
 struct SalmonRecipe: View {
@@ -11,22 +5,19 @@ struct SalmonRecipe: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 
-                // Recipe Title
                 Text("Marinated Salmon")
                     .font(.system(size: 28, weight: .bold, design: .rounded))
                     .foregroundColor(.black)
                     .padding(.top)
                 
-                // Salmon Image
-                                Image("salmon_dish")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 250) // Adjust height as needed
-                                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                                    .shadow(radius: 5)
-                                    .padding(.horizontal, 50)
+                Image("salmondishfinished")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 250) // Adjust height as needed
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .shadow(radius: 5)
+                    .padding(.horizontal, 90)
                 
-                // Ingredients Section
                 Text("Ingredients")
                     .font(.title2)
                     .fontWeight(.semibold)
@@ -65,7 +56,6 @@ struct SalmonRecipe: View {
                 
                 Divider()
                 
-                // Instructions Section
                 Text("Instructions")
                     .font(.title2)
                     .fontWeight(.semibold)
@@ -74,21 +64,29 @@ struct SalmonRecipe: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("1. **Prepare the marinade**: In a bowl, mix all marinade ingredients well.")
                     Text("2. **Marinate the salmon**: Add the salmon to the bowl and refrigerate for at least **1 hour** (the longer, the better).")
+                    
+                    Image("salmonmarinade")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 250) // Adjust height as needed
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .shadow(radius: 5)
+                        .padding(.horizontal, 90)
+                    
                     Text("3. **Preheat the pan**: Heat **2 tbsp cooking oil** in a pan until it reaches **350°F** (oil should bubble when water touches it).")
                     Text("4. **Cook the salmon**: Place the salmon in the pan and cook on **high heat** until golden brown, about **2 minutes per side**.")
                     Text("   - Ensure the internal temperature reaches **145°F**.")
                     Text("   - If the fish is browning too fast, lower the heat.")
                     
-                    // Salmon Image
-                                    Image("salmon_dish")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(height: 250) // Adjust height as needed
-                                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                                        .shadow(radius: 5)
-                                        .padding(.horizontal, 50)
+                    Image("salmongrilled")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 250) // Adjust height as needed
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .shadow(radius: 5)
+                        .padding(.horizontal, 90)
                     
-              
+                    
                     Text("5. **Prepare the sauce**: Remove the cooked salmon and set it aside. Pour the marinade into the same pan and stir over **low heat**.")
                     Text("   - Cook for **5-10 minutes** until the brown sugar caramelizes and thickens into a syrupy sauce.")
                     Text("6. **Coat the salmon**: Return the salmon to the pan and coat all sides with the sauce.")
@@ -100,7 +98,6 @@ struct SalmonRecipe: View {
                 
                 Divider()
                 
-                // Cooking Tip
                 VStack(alignment: .leading, spacing: 8) {
                     Text("🔹 **Cooking Tip**")
                         .font(.headline)

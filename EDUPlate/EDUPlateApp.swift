@@ -17,9 +17,11 @@ struct EDUPlateApp: App {
             if isVisible {
                 WelcomeView(isVisible: $isVisible)
                     .environmentObject(userProgress)  // Inject UserProgress
+                    .preferredColorScheme(.light)
             } else {
                 MainTabView()
                     .environmentObject(userProgress)  // Inject UserProgress
+                    .preferredColorScheme(.light)
             }
         }
     }
