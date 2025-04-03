@@ -18,6 +18,18 @@ struct RecipeManager: View {
                 NavigationLink(destination: ScallopsRecipe()) {
                     RecipeCard(title: "Seared Scallops")
                 }
+                
+                NavigationLink(destination: GarlicBreadGrilledCheeseRecipe()) {
+                    RecipeCard(title: "Garlic Bread Grilled Cheese")
+                }
+                
+                NavigationLink(destination: SpinachOrzoRecipe()) {
+                    RecipeCard(title: "Spinach Orzo")
+                }
+                
+                NavigationLink(destination: BrusselSaladRecipe()) {
+                    RecipeCard(title: "Brussel Salad")
+                }
             }
         }
     }

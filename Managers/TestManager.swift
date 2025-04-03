@@ -51,10 +51,9 @@ class TestManager: ObservableObject {
         if questionsIndex < questions.count - 1 {
             questionsIndex += 1
         } else {
-            isQuizCompleted = true  // Show the quiz completion screen if the last question is reached
+            isQuizCompleted = true
             userProgress.addPoints(score)
-            updateUserPointsInCoreData()
-            updateConcentrationProgress(concentration: concentration)  // Pass concentration here
+            updateConcentrationProgress(concentration: concentration) 
         }
         
         // Reset correctness and selected answer states for the next question
@@ -107,14 +106,15 @@ class TestManager: ObservableObject {
         return fileManager.loadScoresFromFile()
     }
     
-    func updateUserPointsInCoreData() {
+  /*  func updateUserPointsInCoreData() {
+        print("went here")
         if let user = CoreDataManager.shared.fetchUser(username: userProgress.username) {
             
             // Add the quiz score to the current points
             let totalPoints = Int(user.points) + score
             
             // Recalculate level based on total points
-            let newLevel = max(1, totalPoints / 100)
+            let newLevel = max(1, totalPoints / 20)
             
             // Update the user's points and level in Core Data
             CoreDataManager.shared.updateUser(username: userProgress.username, points: totalPoints, level: newLevel)
@@ -122,7 +122,7 @@ class TestManager: ObservableObject {
         } else {
             print("No user found in Core Data.")
         }
-    }
+    }*/
     
     func updateConcentrationProgress(concentration: String) {
         // Directly use the score to update concentration progress

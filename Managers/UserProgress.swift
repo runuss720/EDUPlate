@@ -5,7 +5,7 @@ class UserProgress: ObservableObject {
     @Published var currentPoints: Int = 0
     @Published var username: String = "" // Store the username
     @Published var password: String = "" // Store the password
-    let pointsToLevelUp = 300
+    let pointsToLevelUp = 20
 
     private let coreDataManager = CoreDataManager.shared
 
@@ -82,5 +82,3 @@ class UserProgress: ObservableObject {
         print("Updated Core Data for \(username): Points = \(currentPoints), Level = \(currentLevel)")
     }
 }
-
-

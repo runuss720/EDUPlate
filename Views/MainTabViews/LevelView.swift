@@ -1,10 +1,9 @@
 import SwiftUI
 
-// Displays a visual representation of user's level/progress
-// Each time the user scores points, the bar will fill up slightly
 struct LevelView: View {
     @EnvironmentObject private var userProgress: UserProgress
     @Binding var level: Int
+    @State private var showLevelUpView = false
     
     var body: some View {
         VStack {
@@ -27,6 +26,43 @@ struct LevelView: View {
         .onAppear {
             level = userProgress.currentLevel
         }
+        .onChange(of: userProgress.currentLevel) {
+               if userProgress.currentLevel > level {
+                   level = userProgress.currentLevel
+                   showLevelUpView = true
+               }
+           }
+
+
         .padding(.bottom)
+        .sheet(isPresented: $showLevelUpView) {
+            LevelUpView(level: userProgress.currentLevel)
+        }
+    }
+}
+
+struct LevelUpView: View {
+    var level: Int
+    @Environment(\.presentationMode) var presentationMode
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Congratulations!")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            
+            Text("You've reached Level \(level)!")
+                .font(.title2)
+                .padding()
+            
+            Button("Close") {
+                presentationMode.wrappedValue.dismiss()
+            }
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+        }
+        .padding()
     }
 }

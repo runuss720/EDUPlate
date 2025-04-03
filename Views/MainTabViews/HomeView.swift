@@ -70,9 +70,11 @@ struct HomeView: View {
                                         TestCategoryCard(title: "Food Safety", time: 5, category: "Safety", levelRequired: 2)
                                     }
                                     
-                                    NavigationLink(destination: Test5View(userProgress: userProgress)) {
-                                        TestCategoryCard(title: "Basic Techniques", time: 2, category: "Food Prep", levelRequired: 2)
+                                    NavigationLink(destination: Test2View(userProgress: userProgress)) {
+                                        TestCategoryCard(title: "Ingredients", time: 5, category: "Food Prep", levelRequired: 2)
                                     }
+                                    
+                                    
                                 }
                                 
                                 if userProgress.currentLevel >= 1 {
@@ -84,17 +86,14 @@ struct HomeView: View {
                                         TestCategoryCard(title: "Knife Skills", time: 2, category: "Food Prep", levelRequired: 1)
                                     }
                                     
-                                    NavigationLink(destination: Test6View(userProgress: userProgress)) {
-                                        TestCategoryCard(title: "Grilling", time: 2, category: "Food Prep", levelRequired: 1)
-                                    }
-                                    
                                     NavigationLink(destination: Test1View(userProgress: userProgress)) {
                                         TestCategoryCard(title: "Tools", time: 5, category: "Food Prep", levelRequired: 1)
                                     }
                                     
-                                    NavigationLink(destination: Test2View(userProgress: userProgress)) {
-                                        TestCategoryCard(title: "Ingredients", time: 5, category: "Food Prep", levelRequired: 1)
+                                    NavigationLink(destination: Test5View(userProgress: userProgress)) {
+                                        TestCategoryCard(title: "Basic Techniques", time: 2, category: "Food Prep", levelRequired: 2)
                                     }
+                                    
                                 }
                             }
                         }
