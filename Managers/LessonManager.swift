@@ -28,6 +28,21 @@ struct LessonManager: View {
                     
                     // display full list of lessons
                     if userLevel >= 1 {
+                        NavigationLink(destination: HygeneView()) {
+                            LessonCard(title: "Personal Hygene")
+                        }
+                        NavigationLink(destination: KnifeSkillView()) {
+                            LessonCard(title: "Knife Skills")
+                        }
+                        NavigationLink(destination: RoastingView()) {
+                            LessonCard(title: "Roasting")
+                        }
+                        
+                    }
+                    if userLevel >= 2 {
+                        NavigationLink(destination: HygeneView()) {
+                            LessonCard(title: "Personal Hygene")
+                        }
                         NavigationLink(destination: KnifeSkillView()) {
                             LessonCard(title: "Knife Skills")
                         }
@@ -45,9 +60,6 @@ struct LessonManager: View {
                         }
                         NavigationLink(destination: FoodSafetyView()) {
                             LessonCard(title: "Food Safety")
-                        }
-                        NavigationLink(destination: HygeneView()) {
-                            LessonCard(title: "Personal Hygene")
                         }
                     }
                 }

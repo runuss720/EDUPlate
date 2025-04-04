@@ -41,27 +41,61 @@ struct LevelView: View {
     }
 }
 
+import SwiftUI
+
 struct LevelUpView: View {
     var level: Int
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Congratulations!")
+        VStack(spacing: 25) {
+            Text("🎉 Congratulations! 🎉")
                 .font(.largeTitle)
                 .fontWeight(.bold)
+                .multilineTextAlignment(.center)
             
-            Text("You've reached Level \(level)!")
+            Text("You've reached **Level \(level)!**")
                 .font(.title2)
-                .padding()
+                .padding(.horizontal)
+                .multilineTextAlignment(.center)
             
-            Button("Close") {
-                presentationMode.wrappedValue.dismiss()
+            if level >= 2 {
+                VStack(spacing: 12) {
+                    Text("🔓 New Features Unlocked!")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.black)
+                    
+                    VStack(alignment: .leading, spacing: 6) {
+                        Group {
+                            Text("✅ French Terms Quiz")
+                            Text("✅ Food Safety Quiz")
+                            Text("✅ Ingredients Quiz")
+                            Text("✅ Soups Lesson")
+                            Text("✅ Stocks Lesson")
+                            Text("✅ Grilling Lesson")
+                            Text("✅ Food Safety Lesson")
+                        }
+                        .font(.body)
+                        .foregroundColor(.gray)
+                    }
+                    .padding(.horizontal)
+                }
+                .padding(.top, 10)
+                
+                Divider()
             }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(10)
+            
+            Button(action: { presentationMode.wrappedValue.dismiss() }) {
+                Text("Close")
+                    .font(.headline)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.indigo)
+                    .foregroundColor(.white)
+                    .cornerRadius(12)
+            }
+            .padding(.horizontal)
         }
         .padding()
     }

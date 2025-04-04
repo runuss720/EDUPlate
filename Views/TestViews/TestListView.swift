@@ -23,7 +23,7 @@ struct TestListView: View {
                                     }
                                 }
 
-                                if 1 <= userProgress.currentLevel {
+                                if 2 <= userProgress.currentLevel {
                                     NavigationLink(destination: Test2View(userProgress: userProgress)) {
                                         TestCategoryCard(title: "Ingredients", time: 5, category: "Food Prep", levelRequired: 1)
                                     }
@@ -31,7 +31,7 @@ struct TestListView: View {
 
                                 if 1 <= userProgress.currentLevel {
                                     NavigationLink(destination: Test5View(userProgress: userProgress)) {
-                                        TestCategoryCard(title: "Basic Techniques", time: 2, category: "Food Prep", levelRequired: 1)
+                                        TestCategoryCard(title: "Basic Cooking Techniques", time: 2, category: "Food Prep", levelRequired: 1)
                                     }
                                 }
 
@@ -147,7 +147,7 @@ struct Test4View: View {
 struct Test5View: View {
     @ObservedObject var userProgress: UserProgress
     var body: some View {
-        TestView(category: "Basic Techniques", userProgress: userProgress, concentration: "Food Preparation")
+        TestView(category: "Basic Cooking Techniques", userProgress: userProgress, concentration: "Food Preparation")
     }
 }
 
