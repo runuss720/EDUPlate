@@ -113,7 +113,7 @@ struct HomeView: View {
                         Spacer()
                     }
                     
-                    LessonManager(length: 1)
+                    LessonManager()
                 }
             }
             .padding(.horizontal)
