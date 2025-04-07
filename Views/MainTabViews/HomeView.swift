@@ -48,9 +48,6 @@ struct HomeView: View {
                     VStack(spacing: 16) {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
-                                
-                                // only display tests specific to user level
-                                if userProgress.currentLevel >= 3 {
                                     NavigationLink(destination: Test10View(userProgress: userProgress)) {
                                         TestCategoryCard(title: "Japanese Terms", time: 5, category: "International", levelRequired: 3)
                                     }
@@ -58,10 +55,7 @@ struct HomeView: View {
                                     NavigationLink(destination: Test9View(userProgress: userProgress)) {
                                         TestCategoryCard(title: "Spanish Terms", time: 5, category: "International", levelRequired: 3)
                                     }
-                                }
                                 
-                                if userProgress.currentLevel >= 2 {
-                                    
                                     NavigationLink(destination: Test3View(userProgress: userProgress)) {
                                         TestCategoryCard(title: "French Terms", time: 5, category: "International", levelRequired: 2)
                                     }
@@ -73,11 +67,7 @@ struct HomeView: View {
                                     NavigationLink(destination: Test2View(userProgress: userProgress)) {
                                         TestCategoryCard(title: "Ingredients", time: 5, category: "Food Prep", levelRequired: 2)
                                     }
-                                    
-                                    
-                                }
-                                
-                                if userProgress.currentLevel >= 1 {
+                
                                     NavigationLink(destination: Test8View(userProgress: userProgress)) {
                                         TestCategoryCard(title: "Personal Hygiene", time: 2, category: "Safety", levelRequired: 1)
                                     }
@@ -94,7 +84,7 @@ struct HomeView: View {
                                         TestCategoryCard(title: "Basic Techniques", time: 2, category: "Food Prep", levelRequired: 2)
                                     }
                                     
-                                }
+                                
                             }
                         }
                     }
@@ -126,47 +116,53 @@ struct HomeView: View {
 
 
 struct TestCategoryCard: View {
+    @EnvironmentObject private var userProgress: UserProgress
+    
     let title: String
     let time: Int
     let category: String
     let levelRequired: Int
     
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            VStack {
-                Text(title)
-                    .font(.system(size: 30, weight: .bold))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundStyle(.white)
-                    .padding(.top, 20)
-                    .padding(.leading, 20)
+        
+        // only show if user meets level requirment
+        if (userProgress.currentLevel >= levelRequired) {
+            ZStack(alignment: .bottomLeading) {
+                VStack {
+                    Text(title)
+                        .font(.system(size: 30, weight: .bold))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundStyle(.white)
+                        .padding(.top, 20)
+                        .padding(.leading, 20)
+                    
+                    Text("Estimated Time: \(time) min")
+                        .font(.system(size: 19, weight: .bold, design: .rounded))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundStyle(.white)
+                        .padding(.leading, 20)
+                    
+                    Text("\(category)")
+                        .font(.system(size: 17, weight: .bold, design: .rounded))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundStyle(.white)
+                        .padding(.leading, 20)
+                        .offset(x: -10, y: 110)
+                    
+                    Spacer()
+                }
+                .frame(width: 230, height: 220)
+                .background(Color(red: 0.6, green: 0.7, blue: 1.1))
+                .cornerRadius(20)
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
                 
-                Text("Estimated Time: \(time) min")
-                    .font(.system(size: 19, weight: .bold, design: .rounded))
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                Image(systemName: "play.circle")
                     .foregroundStyle(.white)
-                    .padding(.leading, 20)
-                
-                Text("\(category)")
-                    .font(.system(size: 17, weight: .bold, design: .rounded))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundStyle(.white)
-                    .padding(.leading, 20)
-                    .offset(x: -10, y: 110)
-                
-                Spacer()
+                    .font(.system(size: 70))
+                    .offset(x: 135, y: -19)
             }
-            .frame(width: 230, height: 220)
-            .background(Color(red: 0.6, green: 0.7, blue: 1.1))
-            .cornerRadius(20)
-            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
-            
-            Image(systemName: "play.circle")
-                .foregroundStyle(.white)
-                .font(.system(size: 70))
-                .offset(x: 135, y: -19)
+            .frame(width: 230, height: 240)
         }
-        .frame(width: 230, height: 240)
     }
 }
 

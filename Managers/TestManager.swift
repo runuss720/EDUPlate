@@ -53,7 +53,7 @@ class TestManager: ObservableObject {
         } else {
             isQuizCompleted = true
             userProgress.addPoints(score)
-            updateConcentrationProgress(concentration: concentration) 
+            updateConcentrationProgress(concentration: concentration)
         }
         
         // Reset correctness and selected answer states for the next question

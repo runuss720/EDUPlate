@@ -26,6 +26,9 @@ struct LessonManager: View {
                 }
                 
                 if userProgress.currentLevel >= 1 {
+                    NavigationLink(destination: BasicToolsView()) {
+                        LessonCard(title: "Basic Tools")
+                    }
                     NavigationLink(destination: HygeneView()) {
                         LessonCard(title: "Personal Hygiene")
                     }
