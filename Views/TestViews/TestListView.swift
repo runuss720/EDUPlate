@@ -16,6 +16,7 @@ struct TestListView: View {
                         
                         foodPrepManager()
                     }
+                    .padding(.leading, 10)
                     
                     // Food Safety Section
                     VStack(alignment: .leading, spacing: 10) {
@@ -26,6 +27,7 @@ struct TestListView: View {
                         
                         foodSafetyManager()
                     }
+                    .padding(.leading, 10)
                     
                     // International Terms Section
                     VStack(alignment: .leading, spacing: 10) {
@@ -36,12 +38,12 @@ struct TestListView: View {
                         
                         internationalTermsManager()
                     }
-                    
-                    Divider()
-                        .padding(.vertical, 10)
+                    .padding(.leading, 10)
                 }
-                .padding(.horizontal, 16)
+                .navigationBarTitleDisplayMode(.inline)
+                .padding(.horizontal, 0)
             }
+            .padding(.horizontal, 0)
         }
     }
 }
@@ -100,7 +102,6 @@ struct Test8View: View {
     var body: some View {
         TestView(category: "Personal Hygiene", userProgress: userProgress, concentration: "Safety")
     }
-    
 }
 
 struct Test9View: View {
@@ -119,70 +120,133 @@ struct Test10View: View {
 
 struct foodPrepManager: View {
     @EnvironmentObject private var userProgress: UserProgress
+    var filter: Int?
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 16) {
-                NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                    TestCategoryCard(title: "Tools", time: 5, category: "Food Prep", levelRequired: 1)
-                }
-                
-                NavigationLink(destination: Test2View(userProgress: userProgress)) {
-                    TestCategoryCard(title: "Ingredients", time: 5, category: "Food Prep", levelRequired: 2)
-                }
-                
-                NavigationLink(destination: Test5View(userProgress: userProgress)) {
-                    TestCategoryCard(title: "Basic Cooking Techniques", time: 2, category: "Food Prep", levelRequired: 1)
-                }
-                
-                NavigationLink(destination: Test6View(userProgress: userProgress)) {
-                    TestCategoryCard(title: "Grilling", time: 2, category: "Food Prep", levelRequired: 1)
-                }
-                
-                NavigationLink(destination: Test7View(userProgress: userProgress)) {
-                    TestCategoryCard(title: "Knife Skills", time: 2, category: "Food Prep", levelRequired: 1)
+            HStack(spacing: 5) {
+                if filter == 1 {
+                    NavigationLink(destination: Test1View(userProgress: userProgress)) {
+                        TestCategoryCard(filter: 1, title: "Tools", time: 5, category: "Food Prep", levelRequired: 1)
+                    }
+                    
+                    NavigationLink(destination: Test2View(userProgress: userProgress)) {
+                        TestCategoryCard(filter: 1, title: "Ingredients", time: 5, category: "Food Prep", levelRequired: 2)
+                    }
+                    
+                    NavigationLink(destination: Test5View(userProgress: userProgress)) {
+                        TestCategoryCard(filter: 1, title: "Basic Cooking Techniques", time: 2, category: "Food Prep", levelRequired: 1)
+                    }
+                    
+                    NavigationLink(destination: Test6View(userProgress: userProgress)) {
+                        TestCategoryCard(filter: 1, title: "Grilling", time: 2, category: "Food Prep", levelRequired: 1)
+                    }
+                    
+                    NavigationLink(destination: Test7View(userProgress: userProgress)) {
+                        TestCategoryCard(filter: 1, title: "Knife Skills", time: 2, category: "Food Prep", levelRequired: 1)
+                    }
+                } else {
+                    NavigationLink(destination: Test1View(userProgress: userProgress)) {
+                        TestCategoryCard(title: "Tools", time: 5, category: "Food Prep", levelRequired: 1)
+                    }
+                    
+                    NavigationLink(destination: Test2View(userProgress: userProgress)) {
+                        TestCategoryCard(title: "Ingredients", time: 5, category: "Food Prep", levelRequired: 2)
+                    }
+                    
+                    NavigationLink(destination: Test5View(userProgress: userProgress)) {
+                        TestCategoryCard(title: "Basic Cooking Techniques", time: 2, category: "Food Prep", levelRequired: 1)
+                    }
+                    
+                    NavigationLink(destination: Test6View(userProgress: userProgress)) {
+                        TestCategoryCard(title: "Grilling", time: 2, category: "Food Prep", levelRequired: 1)
+                    }
+                    
+                    NavigationLink(destination: Test7View(userProgress: userProgress)) {
+                        TestCategoryCard(title: "Knife Skills", time: 2, category: "Food Prep", levelRequired: 1)
+                    }
                 }
             }
-            .padding(.horizontal, 16)
+            .padding(.leading, 10) 
+            .frame(minWidth: 0, maxWidth: .infinity)
         }
     }
 }
 
 struct foodSafetyManager: View {
     @EnvironmentObject private var userProgress: UserProgress
+    var filter: Int?
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 16) {
-                NavigationLink(destination: Test8View(userProgress: userProgress)) {
-                    TestCategoryCard(title: "Personal Hygiene", time: 2, category: "Safety", levelRequired: 1)
-                }
-                
-                NavigationLink(destination: Test4View(userProgress: userProgress)) {
-                    TestCategoryCard(title: "Food Safety", time: 5, category: "Safety", levelRequired: 2)
+            HStack(spacing: 5) {
+                if filter == 1 {
+                    NavigationLink(destination: Test8View(userProgress: userProgress)) {
+                        TestCategoryCard(filter: 1, title: "Personal Hygiene", time: 2, category: "Safety", levelRequired: 1)
+                    }
+                    
+                    NavigationLink(destination: Test4View(userProgress: userProgress)) {
+                        TestCategoryCard(filter: 1, title: "Food Safety", time: 5, category: "Safety", levelRequired: 2)
+                    }
+                } else {
+                    NavigationLink(destination: Test8View(userProgress: userProgress)) {
+                        TestCategoryCard(title: "Personal Hygiene", time: 2, category: "Safety", levelRequired: 1)
+                    }
+                    
+                    NavigationLink(destination: Test4View(userProgress: userProgress)) {
+                        TestCategoryCard(title: "Food Safety", time: 5, category: "Safety", levelRequired: 2)
+                    }
                 }
             }
-            .padding(.horizontal, 16)
+            .padding(.horizontal, 0)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
         }
+        .padding(.leading, 10)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
 struct internationalTermsManager: View {
     @EnvironmentObject private var userProgress: UserProgress
+    var filter: Int?
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 16) {
-                NavigationLink(destination: Test3View(userProgress: userProgress)) {
-                    TestCategoryCard(title: "French Terms", time: 5, category: "International", levelRequired: 2)
-                }
-                
-                NavigationLink(destination: Test9View(userProgress: userProgress)) {
-                    TestCategoryCard(title: "Spanish Terms", time: 5, category: "International", levelRequired: 3)
-                }
-                
-                NavigationLink(destination: Test10View(userProgress: userProgress)) {
-                    TestCategoryCard(title: "Japanese Terms", time: 5, category: "International", levelRequired: 3)
+            HStack(spacing: 5) {
+                if filter == 1 {
+                   
+                        NavigationLink(destination: Test3View(userProgress: userProgress)) {
+                            TestCategoryCard(filter: 1, title: "French Terms", time: 5, category: "International", levelRequired: 3)
+                        }
+                  
+                        NavigationLink(destination: Test9View(userProgress: userProgress)) {
+                            TestCategoryCard(filter: 1, title: "Spanish Terms", time: 5, category: "International", levelRequired: 3)
+                        }
+                        NavigationLink(destination: Test10View(userProgress: userProgress)) {
+                            TestCategoryCard(filter: 1, title: "Japanese Terms", time: 5, category: "International", levelRequired: 3)
+                        }
+                    
+                } else {
+                    if userProgress.currentLevel >= 2 {
+                        NavigationLink(destination: Test3View(userProgress: userProgress)) {
+                            TestCategoryCard(title: "French Terms", time: 5, category: "International", levelRequired: 3)
+                        }
+                    }
+                    
+                    if userProgress.currentLevel >= 3 {
+                        NavigationLink(destination: Test9View(userProgress: userProgress)) {
+                            TestCategoryCard(title: "Spanish Terms", time: 5, category: "International", levelRequired: 3)
+                        }
+                        NavigationLink(destination: Test10View(userProgress: userProgress)) {
+                            TestCategoryCard(title: "Japanese Terms", time: 5, category: "International", levelRequired: 3)
+                        }
+                    }
                 }
             }
-            .padding(.horizontal, 16)
+            .padding(.horizontal, 0)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
         }
+        .padding(.leading, 10)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }

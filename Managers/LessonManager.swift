@@ -3,40 +3,81 @@ struct LessonManager: View {
     @EnvironmentObject private var userProgress: UserProgress
     @State private var userLevel: Int = 1
     
+    // filter controls what lessons to display
+    // depending on what view it's being called from
+    var filter: Int?
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             VStack {
                 
-                if userProgress.currentLevel >= 3 {
-                    NavigationLink(destination: StockView()) {
-                        LessonCard(title: "Stocks")
+                // filter: 1 - called from lessonview, display everything
+                if (filter == 1) {
+                    if userProgress.currentLevel >= 3 {
+                        NavigationLink(destination: StockView()) {
+                            LessonCard(title: "Stocks")
+                        }
+                    }
+                    
+                    if userProgress.currentLevel >= 2 {
+                        NavigationLink(destination: GrillingView()) {
+                            LessonCard(title: "Grilling")
+                        }
+                        NavigationLink(destination: SoupsView()) {
+                            LessonCard(title: "Soups")
+                        }
+                        NavigationLink(destination: FoodSafetyView()) {
+                            LessonCard(title: "Food Safety")
+                        }
+                    }
+                    
+                    if userProgress.currentLevel >= 1 {
+                        NavigationLink(destination: BasicToolsView()) {
+                            LessonCard(title: "Basic Tools")
+                        }
+                        NavigationLink(destination: HygeneView()) {
+                            LessonCard(title: "Personal Hygiene")
+                        }
+                        NavigationLink(destination: KnifeSkillView()) {
+                            LessonCard(title: "Knife Skills")
+                        }
+                        NavigationLink(destination: RoastingView()) {
+                            LessonCard(title: "Roasting")
+                        }
                     }
                 }
-                
-                if userProgress.currentLevel >= 2 {
-                    NavigationLink(destination: GrillingView()) {
-                        LessonCard(title: "Grilling")
+                // filter called from homeview, display new lessons only
+                else {
+                    if userProgress.currentLevel == 3 {
+                        NavigationLink(destination: StockView()) {
+                            LessonCard(title: "Stocks")
+                        }
                     }
-                    NavigationLink(destination: SoupsView()) {
-                        LessonCard(title: "Soups")
+                    
+                    if userProgress.currentLevel == 2 {
+                        NavigationLink(destination: GrillingView()) {
+                            LessonCard(title: "Grilling")
+                        }
+                        NavigationLink(destination: SoupsView()) {
+                            LessonCard(title: "Soups")
+                        }
+                        NavigationLink(destination: FoodSafetyView()) {
+                            LessonCard(title: "Food Safety")
+                        }
                     }
-                    NavigationLink(destination: FoodSafetyView()) {
-                        LessonCard(title: "Food Safety")
-                    }
-                }
-                
-                if userProgress.currentLevel >= 1 {
-                    NavigationLink(destination: BasicToolsView()) {
-                        LessonCard(title: "Basic Tools")
-                    }
-                    NavigationLink(destination: HygeneView()) {
-                        LessonCard(title: "Personal Hygiene")
-                    }
-                    NavigationLink(destination: KnifeSkillView()) {
-                        LessonCard(title: "Knife Skills")
-                    }
-                    NavigationLink(destination: RoastingView()) {
-                        LessonCard(title: "Roasting")
+                    
+                    if userProgress.currentLevel == 1 {
+                        NavigationLink(destination: BasicToolsView()) {
+                            LessonCard(title: "Basic Tools")
+                        }
+                        NavigationLink(destination: HygeneView()) {
+                            LessonCard(title: "Personal Hygiene")
+                        }
+                        NavigationLink(destination: KnifeSkillView()) {
+                            LessonCard(title: "Knife Skills")
+                        }
+                        NavigationLink(destination: RoastingView()) {
+                            LessonCard(title: "Roasting")
+                        }
                     }
                 }
             }

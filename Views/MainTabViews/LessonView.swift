@@ -12,7 +12,7 @@ struct LessonView: View {
                         .padding(.top, 10)
                         .foregroundStyle(.black)
                     
-                    LessonManager()
+                    LessonManager(filter: 1)
                 }
             }
             .padding(.horizontal)

@@ -1,10 +1,3 @@
-//
-//  EDUPlateApp.swift
-//  EDUPlate
-//
-//  Created by Ruby Nuss on 11/17/24.
-//
-
 import SwiftUI
 
 @main
