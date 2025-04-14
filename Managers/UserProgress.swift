@@ -5,7 +5,7 @@ class UserProgress: ObservableObject {
     @Published var currentPoints: Int = 0
     @Published var username: String = "" // Store the username
     @Published var password: String = "" // Store the password
-    let pointsToLevelUp = 20
+    let pointsToLevelUp = 10
 
     private let coreDataManager = CoreDataManager.shared
 
@@ -30,6 +30,7 @@ class UserProgress: ObservableObject {
                 print("Fetched user data for \(username): Points = \(currentPoints), Level = \(currentLevel)")
             }
         } else {
+            
             // If no user exists or password is incorrect, create a new one
             resetUserProgress()
             coreDataManager.saveUser(username: username, password: password, points: currentPoints, level: currentLevel)
@@ -47,7 +48,7 @@ class UserProgress: ObservableObject {
     func updateUserData(username: String, password: String) {
         self.username = username
         self.password = password
-        resetUserProgress() // Reset stats for the new user
+        resetUserProgress() 
         coreDataManager.saveUser(username: username, password: password, points: currentPoints, level: currentLevel) // Save new user profile
         print("Updated user data for \(username)")
     }

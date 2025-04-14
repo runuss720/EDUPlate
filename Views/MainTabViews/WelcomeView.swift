@@ -5,12 +5,12 @@ struct WelcomeView: View {
     @State private var username: String = ""
     @State private var showTextField: Bool = false
     
-    @EnvironmentObject var userProgress: UserProgress  // Use EnvironmentObject
+    @EnvironmentObject var userProgress: UserProgress
     
-    @State private var password: String = ""  // New state for password input
+    @State private var password: String = ""
     
-    @State private var isNewUser: Bool = false  // Flag for new user logic
-    @State private var errorMessage: String? = nil  // Error message for invalid username or password
+    @State private var isNewUser: Bool = false
+    @State private var errorMessage: String? = nil
     
     var body: some View {
         if isVisible {
@@ -36,7 +36,8 @@ struct WelcomeView: View {
                         .padding(.horizontal, 40)
                         .padding(.top, 10)
                     
-                    if !isNewUser {  // Check if user is new or existing
+                    // Check if user is new or existing
+                    if !isNewUser {
                         SecureField("Enter your password", text: $password)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.horizontal, 40)
@@ -46,9 +47,9 @@ struct WelcomeView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.horizontal, 40)
                             .padding(.top, 10)
-                            .autocapitalization(.none)  // Disable automatic capitalization
-                            .disableAutocorrection(true)  // Disable autocorrection
-                            .keyboardType(.default)  // Set keyboard to default type
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
+                            .keyboardType(.default)
                     }
                 }
                 
@@ -64,11 +65,12 @@ struct WelcomeView: View {
                     if showTextField {
                         if !username.isEmpty {
                             if isNewUser {
-                                // New user logic: check if username is already taken
+                                
+                                // check if username is taken
                                 if let _ = CoreDataManager.shared.fetchUser(username: username) {
-                                    // Username already exists
                                     errorMessage = "Username already taken. Please try again."
                                 } else {
+                                    
                                     // Create new user
                                     // No need for confirm password anymore
                                     if !password.isEmpty {
@@ -81,6 +83,7 @@ struct WelcomeView: View {
                                     }
                                 }
                             } else {
+                                
                                 // Existing user logic: verify username and password
                                 if let user = CoreDataManager.shared.fetchUser(username: username, password: password) {
                                     userProgress.resetUserProgress()
@@ -114,8 +117,8 @@ struct WelcomeView: View {
                     Button(action: {
                         withAnimation {
                             isNewUser = true
-                            showTextField = true  // Automatically show text fields for username and password
-                            errorMessage = nil // Clear any previous error message
+                            showTextField = true
+                            errorMessage = nil 
                         }
                     }) {
                         Text("Create an Account")

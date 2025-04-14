@@ -102,8 +102,8 @@ struct LevelUpView: View {
                         Group {
                             Text("✅ Food Safety Quiz")
                             Text("✅ Ingredients Quiz")
+                            Text("✅ Grilling Quiz")
                             Text("✅ Soups Lesson")
-                            Text("✅ Stocks Lesson")
                             Text("✅ Grilling Lesson")
                             Text("✅ Food Safety Lesson")
                         }

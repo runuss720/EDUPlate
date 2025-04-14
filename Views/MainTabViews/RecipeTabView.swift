@@ -1,9 +1,3 @@
-//
-//  RecipeTabView.swift
-//  EDUPlate
-//
-//  Created by Ruby Nuss on 3/19/25.
-//
 import SwiftUI
 
 struct RecipeTabView: View {

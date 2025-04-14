@@ -1,17 +1,11 @@
 [
-{"category": "Tools", "question": "colander", "answer": "Drains water from cooked pasta or vegetables", "fake1": "used to create fine particles of vegetables", "fake2": "used for making marmalades and preserves", "fake3": "used to flatten dough"} ,
-{"category": "Tools", "question": "paring knife", "answer": "Good for peeling an apple", "fake1": "Drains water from cooked pasta or vegetables", "fake2": "used to drain liquid while serving", "fake3": "used to create fine or coarse particles of cheese"} ,
 {"category": "Tools", "question": "spatula", "answer": "used to scrape bowls", "fake1": "a wavy pattern in some steel knives", "fake2": "used to flatten dough", "fake3": "protects a table from scorch marks"} ,
 {"category": "Tools", "question": "whisk", "answer": "used to whip or mix ingredients", "fake1": "Good for peeling an apple", "fake2": "used for making marmalades and preserves", "fake3": "used to lift ingredients during grilling or frying"} ,
 {"category": "Tools", "question": "grater", "answer": "used to create fine or coarse particles of cheese", "fake1": "used to drain liquid while serving", "fake2": "used to create fine particles of vegetables", "fake3": "Drains water from cooked pasta or vegetables"} ,
 {"category": "Tools", "question": "rolling pin", "answer": "used to flatten dough", "fake1": "used to whip or mix ingredients", "fake2": "a wavy pattern in some steel knives", "fake3": "Good for peeling an apple"} ,
-{"category": "Tools", "question": "ricer", "answer": "used to create fine particles of vegetables", "fake1": "used to create fine or coarse particles of cheese", "fake2": "protects a table from scorch marks", "fake3": "used for making marmalades and preserves"} ,
-{"category": "Tools", "question": "extruder", "answer": "used to make pasta", "fake1": "used for making marmalades and preserves", "fake2": "used to drain liquid while serving", "fake3": "used to scrape bowls"} ,
 {"category": "Tools", "question": "tongs", "answer": "used to lift ingredients during grilling or frying", "fake1": "used to scrape bowls", "fake2": "used to make pasta", "fake3": "Good for peeling an apple"} ,
-{"category": "Tools", "question": "maslin pan", "answer": "used for making marmalades and preserves", "fake1": "protects a table from scorch marks", "fake2": "used to flatten dough", "fake3": "used to whip or mix ingredients"} ,
 {"category": "Tools", "question": "slotted spoon", "answer": "used to drain liquid while serving", "fake1": "used for making marmalades and preserves", "fake2": "used to scrape bowls", "fake3": "used to lift ingredients during grilling or frying"} ,
-{"category": "Tools", "question": "damascus", "answer": "a wavy pattern in some steel knives", "fake1": "used to flatten dough", "fake2": "used to drain liquid while serving", "fake3": "used to scrape bowls"} ,
-{"category": "Tools", "question": "trivet", "answer": "protects a table from scorch marks", "fake1": "used to scrape bowls", "fake2": "used to whip or mix ingredients", "fake3": "Drains water from cooked pasta or vegetables"} ,
+{"category": "Tools", "question": "Peeler", "answer": "Tool to remove the outer layer of fruits and vegetables", "fake1": "used to scrape bowls", "fake2": "used to whip or mix ingredients", "fake3": "Drains water from cooked pasta or vegetables"} ,
 {"category": "French Terms", "question": "Au Gratin", "answer": "A dish that is topped with breadcrumbs or cheese and browned on top", "fake1": "A parchment paper lid that sits directly on the surface of ingredients in a pot or pan.", "fake2": "The art of preserving meats with salting, cooking, and curing methods.", "fake3": "A quickly-cooked broth most often used to poach other foods, like seafood."} ,
 {"category": "French Terms", "question": "Bouquet Garni", "answer": "A bunch of herbs or leaves tied together with string to flavor dishes like soups", "fake1": "Chopped mushrooms saut\u00e9ed in butter with onions or shallots and herbs, such as parsley.", "fake2": "A concentrated sauce made from equal parts of Espagnole and brown stock", "fake3": "Foods containing strong alcohol (such as brandy, cognac, rum) that are ignited."} ,
 {"category": "French Terms", "question": "Beurre Noisette", "answer": "a type of warm sauce used in French cuisine.", "fake1": "A boneless piece of meat that is pounded with a mallet or rolled with a pin until thin.", "fake2": "Small strips of slab bacon, usually around 1/4-inch wide and thick.", "fake3": "A parchment paper lid that sits directly on the surface of ingredients in a pot or pan."} ,
@@ -214,83 +208,83 @@
 },
 {
     "category": "Basic Cooking Techniques",
-    "question": "What is the correct description for sautéing?",
-    "answer": "Cooking food quickly in a small amount of oil over medium-high heat",
-    "fake1": "Cooking food in a large amount of water at a rolling boil",
-    "fake2": "Slow-cooking food in liquid over low heat",
-    "fake3": "Cooking food in an oven at a high temperature"
+    "question": "What technique involves cooking food using a small amount of oil or fat in a pan over medium-high heat",
+    "answer": "Sautéing",
+    "fake1": "Boiling",
+    "fake2": "Slow-cooking",
+    "fake3": "Roasting"
   },
   {
     "category": "Basic Cooking Techniques",
-    "question": "What does it mean to ‘braise’ meat?",
-    "answer": "Sear it in a pan, then cook it slowly in liquid",
-    "fake1": "Cook it over an open flame",
-    "fake2": "Grill it at a high temperature",
-    "fake3": "Deep-fry it in hot oil"
+    "question": "A mixture that you soak meat or fish in, in order to add flavor to it",
+    "answer": "Marinade",
+    "fake1": "Oil",
+    "fake2": "Baking",
+    "fake3": "Deep-frying"
   },
   {
     "category": "Basic Cooking Techniques",
-    "question": "Which cooking method uses low heat and indirect steam to cook food gently?",
-    "answer": "Steaming",
+    "question": "What do you call using dry heat, typically in an oven or over an open flame to cook food?",
+    "answer": "Roasting",
     "fake1": "Searing",
     "fake2": "Broiling",
     "fake3": "Deep-frying"
   },
   {
     "category": "Basic Cooking Techniques",
-    "question": "What is the term for cooking food in its own fat, often used for duck?",
-    "answer": "Confit",
+    "question": "The act of adding liquid to a hot pan to dissolve and incorporate the flavorful browned bits (fond) stuck to the bottom",
+    "answer": "Deglazing",
     "fake1": "Sous vide",
     "fake2": "Poaching",
     "fake3": "Blanching"
   },
   {
     "category": "Basic Cooking Techniques",
-    "question": "What is the best way to prevent pasta from sticking together?",
-    "answer": "Stir it frequently while boiling",
-    "fake1": "Add oil to the water",
-    "fake2": "Rinse it with cold water after cooking",
-    "fake3": "Boil it at a lower temperature"
+    "question": "A cooking method that involves searing food at a high temperature and then slowly cooking it in liquid at a lower temperature.",
+    "answer": "Braising",
+    "fake1": "Poaching",
+    "fake2": "Boiling",
+    "fake3": "Roasting"
   },
   {
     "category": "Basic Cooking Techniques",
-    "question": "What is the purpose of deglazing a pan?",
-    "answer": "To dissolve browned bits of food for added flavor",
-    "fake1": "To remove excess oil",
-    "fake2": "To cool down the pan quickly",
-    "fake3": "To sterilize the pan before reuse"
+    "question": "A cooking technique where food is gently cooked in liquid just below the boiling point",
+    "answer": "Simmering",
+    "fake1": "Roasting",
+    "fake2": "Deglazing",
+    "fake3": "Baking"
   },
   {
     "category": "Basic Cooking Techniques",
-    "question": "What does ‘julienne’ mean in cooking?",
-    "answer": "Cutting food into thin matchstick-like strips",
-    "fake1": "Dicing food into small cubes",
-    "fake2": "Slicing food into large wedges",
-    "fake3": "Chopping food into rough chunks"
+    "question": "What foods are commonly poached?",
+    "answer": "Eggs",
+    "fake1": "Bread",
+    "fake2": "Ground Beef",
+    "fake3": "Steak"
   },
   {
     "category": "Basic Cooking Techniques",
-    "question": "What is the main purpose of blanching vegetables?",
-    "answer": "To partially cook and preserve color and texture",
-    "fake1": "To remove excess water",
-    "fake2": "To fully cook them before serving",
-    "fake3": "To make them crispier"
+    "question": "What cooking method involves submerging food in hot oil until crispy?",
+    "answer": "Deep-Frying",
+    "fake1": "Steaming",
+    "fake2": "Broiling",
+    "fake3": "Poaching"
   },
   {
     "category": "Basic Cooking Techniques",
-    "question": "Which of the following is a dry-heat cooking method?",
-    "answer": "Roasting",
-    "fake1": "Boiling",
-    "fake2": "Poaching",
+    "question": "Which of the following involves cooking food using hot steam?",
+    "answer": "Steaming",
+    "fake1": "Roasting",
+    "fake2": "Torching",
     "fake3": "Stewing"
   },
   {
     "category": "Basic Cooking Techniques",
-    "question": "What does ‘tempering’ mean in cooking?",
-    "answer": "Gradually raising the temperature of an ingredient before adding it to a hot mixture",
-    "fake1": "Cooling food quickly to stop the cooking process",
-    "fake2": "Marinating meat in a spicy sauce",
-    "fake3": "Blending two liquids together at high speed"
+    "question": "Which method involves quickly cooking food in boiling water, then transferring it to cold water?",
+    "answer": "Blanching",
+    "fake1": "Steaming",
+    "fake2": "Simmering",
+    "fake3": "Blending"
   },
     {
       "category": "Grilling Techniques",
@@ -453,16 +447,6 @@
         "fake3": "Marble slab"
       },
 
-{"category": "Basic Cooking Techniques", "question": "The correct description for boiling is", "answer": "Large bubbles breaking at the surface 100 degrees celsius", "fake1": "small bubbles breaking at the surface 98 degrees celsius", "fake2": "Water reaching 98 degrees celsius", "fake3": "Frying in oil"},
-
-    {
-        "category": "Personal Hygiene",
-        "question": "What is the minimum amount of time you should wash your hands with soap and water before handling food?",
-        "answer": "20 seconds",
-        "fake1": "5 seconds",
-        "fake2": "10 seconds",
-        "fake3": "30 seconds"
-    },
     {
         "category": "Personal Hygiene",
         "question": "When should you wash your hands while working in the kitchen?",
@@ -473,51 +457,19 @@
     },
     {
         "category": "Personal Hygiene",
-        "question": "Which of the following is NOT an acceptable way to dry your hands after washing them in the kitchen?",
-        "answer": "Wiping on your apron",
-        "fake1": "Using a clean paper towel",
-        "fake2": "Using a hand dryer",
-        "fake3": "Air drying without touching anything"
-    },
-    {
-        "category": "Personal Hygiene",
-        "question": "What should you do if you have a cut on your hand while preparing food?",
-        "answer": "Wash it, cover it with a bandage, and wear a glove",
-        "fake1": "Keep working and be careful not to touch it",
-        "fake2": "Rinse it with water and continue working",
-        "fake3": "Ignore it if it’s small"
-    },
-    {
-        "category": "Personal Hygiene",
-        "question": "Which of the following actions can spread germs while preparing food?",
-        "answer": "Touching raw meat and then ready-to-eat food without washing hands",
-        "fake1": "Coughing into your elbow before touching food",
-        "fake2": "Washing hands before putting on gloves",
-        "fake3": "Wearing a clean apron"
-    },
-    {
-        "category": "Personal Hygiene",
-        "question": "What type of jewelry is acceptable to wear while handling food?",
-        "answer": "A plain wedding band",
-        "fake1": "Rings with stones",
-        "fake2": "Dangling bracelets",
-        "fake3": "Large hoop earrings"
-    },
-    {
-        "category": "Personal Hygiene",
         "question": "What is the best way to handle long hair in the kitchen?",
         "answer": "Tie it back or wear a hairnet",
-        "fake1": "Leave it down but try not to touch it",
+        "fake1": "Leave it down",
         "fake2": "Tuck it behind your ears",
-        "fake3": "Only cover it if cooking with raw meat"
+        "fake3": "Wear a hat"
     },
     {
         "category": "Personal Hygiene",
         "question": "If you sneeze while preparing food, what should you do next?",
-        "answer": "Wash your hands immediately before resuming food prep",
+        "answer": "Wash your hands immediately",
         "fake1": "Keep working if your hands didn’t touch your face",
         "fake2": "Wipe your hands on your apron",
-        "fake3": "Just turn away from the food and continue working"
+        "fake3": "Keep working as normal"
     },
     {
         "category": "Personal Hygiene",
@@ -529,35 +481,11 @@
     },
     {
         "category": "Personal Hygiene",
-        "question": "Which of the following should you NOT do when wearing gloves in the kitchen?",
-        "answer": "Wash gloves instead of changing them",
-        "fake1": "Change gloves after handling raw meat",
-        "fake2": "Remove gloves before eating or drinking",
-        "fake3": "Wear gloves over clean hands"
-    },
-    {
-        "category": "Personal Hygiene",
-        "question": "How often should you change your apron while working in the kitchen?",
-        "answer": "After handling raw meat or if it becomes soiled",
-        "fake1": "Once a day",
-        "fake2": "Only if it gets visibly dirty",
-        "fake3": "Once a week"
-    },
-    {
-        "category": "Personal Hygiene",
         "question": "If you have a cold, what should you do before working in the kitchen?",
         "answer": "Avoid working with food entirely",
         "fake1": "Take medicine and work as usual",
         "fake2": "Wash your hands frequently and wear a mask",
         "fake3": "Only prepare food that will be cooked at high temperatures"
-    },
-    {
-        "category": "Personal Hygiene",
-        "question": "What should you do if you accidentally drop a utensil on the floor while cooking?",
-        "answer": "Wash it properly or replace it with a clean utensil",
-        "fake1": "Rinse it under water and use it",
-        "fake2": "Wipe it with a clean towel and continue using it",
-        "fake3": "Use it only if it looks clean"
     },
     {
         "category": "Personal Hygiene",
@@ -567,14 +495,7 @@
         "fake2": "It looks more professional",
         "fake3": "To make it easier to put on gloves"
     },
-    {
-        "category": "Personal Hygiene",
-        "question": "Which of the following is a good personal hygiene practice while preparing food?",
-        "answer": "Wearing clean clothes and an apron",
-        "fake1": "Tasting food with your fingers",
-        "fake2": "Chewing gum to keep your breath fresh",
-        "fake3": "Using a cloth towel to dry hands after washing"
-    },
+  
     
       {"category": "Spanish Cooking", "question": "Sofrito", "answer": "A mixture of sautéed onions, garlic, and tomatoes", "fake1": "A type of soup", "fake2": "A grilling technique", "fake3": "A type of pastry"},
       {"category": "Spanish Cooking", "question": "Empanar", "answer": "Breading food before frying", "fake1": "Wrapping food in a dough", "fake2": "Cooking over an open flame", "fake3": "Marinating meat in citrus juice"},

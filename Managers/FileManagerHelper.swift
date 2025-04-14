@@ -1,10 +1,3 @@
-//
-//  FileManagerHelper.swift
-//  EDUPlate
-//
-//  Created by Ruby Nuss on 12/5/24.
-//
-
 import Foundation
 
 class FileManagerHelper {
@@ -17,8 +10,6 @@ class FileManagerHelper {
         var existingScores = loadScoresFromFile()
         existingScores.append(score)
         saveScoresToFile(scores: existingScores, fileURL: fileURL)
-        
-        print("Appended score: \(score)") // Debugging: Print the appended score
     }
     
     // Save an array of scores to the file
@@ -42,26 +33,21 @@ class FileManagerHelper {
             print("File does not exist at path: \(fileURL.path)") // Debugging: Print file path
             return []
         }
-        
         do {
             let data = try Data(contentsOf: fileURL)
             let decoder = JSONDecoder()
             let scores = try decoder.decode([Score].self, from: data)
-            print("Loaded scores: \(scores)") // Debugging: Print loaded scores
             return scores
         } catch {
-            print("Error loading scores: \(error)") // Debugging: Print the error
             return []
         }
     }
-    
     
     // Get the file URL for the userScores.json file
     func ScoresFileURL() -> URL {
         let fm = FileManager.default
         let documentsURL = fm.urls(for: .documentDirectory, in: .userDomainMask).first!
         let fileURL = documentsURL.appendingPathComponent("userScores.json")
-        print("File URL: \(fileURL.path)") // Debugging: Print file path
         return fileURL
     }
 }

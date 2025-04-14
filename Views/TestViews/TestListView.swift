@@ -127,43 +127,43 @@ struct foodPrepManager: View {
             HStack(spacing: 5) {
                 if filter == 1 {
                     NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                        TestCategoryCard(filter: 1, title: "Tools", time: 5, category: "Food Prep", levelRequired: 1)
+                        TestCard(filter: 1, title: "Tools", time: 5, category: "Food Prep", levelRequired: 1)
                     }
                     
                     NavigationLink(destination: Test2View(userProgress: userProgress)) {
-                        TestCategoryCard(filter: 1, title: "Ingredients", time: 5, category: "Food Prep", levelRequired: 2)
+                        TestCard(filter: 1, title: "Ingredients", time: 5, category: "Food Prep", levelRequired: 2)
                     }
                     
                     NavigationLink(destination: Test5View(userProgress: userProgress)) {
-                        TestCategoryCard(filter: 1, title: "Basic Cooking Techniques", time: 2, category: "Food Prep", levelRequired: 1)
+                        TestCard(filter: 1, title: "Basic Cooking Techniques", time: 2, category: "Food Prep", levelRequired: 1)
                     }
                     
                     NavigationLink(destination: Test6View(userProgress: userProgress)) {
-                        TestCategoryCard(filter: 1, title: "Grilling", time: 2, category: "Food Prep", levelRequired: 1)
+                        TestCard(filter: 1, title: "Grilling", time: 2, category: "Food Prep", levelRequired: 2)
                     }
                     
                     NavigationLink(destination: Test7View(userProgress: userProgress)) {
-                        TestCategoryCard(filter: 1, title: "Knife Skills", time: 2, category: "Food Prep", levelRequired: 1)
+                        TestCard(filter: 1, title: "Knife Skills", time: 2, category: "Food Prep", levelRequired: 1)
                     }
                 } else {
                     NavigationLink(destination: Test1View(userProgress: userProgress)) {
-                        TestCategoryCard(title: "Tools", time: 5, category: "Food Prep", levelRequired: 1)
+                        TestCard(title: "Tools", time: 5, category: "Food Prep", levelRequired: 1)
                     }
                     
                     NavigationLink(destination: Test2View(userProgress: userProgress)) {
-                        TestCategoryCard(title: "Ingredients", time: 5, category: "Food Prep", levelRequired: 2)
+                        TestCard(title: "Ingredients", time: 5, category: "Food Prep", levelRequired: 2)
                     }
                     
                     NavigationLink(destination: Test5View(userProgress: userProgress)) {
-                        TestCategoryCard(title: "Basic Cooking Techniques", time: 2, category: "Food Prep", levelRequired: 1)
+                        TestCard(title: "Basic Cooking Techniques", time: 2, category: "Food Prep", levelRequired: 1)
                     }
                     
                     NavigationLink(destination: Test6View(userProgress: userProgress)) {
-                        TestCategoryCard(title: "Grilling", time: 2, category: "Food Prep", levelRequired: 1)
+                        TestCard(title: "Grilling", time: 2, category: "Food Prep", levelRequired: 2)
                     }
                     
                     NavigationLink(destination: Test7View(userProgress: userProgress)) {
-                        TestCategoryCard(title: "Knife Skills", time: 2, category: "Food Prep", levelRequired: 1)
+                        TestCard(title: "Knife Skills", time: 2, category: "Food Prep", levelRequired: 1)
                     }
                 }
             }
@@ -182,19 +182,19 @@ struct foodSafetyManager: View {
             HStack(spacing: 5) {
                 if filter == 1 {
                     NavigationLink(destination: Test8View(userProgress: userProgress)) {
-                        TestCategoryCard(filter: 1, title: "Personal Hygiene", time: 2, category: "Safety", levelRequired: 1)
+                        TestCard(filter: 1, title: "Personal Hygiene", time: 2, category: "Safety", levelRequired: 1)
                     }
                     
                     NavigationLink(destination: Test4View(userProgress: userProgress)) {
-                        TestCategoryCard(filter: 1, title: "Food Safety", time: 5, category: "Safety", levelRequired: 2)
+                        TestCard(filter: 1, title: "Food Safety", time: 5, category: "Safety", levelRequired: 2)
                     }
                 } else {
                     NavigationLink(destination: Test8View(userProgress: userProgress)) {
-                        TestCategoryCard(title: "Personal Hygiene", time: 2, category: "Safety", levelRequired: 1)
+                        TestCard(title: "Personal Hygiene", time: 2, category: "Safety", levelRequired: 1)
                     }
                     
                     NavigationLink(destination: Test4View(userProgress: userProgress)) {
-                        TestCategoryCard(title: "Food Safety", time: 5, category: "Safety", levelRequired: 2)
+                        TestCard(title: "Food Safety", time: 5, category: "Safety", levelRequired: 2)
                     }
                 }
             }
@@ -216,29 +216,29 @@ struct internationalTermsManager: View {
                 if filter == 1 {
                    
                         NavigationLink(destination: Test3View(userProgress: userProgress)) {
-                            TestCategoryCard(filter: 1, title: "French Terms", time: 5, category: "International", levelRequired: 3)
+                            TestCard(filter: 1, title: "French Terms", time: 5, category: "International", levelRequired: 3)
                         }
                   
                         NavigationLink(destination: Test9View(userProgress: userProgress)) {
-                            TestCategoryCard(filter: 1, title: "Spanish Terms", time: 5, category: "International", levelRequired: 3)
+                            TestCard(filter: 1, title: "Spanish Terms", time: 5, category: "International", levelRequired: 3)
                         }
                         NavigationLink(destination: Test10View(userProgress: userProgress)) {
-                            TestCategoryCard(filter: 1, title: "Japanese Terms", time: 5, category: "International", levelRequired: 3)
+                            TestCard(filter: 1, title: "Japanese Terms", time: 5, category: "International", levelRequired: 3)
                         }
                     
                 } else {
                     if userProgress.currentLevel >= 2 {
                         NavigationLink(destination: Test3View(userProgress: userProgress)) {
-                            TestCategoryCard(title: "French Terms", time: 5, category: "International", levelRequired: 3)
+                            TestCard(title: "French Terms", time: 5, category: "International", levelRequired: 3)
                         }
                     }
                     
                     if userProgress.currentLevel >= 3 {
                         NavigationLink(destination: Test9View(userProgress: userProgress)) {
-                            TestCategoryCard(title: "Spanish Terms", time: 5, category: "International", levelRequired: 3)
+                            TestCard(title: "Spanish Terms", time: 5, category: "International", levelRequired: 3)
                         }
                         NavigationLink(destination: Test10View(userProgress: userProgress)) {
-                            TestCategoryCard(title: "Japanese Terms", time: 5, category: "International", levelRequired: 3)
+                            TestCard(title: "Japanese Terms", time: 5, category: "International", levelRequired: 3)
                         }
                     }
                 }

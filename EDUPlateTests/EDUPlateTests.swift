@@ -1,9 +1,3 @@
-//
-//  EDUPlateTests.swift
-//  EDUPlateTests
-//
-//  Created by Ruby Nuss on 11/17/24.
-//
 
 import Testing
 @testable import EDUPlate

@@ -59,8 +59,8 @@ class TestManager: ObservableObject {
         // Reset correctness and selected answer states for the next question
         isCorrect = nil
         selectedAnswer = nil
-        showNextButton = false  // Hide the "Next" button until an answer is selected
-        isAnswerSelected = false  // Allow the user to select an answer again
+        showNextButton = false
+        isAnswerSelected = false  
     }
     
     // Read questions/answers from JSON file depending on category and present to user
@@ -90,15 +90,15 @@ class TestManager: ObservableObject {
         }
         
         selectedAnswer = option
-        showNextButton = true  // Show the "Next" button after selecting an answer
-        isAnswerSelected = true  // Prevent the user from selecting another answer
+        showNextButton = true
+        isAnswerSelected = true
     }
     
     // Save score to the file (This code is left as a fallback)
     func saveScore(forConcentration concentration: String) {
         let newScore = Score(score: score, date: Date(), concentration: concentration)
         fileManager.appendScoreToFile(newScore)
-        print("Saved score: \(newScore)") // Debugging: Print the saved score
+        //print("Saved score: \(newScore)")
     }
     
     // Load saved scores from the file (Fallback loading)
@@ -106,25 +106,8 @@ class TestManager: ObservableObject {
         return fileManager.loadScoresFromFile()
     }
     
-  /*  func updateUserPointsInCoreData() {
-        print("went here")
-        if let user = CoreDataManager.shared.fetchUser(username: userProgress.username) {
-            
-            // Add the quiz score to the current points
-            let totalPoints = Int(user.points) + score
-            
-            // Recalculate level based on total points
-            let newLevel = max(1, totalPoints / 20)
-            
-            // Update the user's points and level in Core Data
-            CoreDataManager.shared.updateUser(username: userProgress.username, points: totalPoints, level: newLevel)
-            print("Updated user in Core Data: \(user.username ?? "Unknown") with points: \(totalPoints) and level: \(newLevel)")
-        } else {
-            print("No user found in Core Data.")
-        }
-    }*/
-    
     func updateConcentrationProgress(concentration: String) {
+        
         // Directly use the score to update concentration progress
         CoreDataManager.shared.updateConcentrationProgress(username: userProgress.username, concentration: concentration, earnedPoints: score)
         print("Updated concentration \(concentration) with \(score) points.")
@@ -143,6 +126,7 @@ class TestManager: ObservableObject {
             
             // Filter questions to include only those with one word
             let oneWordQuestions = decodedQuestions.filter { question in
+                
                 // Check if the question contains no spaces
                 !question.question.contains(" ")
             }

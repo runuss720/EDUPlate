@@ -87,7 +87,7 @@ struct HomeView: View {
 
 // used to display test buttons
 // displays title, time needed to take, and category
-struct TestCategoryCard: View {
+struct TestCard: View {
     @EnvironmentObject private var userProgress: UserProgress
     var filter: Int?
     let title: String
@@ -96,8 +96,12 @@ struct TestCategoryCard: View {
     let levelRequired: Int
     
     var body: some View {
+        
+        // pass filter if you only want to display the tests matching the level required
+        // otherwise dont pass a filter
         if (filter == 1) {
-            // only show new tests
+            
+            // only show new tests, for homeview
             if (userProgress.currentLevel == levelRequired) {
                 ZStack(alignment: .bottomLeading) {
                     VStack {

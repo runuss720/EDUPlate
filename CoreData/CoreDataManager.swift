@@ -1,11 +1,12 @@
 import CoreData
-import UIKit
+//import UIKit
 
+// handles user accounts, such as usernames and passwords
 class CoreDataManager {
     static let shared = CoreDataManager()
-
+    
     let persistentContainer: NSPersistentContainer
-
+    
     private init() {
         persistentContainer = NSPersistentContainer(name: "UserDataModel")
         persistentContainer.loadPersistentStores { (storeDescription, error) in
@@ -14,42 +15,39 @@ class CoreDataManager {
             }
         }
     }
-
+    
     var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
-
-    // Save new user data with password
+    
+    // Save new user data with password and username
     func saveUser(username: String, password: String, points: Int, level: Int) {
         let user = UserProfile(context: context)
         user.username = username
-        user.password = password  // Save the password
+        user.password = password
         user.points = Int64(points)
         user.level = Int64(level)
-
+        
         saveContext()
     }
-
+    
+    // updates user data if points change
     func updateUser(username: String, points: Int, level: Int) {
         if let user = fetchUser(username: username) {
             let oldLevel = user.level
             let oldPoints = user.points
-
+            
             if oldLevel != level || oldPoints != points {
                 user.points = Int64(points)
                 user.level = Int64(level)
                 saveContext()
-                print("✅ Successfully updated user: \(username) from Points: \(oldPoints), Level: \(oldLevel) to Points: \(points), Level: \(level)")
-            } else {
-                print("⚠️ No changes detected for \(username), skipping save. Current Points: \(oldPoints), Level: \(oldLevel)")
             }
         } else {
-            print("⚠️ User \(username) not found in Core Data.")
+            print("user not found in Core Data.")
         }
     }
-
-
-
+    
+    // verifies password from username
     func fetchUser(username: String, password: String? = nil) -> UserProfile? {
         let fetchRequest: NSFetchRequest<UserProfile> = UserProfile.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "username == %@", username)
@@ -57,7 +55,7 @@ class CoreDataManager {
         do {
             let users = try context.fetch(fetchRequest)
             if let user = users.first {
-                context.refresh(user, mergeChanges: true) 
+                context.refresh(user, mergeChanges: true)
                 
                 if let password = password, user.password == password {
                     return user
@@ -70,15 +68,14 @@ class CoreDataManager {
         }
         return nil
     }
-
+    
     // Save or update concentration progress
     func updateConcentrationProgress(username: String, concentration: String, earnedPoints: Int) {
         let fetchRequest: NSFetchRequest<ConcentrationProgress> = ConcentrationProgress.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "username == %@ AND concentration == %@", username, concentration)
-
+        
         do {
             if let progress = try context.fetch(fetchRequest).first {
-                // Update existing concentration progress
                 progress.points += Int64(earnedPoints)
             } else {
                 // Create a new concentration progress entry
@@ -92,12 +89,12 @@ class CoreDataManager {
             print("Failed to fetch concentration progress:", error)
         }
     }
-
+    
     // Fetch concentration progress
     func fetchConcentrationProgress(username: String) -> [ConcentrationProgress] {
         let fetchRequest: NSFetchRequest<ConcentrationProgress> = ConcentrationProgress.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "username == %@", username)
-
+        
         do {
             return try context.fetch(fetchRequest)
         } catch {
@@ -105,7 +102,7 @@ class CoreDataManager {
             return []
         }
     }
-
+    
     // Save context
     private func saveContext() {
         do {

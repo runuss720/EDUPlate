@@ -2,14 +2,15 @@ import SwiftUI
 
 struct TestView: View {
     @StateObject private var viewModel: TestManager
-    @ObservedObject var userProgress: UserProgress // Pass UserProgress here
+    @ObservedObject var userProgress: UserProgress
+    
     var category: String
     var concentration: String
 
     @State private var selectedAnswer: String? = nil
     @State private var isCorrect: Bool? = nil
     @State private var showNextButton: Bool = false
-    @State private var shuffledAnswers: [String] = []  // Initialize here
+    @State private var shuffledAnswers: [String] = []
 
     @Environment(\.presentationMode) var presentationMode
 
@@ -22,8 +23,13 @@ struct TestView: View {
 
     var body: some View {
         VStack {
+            
+            // wait for questions to load in
             if !viewModel.questions.isEmpty {
+                
+                // check if quiz has completed and show completion screen
                 if viewModel.isQuizCompleted {
+                    
                     VStack {
                         Text("Quiz Completed!")
                             .font(.largeTitle)
@@ -33,8 +39,9 @@ struct TestView: View {
                             .font(.title2)
                             .padding()
 
+                        // return to home screen
                         Button(action: {
-                            presentationMode.wrappedValue.dismiss() // Dismiss the current view to go back
+                            presentationMode.wrappedValue.dismiss()
                         }) {
                             Text("Return")
                                 .font(.title2)
@@ -49,7 +56,8 @@ struct TestView: View {
                 } else {
                     let currentQuestion = viewModel.questions[viewModel.questionsIndex]
 
-                    ZStack(alignment: .bottom) { // Use ZStack to overlay the "Next" button
+                    // display category, current question and shuffled answer choices
+                    ZStack(alignment: .bottom) {
                         VStack {
                             Text(currentQuestion.category)
                                 .font(.title)
@@ -62,10 +70,12 @@ struct TestView: View {
                             VStack {
                                 ForEach(shuffledAnswers, id: \.self) { answer in
                                     Button(action: {
-                                        if !viewModel.isAnswerSelected {  // Only allow answer selection if no answer has been selected
+                                        if !viewModel.isAnswerSelected {
                                             viewModel.answerQuestion(with: answer, concentration: concentration)
                                         }
                                     }) {
+                                        
+                                        // answer turns green if correct, red if false
                                         Text(answer)
                                             .font(.title2)
                                             .padding()
@@ -75,7 +85,10 @@ struct TestView: View {
                                             .cornerRadius(8)
                                             .padding(.bottom, 10)
                                     }
-                                    .disabled(viewModel.isAnswerSelected)  // Disable the button if an answer has already been selected
+                                    
+                                    // Disable the button if an answer has already been selected
+                                    // no cheating allowed
+                                    .disabled(viewModel.isAnswerSelected)
                                 }
                             }
 
@@ -93,7 +106,7 @@ struct TestView: View {
                         if viewModel.showNextButton {
                             Button(action: {
                                 viewModel.moveToNextQuestion(concentration: concentration)
-                                shuffleAnswers()  // Shuffle answers for the next question
+                                shuffleAnswers()
                             }) {
                                 Text("Next")
                                     .font(.title2)
@@ -104,23 +117,25 @@ struct TestView: View {
                                     .foregroundColor(.white)
                             }
                             .padding(.horizontal)
-                            .padding(.bottom, 20) // Add some padding at the bottom
+                            .padding(.bottom, 20)
                         }
                     }
                 }
             } else {
-                ProgressView("Loading Quiz...") // Show a loading indicator while questions are being loaded
+                // if this happens app has usually crashed
+                ProgressView("Loading Quiz...")
                     .font(.title2)
                     .padding()
             }
         }
         .onAppear {
-            viewModel.loadQuiz(forCategory: category) // Load quiz questions when the view appears
-            shuffleAnswers()  // Shuffle answers when the view appears
+            viewModel.loadQuiz(forCategory: category)
+            shuffleAnswers()
         }
         .navigationBarBackButtonHidden(true)
     }
 
+    // make sure answer choices don't show up in same order
     private func shuffleAnswers() {
         guard !viewModel.questions.isEmpty else { return }
         let currentQuestion = viewModel.questions[viewModel.questionsIndex]
