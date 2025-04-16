@@ -1,14 +1,13 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    @Binding var isVisible: Bool
-    @State private var username: String = ""
-    @State private var showTextField: Bool = false
     
+    @Binding var isVisible: Bool
     @EnvironmentObject var userProgress: UserProgress
     
+    @State private var username: String = ""
+    @State private var showTextField: Bool = false
     @State private var password: String = ""
-    
     @State private var isNewUser: Bool = false
     @State private var errorMessage: String? = nil
     
@@ -60,7 +59,7 @@ struct WelcomeView: View {
                         .padding(.top, 10)
                 }
 
-                // Login or Create Account button
+                // gives user the option to login or create an account
                 Button(action: {
                     if showTextField {
                         if !username.isEmpty {

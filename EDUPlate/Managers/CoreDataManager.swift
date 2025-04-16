@@ -1,17 +1,17 @@
 import CoreData
-//import UIKit
 
 // handles user accounts, such as usernames and passwords
+// check print messages for testing later
 class CoreDataManager {
-    static let shared = CoreDataManager()
     
+    static let shared = CoreDataManager()
     let persistentContainer: NSPersistentContainer
     
     private init() {
-        persistentContainer = NSPersistentContainer(name: "UserDataModel")
+        persistentContainer = NSPersistentContainer(name: "UserData")
         persistentContainer.loadPersistentStores { (storeDescription, error) in
             if let error = error {
-                fatalError("Failed to load Core Data stack: \(error)")
+                print("Failed to load coredata", error)
             }
         }
     }
@@ -21,6 +21,7 @@ class CoreDataManager {
     }
     
     // Save new user data with password and username
+    // new users SHOULD start out with 0 points and level 1
     func saveUser(username: String, password: String, points: Int, level: Int) {
         let user = UserProfile(context: context)
         user.username = username
@@ -28,6 +29,9 @@ class CoreDataManager {
         user.points = Int64(points)
         user.level = Int64(level)
         
+        if (user.points > 0 || user.level > 1) {
+            print("ERROR - new user should start with 0 points")
+        }
         saveContext()
     }
     
@@ -37,13 +41,11 @@ class CoreDataManager {
             let oldLevel = user.level
             let oldPoints = user.points
             
-            if oldLevel != level || oldPoints != points {
+            if (oldLevel != level) || (oldPoints != points) {
                 user.points = Int64(points)
                 user.level = Int64(level)
                 saveContext()
             }
-        } else {
-            print("user not found in Core Data.")
         }
     }
     
@@ -78,6 +80,7 @@ class CoreDataManager {
             if let progress = try context.fetch(fetchRequest).first {
                 progress.points += Int64(earnedPoints)
             } else {
+                
                 // Create a new concentration progress entry
                 let newProgress = ConcentrationProgress(context: context)
                 newProgress.username = username
@@ -90,7 +93,7 @@ class CoreDataManager {
         }
     }
     
-    // Fetch concentration progress
+    // keep track of concentration data for stats page
     func fetchConcentrationProgress(username: String) -> [ConcentrationProgress] {
         let fetchRequest: NSFetchRequest<ConcentrationProgress> = ConcentrationProgress.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "username == %@", username)

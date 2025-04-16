@@ -7,14 +7,15 @@ struct ChartData: Identifiable {
     let concentration: String
 }
 
-class ChartViewModel: ObservableObject {
+class ChartView: ObservableObject {
     @Published var chartData = [ChartData]()
-    @ObservedObject var userProgress: UserProgress // Use userProgress directly
-
+    @ObservedObject var userProgress: UserProgress
+   // @EnvironmentObject private var userProgress: UserProgress
+    
     init(userProgress: UserProgress) {
         self.userProgress = userProgress
     }
-
+    
     func loadScores() {
         let coreDataManager = CoreDataManager.shared
         let concentrationProgress = coreDataManager.fetchConcentrationProgress(username: userProgress.username)
@@ -25,15 +26,15 @@ class ChartViewModel: ObservableObject {
             print("No concentration progress found, chart is blank.")
             return
         }
-
+        
         // Aggregate scores by concentration
         var concentrationScores = [String: Int]()
         for progress in concentrationProgress {
             let concentration = progress.concentration ?? ""
             concentrationScores[concentration] = (concentrationScores[concentration] ?? 0) + Int(progress.points)
         }
-
-        // Convert the aggregated scores into ChartData
+        
+        // convert scores into ChartData
         chartData = concentrationScores.map { concentration, totalScore in
             ChartData(score: totalScore, concentration: concentration)
         }
@@ -42,13 +43,14 @@ class ChartViewModel: ObservableObject {
 
 struct StatsView: View {
     @ObservedObject var userProgress: UserProgress
-    @StateObject var vm: ChartViewModel
+    @StateObject var vm: ChartView
     @StateObject private var testManager = TestManager(userProgress: UserProgress())
     
+    // random vocab word to display taken from questions
     @State private var vocabOfTheDay: Question? = nil
     
-    // Define a color palette for various shades of indigo
-    let indigoShades: [Color] = [
+    // color palette
+    let colorPalette: [Color] = [
         Color(red: 0.6, green: 0.7, blue: 1.1), // Dark Indigo
         Color(red: 0.7, green: 0.8, blue: 1.2), // Medium Indigo
         Color(red: 0.8, green: 0.9, blue: 1.3), // Light Indigo
@@ -66,7 +68,7 @@ struct StatsView: View {
             .frame(height: 60)
             .padding(.top, -30)
             
-            // Check if chartData is empty
+            // Check if chartData is empty aka user hasn't gained any points on account
             if vm.chartData.isEmpty {
                 
                 // Show message if no data
@@ -76,7 +78,7 @@ struct StatsView: View {
                     .offset(x:0, y:-200)
             } else {
                 
-                // Pie Chart for concentration scores
+                // pie chart for concentration scores
                 Chart(vm.chartData) { item in
                     SectorMark(
                         angle: .value("Score", item.score),
@@ -91,7 +93,7 @@ struct StatsView: View {
                             .foregroundStyle(.white)
                     }
                 }
-                .chartForegroundStyleScale(range: indigoShades)
+                .chartForegroundStyleScale(range: colorPalette)
                 .frame(height: 300)
                 .padding(.top, 20)
             }
@@ -125,7 +127,10 @@ struct StatsView: View {
         }
         .padding()
         .onAppear {
-            vm.loadScores() // Load chart data when the view appears
+            
+            // Load chart data when the view appears
+            // ensures chart updates consistently
+            vm.loadScores()
             userProgress.fetchUserData()
             vocabOfTheDay = testManager.fetchRandomQuestion()
         }
@@ -133,5 +138,5 @@ struct StatsView: View {
 }
 
 #Preview {
-    StatsView(userProgress: UserProgress(), vm: ChartViewModel(userProgress: UserProgress()))
+    StatsView(userProgress: UserProgress(), vm: ChartView(userProgress: UserProgress()))
 }

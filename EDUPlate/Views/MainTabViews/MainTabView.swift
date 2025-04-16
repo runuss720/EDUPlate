@@ -10,7 +10,7 @@ struct MainTabView: View {
                     Label("Home", systemImage: "house.fill")
                 }
             
-            StatsView(userProgress: userProgress, vm: ChartViewModel(userProgress: userProgress))
+            StatsView(userProgress: userProgress, vm: ChartView(userProgress: userProgress))
                 .tabItem {
                     Label("Stats", systemImage: "chart.bar.xaxis")
                 }

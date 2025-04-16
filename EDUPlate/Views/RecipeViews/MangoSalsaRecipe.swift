@@ -3,8 +3,7 @@ import SwiftUI
 struct MangoSalsaRecipe: View {
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
-                
+            VStack(alignment: .leading, spacing: 10) {
                 
                 Text("Mango Salsa")
                     .font(.system(size: 28, weight: .bold, design: .rounded))
@@ -15,7 +14,7 @@ struct MangoSalsaRecipe: View {
                 Image("mangoSalsa")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 250) // Adjust height as needed
+                    .frame(height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .shadow(radius: 5)
                     .padding(.horizontal, 90)
@@ -27,13 +26,13 @@ struct MangoSalsaRecipe: View {
                     .foregroundColor(.black)
                 
                 Group {
-                    Text("• 1/4 cup soy sauce")
-                    Text("• 1/4 cup oyster sauce")
-                    Text("• 4 cloves garlic, minced")
-                    Text("• 1 teaspoon ginger, minced")
+                    Text("• 1 mango, diced")
+                    Text("• 1 avocado, diced")
+                    Text("• 1/4 cup cilantro, diced")
+                    Text("• 2 tbsp diced red onion")
                     Text("• 1 teaspoon sesame oil")
-                    Text("• 1/4 cup Sake (or mirin)")
-                    Text("• 1/4 cup brown sugar")
+                    Text("• juice of half a lime")
+                    Text("• salt and pepper to taste")
                 }
                 .font(.body)
                 .foregroundColor(.gray)

@@ -3,7 +3,7 @@ import SwiftUI
 struct SalmonRecipe: View {
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: 10) {
                 
                 Text("Marinated Salmon")
                     .font(.system(size: 28, weight: .bold, design: .rounded))
@@ -13,7 +13,7 @@ struct SalmonRecipe: View {
                 Image("salmondishfinished")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 250) // Adjust height as needed
+                    .frame(height: 250) 
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .shadow(radius: 5)
                     .padding(.horizontal, 90)

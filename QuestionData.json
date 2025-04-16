@@ -1,7 +1,7 @@
 [
 {"category": "Tools", "question": "spatula", "answer": "used to scrape bowls", "fake1": "a wavy pattern in some steel knives", "fake2": "used to flatten dough", "fake3": "protects a table from scorch marks"} ,
 {"category": "Tools", "question": "whisk", "answer": "used to whip or mix ingredients", "fake1": "Good for peeling an apple", "fake2": "used for making marmalades and preserves", "fake3": "used to lift ingredients during grilling or frying"} ,
-{"category": "Tools", "question": "grater", "answer": "used to create fine or coarse particles of cheese", "fake1": "used to drain liquid while serving", "fake2": "used to create fine particles of vegetables", "fake3": "Drains water from cooked pasta or vegetables"} ,
+{"category": "Tools", "question": "grater", "answer": "used to create fine or coarse particles of cheese", "fake1": "used to drain liquid while serving", "fake2": "used to lift ingredients during grilling or frying", "fake3": "Drains water from cooked pasta or vegetables"} ,
 {"category": "Tools", "question": "rolling pin", "answer": "used to flatten dough", "fake1": "used to whip or mix ingredients", "fake2": "a wavy pattern in some steel knives", "fake3": "Good for peeling an apple"} ,
 {"category": "Tools", "question": "tongs", "answer": "used to lift ingredients during grilling or frying", "fake1": "used to scrape bowls", "fake2": "used to make pasta", "fake3": "Good for peeling an apple"} ,
 {"category": "Tools", "question": "slotted spoon", "answer": "used to drain liquid while serving", "fake1": "used for making marmalades and preserves", "fake2": "used to scrape bowls", "fake3": "used to lift ingredients during grilling or frying"} ,
@@ -511,8 +511,8 @@
       {"category": "Spanish Cooking", "question": "Caramelizar", "answer": "Slowly cooking sugar until it turns brown", "fake1": "Coating food in flour", "fake2": "Cooking food directly over a flame", "fake3": "Blending ingredients into a paste"},
       
       {"category": "Japanese Cooking", "question": "Yakimono", "answer": "Grilled or pan-fried dishes", "fake1": "Fermented vegetables", "fake2": "Steamed rice dishes", "fake3": "Cold noodle soups"},
-      {"category": "Japanese Cooking", "question": "Tempura", "answer": "Deep-fried battered seafood or vegetables", "fake1": "Raw fish over rice", "fake2": "Simmered meat and vegetables", "fake3": "Pickled vegetables"},
-      {"category": "Japanese Cooking", "question": "Sashimi", "answer": "Sliced raw fish or seafood", "fake1": "Grilled fish", "fake2": "Rice porridge", "fake3": "Fried tofu"},
+      {"category": "Japanese Cooking", "question": "Tempura", "answer": "Seafood or vegetables coated in a thin batter and deep-fried", "fake1": "Raw fish over rice", "fake2": "Simmered meat and vegetables", "fake3": "Pickled radish"},
+      {"category": "Japanese Cooking", "question": "Sashimi", "answer": "Sliced raw seafood", "fake1": "Grilled fish", "fake2": "Rice porridge", "fake3": "Fried tofu"},
       {"category": "Japanese Cooking", "question": "Nimono", "answer": "Simmered dishes with broth", "fake1": "Stir-fried noodles", "fake2": "Breaded and fried pork", "fake3": "Raw seafood over rice"},
       {"category": "Japanese Cooking", "question": "Teriyaki", "answer": "A cooking method using a sweet soy glaze", "fake1": "A soup-based dish", "fake2": "A deep-fried rice ball", "fake3": "A sushi rolling technique"},
       {"category": "Japanese Cooking", "question": "Tataki", "answer": "Lightly seared fish or meat", "fake1": "A type of miso soup", "fake2": "A noodle dish with cold dipping sauce", "fake3": "A method of pickling vegetables"},

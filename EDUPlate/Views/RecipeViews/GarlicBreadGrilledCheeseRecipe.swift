@@ -3,7 +3,7 @@ import SwiftUI
 struct GarlicBreadGrilledCheeseRecipe: View {
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: 10) {
                 
                 Text("Garlic Bread Grilled Cheese")
                     .font(.system(size: 28, weight: .bold, design: .rounded))
@@ -13,7 +13,7 @@ struct GarlicBreadGrilledCheeseRecipe: View {
                 Image("garlic_bread")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 250) // Adjust height as needed
+                    .frame(height: 250) 
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .shadow(radius: 5)
                     .padding(.horizontal, 90)
@@ -29,7 +29,7 @@ struct GarlicBreadGrilledCheeseRecipe: View {
                         Text("• 2 Slices of sourdough bread (or whatever bread you prefer)")
                         Text("• 1 tablespoon butter")
                         Text("• 3 cloves garlic, minced")
-                        Text("• 1 teaspoon italian seasoning")
+                        Text("• 1 teaspoon Italian seasoning")
                         Text("• 1/2 cup grated cheddar, mozzarella, or a combination of both")
                         Text("• Salt and pepper to taste")
                     }
@@ -45,11 +45,11 @@ struct GarlicBreadGrilledCheeseRecipe: View {
                     .foregroundColor(.black)
                 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("1.Using either a microwave or pan, melt butter and add garlic and seasonings. Let it sizzle for about 30 seconds until fragrant. (About 1 minute in the microwave)")
-                    Text("2. Brush the outer sides of your bread with the butter mixture. Place the cheese on the un-buttered sides of the bread and form into a sandwich.")
-                    Text("3. Place buttered side down on a pan on medium heat and cook for about 2-3 minutes, or until golden brown, then flip and repeat on the other side.")
-                    Text("4. If the cheese still hasn't melted at this point, lower the heat and cover for an additional 2-3 mintues, making sure to not burn the bread")
-                    Text("Take off the heat and serve immedietly. Best served with homemade tomato soup.")
+                    Text("1. Using either a microwave or pan, melt butter and add garlic and seasonings. Let it sizzle for about 30 seconds until fragrant. (About 1 minute in the microwave)")
+                    Text("2. Brush the outer sides of your bread with the butter mixture. Place the cheese on the unbuttered sides of the bread and form into a sandwich.")
+                    Text("3. Place buttered side down on a pan over medium heat and cook for about 2-3 minutes, or until golden brown, then flip and repeat on the other side.")
+                    Text("4. If the cheese still hasn't melted at this point, lower the heat and cover for an additional 2-3 minutes, making sure to not burn the bread")
+                    Text("Take off the heat and serve immediately. Best served with homemade tomato soup.")
                 }
                 .font(.body)
                 .foregroundColor(.gray)

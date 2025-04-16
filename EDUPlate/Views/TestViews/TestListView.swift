@@ -7,6 +7,7 @@ struct TestListView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 16) {
+                    
                     // Food Preparation Section
                     VStack(alignment: .leading, spacing: 10) {
                         Text("Food Preparation")
@@ -86,7 +87,7 @@ struct Test5View: View {
 struct Test6View: View {
     @ObservedObject var userProgress: UserProgress
     var body: some View {
-        TestView(category: "Grilling", userProgress: userProgress, concentration: "Food Preparation")
+        TestView(category: "Grilling Techniques", userProgress: userProgress, concentration: "Food Preparation")
     }
 }
 

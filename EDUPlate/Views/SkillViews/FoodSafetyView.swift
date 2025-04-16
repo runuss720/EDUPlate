@@ -1,10 +1,3 @@
-//
-//  FoodSafetyView.swift
-//  EDUPlate
-//
-//  Created by Ruby Nuss on 3/20/25.
-//
-
 import SwiftUI
 
 struct FoodSafetyView: View {
@@ -12,29 +5,26 @@ struct FoodSafetyView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 
-                // Title
                 Text("Food Safety")
                     .font(.system(size: 28, weight: .bold, design: .rounded))
                     .foregroundColor(.black)
                     .padding(.top)
-                    .frame(maxWidth: .infinity, alignment: .center) // Center title
+                    .frame(maxWidth: .infinity, alignment: .center)
                 
-                // Image
                 Image("safety")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 250) // Adjust height as needed
+                    .frame(height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .shadow(radius: 5)
                     .padding(.horizontal, 20)
                 
-                // Section: Overview
                 Text("A Brief Overview")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
                 
-                Text("Food safety is crucial for preventing foodborne illnesses and ensuring meals are safe to eat. Always start by **washing your hands** with soap and warm water for **at least 20 seconds** before handling food. Keep **raw meats, poultry, and seafood separate** from other foods to prevent cross-contamination. Use separate cutting boards and utensils for raw and cooked items. Wash fruits and vegetables under running water before eating, even if you plan to peel them.")
+                Text("Food safety is an important part of the learning process when it comes to cooking, even though it may not be as fun. It is important for preventing foodborne illnesses and ensuring meals are safe to eat. ALWAYS wash your hands with soap and warm water for at least 20 seconds before handling food. Make sure to keep meat separate from other foods to prevent cross-contamination, especially when using a cutting board. Wash fruits and vegetables under running water before eating, even if you plan to peel them.")
                     .font(.body)
                     .foregroundColor(.gray)
                     .lineSpacing(4)
@@ -42,7 +32,6 @@ struct FoodSafetyView: View {
                 
                 Divider()
                 
-                // Section: The Basics
                 Text("The Basics")
                     .font(.title2)
                     .fontWeight(.semibold)
@@ -64,7 +53,6 @@ struct FoodSafetyView: View {
                 
                 Divider()
                 
-                // Section: Proper Food Storage
                 Text("Proper Food Storage")
                     .font(.title2)
                     .fontWeight(.semibold)
@@ -77,8 +65,7 @@ struct FoodSafetyView: View {
                     .padding(.bottom, 20)
                 
                 Divider()
-                
-                // Food Safety Tip
+    
                 VStack(alignment: .leading, spacing: 8) {
                     Text("🔹 **Food Safety Tip**")
                         .font(.headline)
@@ -96,7 +83,6 @@ struct FoodSafetyView: View {
     }
 }
 
-// Preview
 #Preview {
     FoodSafetyView()
 }

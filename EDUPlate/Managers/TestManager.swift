@@ -1,4 +1,4 @@
-import Foundation
+//import Foundation
 import SwiftUI
 
 struct Quiz: Codable {
@@ -19,11 +19,11 @@ struct Question: Codable {
 }
 
 // user scores will be stored, along with date and concentration of quiz
-struct Score: Codable {
+/*struct Score: Codable {
     let score: Int
     let date: Date
     let concentration: String
-}
+}*/
 
 class TestManager: ObservableObject {
     
@@ -39,8 +39,8 @@ class TestManager: ObservableObject {
     @ObservedObject var userProgress: UserProgress
     
     // Used for accessing JSON file
-    private let fileManager = FileManagerHelper()
-    private let scoreFileName = "userScores.json"
+   // private let fileManager = FileManagerHelper()
+   // private let scoreFileName = "userScores.json"
     
     init(userProgress: UserProgress) {
         self.userProgress = userProgress
@@ -48,6 +48,8 @@ class TestManager: ObservableObject {
     }
     
     func moveToNextQuestion(concentration: String) {
+        
+        // check whether quiz is finished or not
         if questionsIndex < questions.count - 1 {
             questionsIndex += 1
         } else {
@@ -65,7 +67,7 @@ class TestManager: ObservableObject {
     
     // Read questions/answers from JSON file depending on category and present to user
     func loadQuiz(forCategory category: String) {
-        guard let url = Bundle.main.url(forResource: "f5", withExtension: "json") else {
+        guard let url = Bundle.main.url(forResource: "QuestionData", withExtension: "json") else {
             return
         }
         do {
@@ -74,7 +76,7 @@ class TestManager: ObservableObject {
             let decodedQuestions = try decoder.decode([Question].self, from: data)
             self.questions = decodedQuestions.filter { $0.category == category }
         } catch {
-            print("Error decoding JSON")
+            print("ERROR", error)
         }
     }
     
@@ -88,23 +90,22 @@ class TestManager: ObservableObject {
         } else {
             isCorrect = false
         }
-        
         selectedAnswer = option
         showNextButton = true
         isAnswerSelected = true
     }
     
-    // Save score to the file (This code is left as a fallback)
+  /*  // Save score to the file (This code is left as a fallback)
     func saveScore(forConcentration concentration: String) {
         let newScore = Score(score: score, date: Date(), concentration: concentration)
-        fileManager.appendScoreToFile(newScore)
+       // fileManager.appendScoreToFile(newScore)
         //print("Saved score: \(newScore)")
-    }
+    }*/
     
-    // Load saved scores from the file (Fallback loading)
+ /*   // Load saved scores from the file (Fallback loading)
     func loadSavedScores() -> [Score] {
         return fileManager.loadScoresFromFile()
-    }
+    }*/
     
     func updateConcentrationProgress(concentration: String) {
         
@@ -115,8 +116,8 @@ class TestManager: ObservableObject {
     
     // fetches random vocabulary words to be used in the stats page
     func fetchRandomQuestion() -> Question? {
-        guard let url = Bundle.main.url(forResource: "f5", withExtension: "json") else {
-            print("Failed to locate f5.json in bundle")
+        guard let url = Bundle.main.url(forResource: "QuestionData", withExtension: "json") else {
+            print("Failed to locate QuestionData.json :(")
             return nil
         }
         do {
@@ -134,7 +135,7 @@ class TestManager: ObservableObject {
             // Return a random question from the filtered list
             return oneWordQuestions.randomElement()
         } catch {
-            print("Error decoding JSON: \(error)")
+            print("Error decoding JSON: ", error)
             return nil
         }
     }

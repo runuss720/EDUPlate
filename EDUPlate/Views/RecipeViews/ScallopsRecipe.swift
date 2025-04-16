@@ -1,16 +1,9 @@
-//
-//  ScallopsRecipe.swift
-//  EDUPlate
-//
-//  Created by Ruby Nuss on 3/22/25.
-//
-
 import SwiftUI
 
 struct ScallopsRecipe: View {
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: 10) {
                 
                 
                 Text("Seared Scallops")
@@ -22,7 +15,7 @@ struct ScallopsRecipe: View {
                 Image("scallopsfinished")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 250) // Adjust height as needed
+                    .frame(height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .shadow(radius: 5)
                     .padding(.horizontal, 90)
@@ -69,7 +62,7 @@ struct ScallopsRecipe: View {
                 Image("scallops")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 250) // Adjust height as needed
+                    .frame(height: 250) 
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .shadow(radius: 5)
                     .padding(.horizontal, 90)

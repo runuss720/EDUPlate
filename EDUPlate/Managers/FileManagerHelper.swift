@@ -1,4 +1,4 @@
-import Foundation
+/*import Foundation
 
 class FileManagerHelper {
     
@@ -12,7 +12,7 @@ class FileManagerHelper {
         saveScoresToFile(scores: existingScores, fileURL: fileURL)
     }
     
-    // Save an array of scores to the file
+    /*// Save an array of scores to the file
     func saveScoresToFile(scores: [Score], fileURL: URL) {
         do {
             let encoder = JSONEncoder()
@@ -22,9 +22,9 @@ class FileManagerHelper {
         } catch {
             print("Error saving scores to file: \(error)")
         }
-    }
+    }*/
     
-    // Load scores from the file
+  /*  // Load scores from the file
     func loadScoresFromFile() -> [Score] {
         let fileURL = ScoresFileURL()
         
@@ -41,13 +41,14 @@ class FileManagerHelper {
         } catch {
             return []
         }
-    }
+    }*/
     
-    // Get the file URL for the userScores.json file
+   /* // Get the file URL for the userScores.json file
     func ScoresFileURL() -> URL {
         let fm = FileManager.default
         let documentsURL = fm.urls(for: .documentDirectory, in: .userDomainMask).first!
         let fileURL = documentsURL.appendingPathComponent("userScores.json")
         return fileURL
-    }
+    }*/
 }
+*/

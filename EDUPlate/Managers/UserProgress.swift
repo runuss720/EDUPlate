@@ -3,8 +3,10 @@ import Foundation
 class UserProgress: ObservableObject {
     @Published var currentLevel: Int = 1
     @Published var currentPoints: Int = 0
-    @Published var username: String = "" // Store the username
-    @Published var password: String = "" // Store the password
+    @Published var username: String = "" 
+    @Published var password: String = ""
+    
+    // change to 100 for final product, 10 for demo
     let pointsToLevelUp = 10
 
     private let coreDataManager = CoreDataManager.shared
@@ -15,6 +17,7 @@ class UserProgress: ObservableObject {
 
     // Fetch user data based on the current username and password
     func fetchUserData() {
+        
         // Guard to prevent unnecessary fetching
         guard !username.isEmpty else {
             print("Username is empty. Skipping fetch.")
@@ -23,6 +26,7 @@ class UserProgress: ObservableObject {
 
         // Fetch user data from Core Data and validate password
         if let user = coreDataManager.fetchUser(username: username, password: password) {
+            
             // Update properties only if they have changed
             if self.currentPoints != Int(user.points) || self.currentLevel != Int(user.level) {
                 self.currentPoints = Int(user.points)
@@ -49,7 +53,7 @@ class UserProgress: ObservableObject {
         self.username = username
         self.password = password
         resetUserProgress() 
-        coreDataManager.saveUser(username: username, password: password, points: currentPoints, level: currentLevel) // Save new user profile
+        coreDataManager.saveUser(username: username, password: password, points: currentPoints, level: currentLevel) 
         print("Updated user data for \(username)")
     }
 
