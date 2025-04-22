@@ -5,6 +5,7 @@ struct RecipeManager: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             VStack {
+                
                 // display full list of Recipes
                 NavigationLink(destination: SalmonRecipe()) {
                     RecipeCard(title: "Salmon")

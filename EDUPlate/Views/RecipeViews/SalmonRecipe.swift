@@ -63,34 +63,34 @@ struct SalmonRecipe: View {
                 
                 VStack(alignment: .leading, spacing: 8) {
                     Text("1. **Prepare the marinade**: In a bowl, mix all marinade ingredients well.")
-                    Text("2. **Marinate the salmon**: Add the salmon to the bowl and refrigerate for at least **1 hour** (the longer, the better).")
+                    Text("2. **Marinate the salmon**: Add the salmon to the bowl and refrigerate for at least 1 hour (the longer, the better).")
                     
                     Image("salmonmarinade")
                         .resizable()
                         .scaledToFit()
-                        .frame(height: 250) // Adjust height as needed
+                        .frame(height: 250)
                         .clipShape(RoundedRectangle(cornerRadius: 15))
                         .shadow(radius: 5)
                         .padding(.horizontal, 90)
                     
-                    Text("3. **Preheat the pan**: Heat **2 tbsp cooking oil** in a pan until it reaches **350°F** (oil should bubble when water touches it).")
-                    Text("4. **Cook the salmon**: Place the salmon in the pan and cook on **high heat** until golden brown, about **2 minutes per side**.")
-                    Text("   - Ensure the internal temperature reaches **145°F**.")
+                    Text("3. **Preheat the pan**: Heat 2 tbsp cooking oil in a pan until it reaches 350°F (oil should bubble when water touches it).")
+                    Text("4. **Cook the salmon**: Place the salmon in the pan and cook on high heat until golden brown, about 2 minutes per side.")
+                    Text("   - Ensure the internal temperature reaches 145°F.")
                     Text("   - If the fish is browning too fast, lower the heat.")
                     
                     Image("salmongrilled")
                         .resizable()
                         .scaledToFit()
-                        .frame(height: 250) // Adjust height as needed
+                        .frame(height: 250) 
                         .clipShape(RoundedRectangle(cornerRadius: 15))
                         .shadow(radius: 5)
                         .padding(.horizontal, 90)
                     
                     
-                    Text("5. **Prepare the sauce**: Remove the cooked salmon and set it aside. Pour the marinade into the same pan and stir over **low heat**.")
-                    Text("   - Cook for **5-10 minutes** until the brown sugar caramelizes and thickens into a syrupy sauce.")
+                    Text("5. **Prepare the sauce**: Remove the cooked salmon and set it aside. Pour the marinade into the same pan and stir over low heat.")
+                    Text("   - Cook for 5-10 minutes until the brown sugar caramelizes and thickens into a syrupy sauce.")
                     Text("6. **Coat the salmon**: Return the salmon to the pan and coat all sides with the sauce.")
-                    Text("7. **Garnish & Serve**: Sprinkle with **green onion** and **sesame seeds**. Serve immediately with **white rice and mango salsa**.")
+                    Text("7. **Garnish & Serve**: Sprinkle with green onion and sesame seeds. Serve immediately with white rice and mango salsa.")
                 }
                 .font(.body)
                 .foregroundColor(.gray)
@@ -99,11 +99,11 @@ struct SalmonRecipe: View {
                 Divider()
                 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("🔹 **Cooking Tip**")
+                    Text("🔹 Cooking Tips")
                         .font(.headline)
                         .foregroundColor(.black)
                     
-                    Text("A temperature gun is **super useful** for monitoring your pan’s surface temperature and ensuring even cooking.")
+                    Text("A temperature gun is super useful for monitoring your pan’s surface temperature and ensuring even cooking.")
                         .font(.body)
                         .foregroundColor(.gray)
                 }
@@ -114,7 +114,6 @@ struct SalmonRecipe: View {
     }
 }
 
-// Preview
 #Preview {
     SalmonRecipe()
 }

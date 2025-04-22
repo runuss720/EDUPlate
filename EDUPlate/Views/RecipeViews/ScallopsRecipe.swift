@@ -20,7 +20,6 @@ struct ScallopsRecipe: View {
                     .shadow(radius: 5)
                     .padding(.horizontal, 90)
                 
-                // Ingredients Section
                 Text("Ingredients")
                     .font(.title2)
                     .fontWeight(.semibold)

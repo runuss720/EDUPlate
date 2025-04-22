@@ -38,14 +38,14 @@ struct FoodSafetyView: View {
                     .foregroundColor(.black)
                 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("• **Cook food to the right temperature** to kill harmful bacteria.")
-                    Text("• Use a **food thermometer** to check internal temperatures:")
-                    Text("   - Poultry: **165°F**")
-                    Text("   - Ground meats: **160°F**")
-                    Text("   - Whole cuts of beef, pork, fish: **145°F**")
-                    Text("• Avoid the **danger zone (40–140°F)**, where bacteria multiply quickly.")
-                    Text("• **Refrigerate leftovers** within **two hours** (or **one hour** in hot weather).")
-                    Text("• Store perishable items at **or below 40°F** and reheat leftovers to at least **165°F**.")
+                    Text("• Cook food to the right temperature to kill harmful bacteria.")
+                    Text("• Use a food thermometer to check internal temperatures:")
+                    Text("   - Poultry: 165°F")
+                    Text("   - Ground meats: 160°F")
+                    Text("   - Beef, pork, fish: 145°F")
+                    Text("• Avoid the danger zone (40–140°F), where bacteria multiply quickly.")
+                    Text("• Refrigerate leftovers within two hours of sitting out")
+                    Text("• Store perishable items at or below 40°F and reheat leftovers to at least 165°F.")
                 }
                 .font(.body)
                 .foregroundColor(.gray)
@@ -58,7 +58,7 @@ struct FoodSafetyView: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
                 
-                Text("Proper food storage helps maintain freshness and safety. Store **raw meats on the lowest shelf** in the refrigerator to prevent drips onto other foods. Label leftovers with dates and consume them within a safe timeframe—typically **three to four days**. When in doubt, throw it out; **spoiled food may not always show signs of contamination**. By following these food safety basics, you can minimize risks and enjoy safe, delicious meals every time!")
+                Text("Proper food storage helps maintain freshness and safety. Store raw meats on the lowest shelf in the refrigerator to prevent drips onto other foods. Label leftovers with dates and consume them within a safe timeframe—typically three to four days. When in doubt, throw it out; spoiled food may not always show signs of contamination. By following these food safety basics, you can minimize risks and enjoy safe, delicious meals every time!")
                     .font(.body)
                     .foregroundColor(.gray)
                     .lineSpacing(4)
@@ -67,11 +67,11 @@ struct FoodSafetyView: View {
                 Divider()
     
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("🔹 **Food Safety Tip**")
+                    Text("🔹 Food Safety Tip")
                         .font(.headline)
                         .foregroundColor(.black)
                     
-                    Text("Keeping a **digital thermometer** in your kitchen ensures your food is always cooked to safe temperatures.")
+                    Text("Keeping a digital thermometer in your kitchen ensures your food is always cooked to safe temperatures.")
                         .font(.body)
                         .foregroundColor(.gray)
                 }

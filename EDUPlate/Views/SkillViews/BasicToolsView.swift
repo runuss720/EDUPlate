@@ -5,23 +5,20 @@ struct BasicToolsView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 
-                // Title
                 Text("Basic Materials")
                     .font(.system(size: 28, weight: .bold, design: .rounded))
                     .foregroundColor(.black)
                     .padding(.top)
-                    .frame(maxWidth: .infinity, alignment: .center) // Center title
+                    .frame(maxWidth: .infinity, alignment: .center)
                 
-                // Image
                 Image("debby-hudson-_HwEGoJKsaM-unsplash")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 250) // Adjust height as needed
+                    .frame(height: 250) 
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .shadow(radius: 5)
                     .padding(.horizontal, 20)
                 
-                // Section: Overview
                 Text("A Brief Overview")
                     .font(.title2)
                     .fontWeight(.semibold)
@@ -35,7 +32,6 @@ struct BasicToolsView: View {
                 
                 Divider()
                 
-                // Section: The Basics
                 Text("Tools")
                     .font(.title2)
                     .fontWeight(.semibold)
@@ -70,7 +66,6 @@ struct BasicToolsView: View {
                 
                 Divider()
                 
-                // Section: Proper Food Storage
                 Text("Basic Ingredients")
                     .font(.title2)
                     .fontWeight(.semibold)
@@ -97,7 +92,6 @@ struct BasicToolsView: View {
                 
                 Divider()
                 
-                // Section: Proper Food Storage
                 Text("Seasonings")
                     .font(.title2)
                     .fontWeight(.semibold)
@@ -125,7 +119,7 @@ struct BasicToolsView: View {
                 .foregroundColor(.gray)
                 .padding(.bottom, 16)
                 
-                Text("🔹 ** Seasoning Tips **")
+                Text("🔹 Seasoning Tips")
                     .font(.headline)
                     .foregroundColor(.black)
                 

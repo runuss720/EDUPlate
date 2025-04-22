@@ -127,6 +127,7 @@ struct TestView: View {
                     }
                 }
             } else {
+                
                 // if this happens app has usually crashed
                 ProgressView("Loading Quiz...")
                     .font(.title2)
@@ -142,7 +143,6 @@ struct TestView: View {
     
     // make sure answer choices don't show up in same order by shuffling
     private func shuffleAnswers() {
-        //guard !viewModel.questions.isEmpty else { return }
         let currentQuestion = viewModel.questions[viewModel.questionsIndex]
         shuffledAnswers = [currentQuestion.answer, currentQuestion.fake1, currentQuestion.fake2, currentQuestion.fake3].shuffled()
     }

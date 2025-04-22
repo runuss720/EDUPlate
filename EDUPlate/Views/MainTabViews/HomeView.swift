@@ -88,7 +88,9 @@ struct HomeView: View {
 // used to display test buttons
 // displays title, time needed to take, and category
 struct TestCard: View {
+    
     @EnvironmentObject private var userProgress: UserProgress
+    
     var filter: Int?
     let title: String
     let time: Int

@@ -1,4 +1,3 @@
-//import Foundation
 import SwiftUI
 
 struct Quiz: Codable {
@@ -18,13 +17,6 @@ struct Question: Codable {
     let fake3: String
 }
 
-// user scores will be stored, along with date and concentration of quiz
-/*struct Score: Codable {
-    let score: Int
-    let date: Date
-    let concentration: String
-}*/
-
 class TestManager: ObservableObject {
     
     @Published var questions: [Question] = []
@@ -38,12 +30,10 @@ class TestManager: ObservableObject {
     
     @ObservedObject var userProgress: UserProgress
     
-    // Used for accessing JSON file
-   // private let fileManager = FileManagerHelper()
-   // private let scoreFileName = "userScores.json"
-    
     init(userProgress: UserProgress) {
         self.userProgress = userProgress
+        
+        // tools as generic placeholder
         loadQuiz(forCategory: "Tools")
     }
     
@@ -58,14 +48,14 @@ class TestManager: ObservableObject {
             updateConcentrationProgress(concentration: concentration)
         }
         
-        // Reset correctness and selected answer states for the next question
+        // reset correctness and selected answer states for the next question
         isCorrect = nil
         selectedAnswer = nil
         showNextButton = false
-        isAnswerSelected = false  
+        isAnswerSelected = false
     }
     
-    // Read questions/answers from JSON file depending on category and present to user
+    // read questions/answers from JSON file depending on category and present to user
     func loadQuiz(forCategory category: String) {
         guard let url = Bundle.main.url(forResource: "QuestionData", withExtension: "json") else {
             return
@@ -80,7 +70,7 @@ class TestManager: ObservableObject {
         }
     }
     
-    // Handle user's answer and update the score
+    // handle user's answer and update the score
     func answerQuestion(with option: String, concentration: String) {
         let currentQuestion = questions[questionsIndex]
         
@@ -95,21 +85,9 @@ class TestManager: ObservableObject {
         isAnswerSelected = true
     }
     
-  /*  // Save score to the file (This code is left as a fallback)
-    func saveScore(forConcentration concentration: String) {
-        let newScore = Score(score: score, date: Date(), concentration: concentration)
-       // fileManager.appendScoreToFile(newScore)
-        //print("Saved score: \(newScore)")
-    }*/
-    
- /*   // Load saved scores from the file (Fallback loading)
-    func loadSavedScores() -> [Score] {
-        return fileManager.loadScoresFromFile()
-    }*/
-    
     func updateConcentrationProgress(concentration: String) {
         
-        // Directly use the score to update concentration progress
+        // use the score to update concentration progress
         CoreDataManager.shared.updateConcentrationProgress(username: userProgress.username, concentration: concentration, earnedPoints: score)
         print("Updated concentration \(concentration) with \(score) points.")
     }
@@ -117,7 +95,6 @@ class TestManager: ObservableObject {
     // fetches random vocabulary words to be used in the stats page
     func fetchRandomQuestion() -> Question? {
         guard let url = Bundle.main.url(forResource: "QuestionData", withExtension: "json") else {
-            print("Failed to locate QuestionData.json :(")
             return nil
         }
         do {
@@ -125,11 +102,14 @@ class TestManager: ObservableObject {
             let decoder = JSONDecoder()
             let decodedQuestions = try decoder.decode([Question].self, from: data)
             
-            // Filter questions to include only those with one word
-            let oneWordQuestions = decodedQuestions.filter { question in
+            // We're only looking for single word questions to display
+            var oneWordQuestions: [Question] = []
+            for question in decodedQuestions {
                 
-                // Check if the question contains no spaces
-                !question.question.contains(" ")
+                // filter out questions with more than 1 word
+                if !(question.question.contains(" ")) {
+                    oneWordQuestions.append(question)
+                }
             }
             
             // Return a random question from the filtered list

@@ -6,8 +6,8 @@ class UserProgress: ObservableObject {
     @Published var username: String = "" 
     @Published var password: String = ""
     
-    // change to 100 for final product, 10 for demo
-    let pointsToLevelUp = 10
+    // change to 50 for final product, 8 for demo
+    let pointsToLevelUp = 50
 
     private let coreDataManager = CoreDataManager.shared
 

@@ -4,8 +4,8 @@
 {"category": "Tools", "question": "grater", "answer": "used to create fine or coarse particles of cheese", "fake1": "used to drain liquid while serving", "fake2": "used to lift ingredients during grilling or frying", "fake3": "Drains water from cooked pasta or vegetables"} ,
 {"category": "Tools", "question": "rolling pin", "answer": "used to flatten dough", "fake1": "used to whip or mix ingredients", "fake2": "a wavy pattern in some steel knives", "fake3": "Good for peeling an apple"} ,
 {"category": "Tools", "question": "tongs", "answer": "used to lift ingredients during grilling or frying", "fake1": "used to scrape bowls", "fake2": "used to make pasta", "fake3": "Good for peeling an apple"} ,
-{"category": "Tools", "question": "slotted spoon", "answer": "used to drain liquid while serving", "fake1": "used for making marmalades and preserves", "fake2": "used to scrape bowls", "fake3": "used to lift ingredients during grilling or frying"} ,
-{"category": "Tools", "question": "Peeler", "answer": "Tool to remove the outer layer of fruits and vegetables", "fake1": "used to scrape bowls", "fake2": "used to whip or mix ingredients", "fake3": "Drains water from cooked pasta or vegetables"} ,
+{"category": "Tools2", "question": "slotted spoon", "answer": "used to drain liquid while serving", "fake1": "used for making marmalades and preserves", "fake2": "used to scrape bowls", "fake3": "used to lift ingredients during grilling or frying"} ,
+{"category": "Tools2", "question": "Peeler", "answer": "Tool to remove the outer layer of fruits and vegetables", "fake1": "used to scrape bowls", "fake2": "used to whip or mix ingredients", "fake3": "Drains water from cooked pasta or vegetables"} ,
 {"category": "French Terms", "question": "Au Gratin", "answer": "A dish that is topped with breadcrumbs or cheese and browned on top", "fake1": "A parchment paper lid that sits directly on the surface of ingredients in a pot or pan.", "fake2": "The art of preserving meats with salting, cooking, and curing methods.", "fake3": "A quickly-cooked broth most often used to poach other foods, like seafood."} ,
 {"category": "French Terms", "question": "Bouquet Garni", "answer": "A bunch of herbs or leaves tied together with string to flavor dishes like soups", "fake1": "Chopped mushrooms saut\u00e9ed in butter with onions or shallots and herbs, such as parsley.", "fake2": "A concentrated sauce made from equal parts of Espagnole and brown stock", "fake3": "Foods containing strong alcohol (such as brandy, cognac, rum) that are ignited."} ,
 {"category": "French Terms", "question": "Beurre Noisette", "answer": "a type of warm sauce used in French cuisine.", "fake1": "A boneless piece of meat that is pounded with a mallet or rolled with a pin until thin.", "fake2": "Small strips of slab bacon, usually around 1/4-inch wide and thick.", "fake3": "A parchment paper lid that sits directly on the surface of ingredients in a pot or pan."} ,
@@ -35,12 +35,12 @@
 {"category": "French Terms", "question": "en Croute", "answer": "Foods that are wrapped in pastry (such as puff pastry, pie dough, or phyllo) and baked", "fake1": "A mixture of meats, seafood, or vegetables, minced or ground with fat into a paste.", "fake2": "To get set up and have everything in you need for a recipe or meal in place before you start cooking.", "fake3": "An emulsion of egg yolks, vinegar (traditional; some recipes use lemon juice), water, and butter."} ,
 {"category": "French Terms", "question": "Escalope", "answer": "A boneless piece of meat that is pounded with a mallet or rolled with a pin until thin.", "fake1": "Small strips of slab bacon, usually around 1/4-inch wide and thick.", "fake2": "A knife technique of cutting food (usually, vegetables) into small, thin strips.", "fake3": "A rustic, stew-like dish where the meat is saut\u00e9ed without browning, braised, and served in a white sauce."} ,
 {"category": "French Terms", "question": "Espagnole", "answer": "a basic brown sauce, made from a mirepoix, brown roux, tomato puree and brown (veal or beef) stock.", "fake1": "To get set up and have everything in you need for a recipe or meal in place before you start cooking.", "fake2": "A bunch of herbs or leaves tied together with string to flavor dishes like soups", "fake3": "A seafood dish, where fish or fillets saut\u00e9ed in butter, and finished with a brown butter, lemon, and parsley sauce."} ,
-{"category": "French Terms", "question": "Flamb\u00e9", "answer": "Foods containing strong alcohol (such as brandy, cognac, rum) that are ignited.", "fake1": "A mixture of aromatics containing 2 parts diced onions to 1 part diced celery and 1 part diced carrots.", "fake2": "A dish that is topped with breadcrumbs or cheese and browned on top", "fake3": "A bunch of herbs or leaves tied together with string to flavor dishes like soups"} ,
-{"category": "French Terms", "question": "Fricass\u00e9e", "answer": "A rustic, stew-like dish where the meat is saut\u00e9ed without browning, braised, and served in a white sauce.", "fake1": "A cooking and food preservation method originally developed out of necessity before refrigeration was invented", "fake2": "Stock that has been clarified (usually, using egg whites) and concentrated.", "fake3": "A clear, seasoned broth, made from simmering meat, vegetables, and seasonings"} ,
+{"category": "French Terms2", "question": "Flamb\u00e9", "answer": "Foods containing strong alcohol (such as brandy, cognac, rum) that are ignited.", "fake1": "A mixture of aromatics containing 2 parts diced onions to 1 part diced celery and 1 part diced carrots.", "fake2": "A dish that is topped with breadcrumbs or cheese and browned on top", "fake3": "A bunch of herbs or leaves tied together with string to flavor dishes like soups"} ,
+{"category": "French Terms2", "question": "Fricass\u00e9e", "answer": "A rustic, stew-like dish where the meat is saut\u00e9ed without browning, braised, and served in a white sauce.", "fake1": "A cooking and food preservation method originally developed out of necessity before refrigeration was invented", "fake2": "Stock that has been clarified (usually, using egg whites) and concentrated.", "fake3": "A clear, seasoned broth, made from simmering meat, vegetables, and seasonings"} ,
 {"category": "French Terms", "question": "Hollandaise", "answer": "An emulsion of egg yolks, vinegar (traditional; some recipes use lemon juice), water, and butter.", "fake1": "a garlicky flavored mayonnaise.", "fake2": "Chopped mushrooms saut\u00e9ed in butter with onions or shallots and herbs, such as parsley.", "fake3": "A hot water bath."} ,
 {"category": "French Terms", "question": "Julienne", "answer": "A knife technique of cutting food (usually, vegetables) into small, thin strips.", "fake1": "A parchment paper lid that sits directly on the surface of ingredients in a pot or pan.", "fake2": "An emulsion of egg yolks, vinegar (traditional; some recipes use lemon juice), water, and butter.", "fake3": "A hot water bath."} ,
 {"category": "French Terms", "question": "Lardons", "answer": "Small strips of slab bacon, usually around 1/4-inch wide and thick.", "fake1": "a creamy white sauce made from milk whisked into a white roux", "fake2": "A mixture of aromatics containing 2 parts diced onions to 1 part diced celery and 1 part diced carrots.", "fake3": "A clear, seasoned broth, made from simmering meat, vegetables, and seasonings"} ,
-{"category": "French Terms", "question": "(\u00e0 la) Meuni\u00e8re", "answer": "A seafood dish, where fish or fillets saut\u00e9ed in butter, and finished with a brown butter, lemon, and parsley sauce.", "fake1": "A mixture of meats, seafood, or vegetables, minced or ground with fat into a paste.", "fake2": "A bite-sized, layered hors d\u2019oeuvre that translates to \u201ccouch.\u201d", "fake3": "A knife technique for cutting leafy ingredients, such as spinach, lettuces, and herbs"} ,
+{"category": "French Terms2", "question": "(\u00e0 la) Meuni\u00e8re", "answer": "A seafood dish, where fish or fillets saut\u00e9ed in butter, and finished with a brown butter, lemon, and parsley sauce.", "fake1": "A mixture of meats, seafood, or vegetables, minced or ground with fat into a paste.", "fake2": "A bite-sized, layered hors d\u2019oeuvre that translates to \u201ccouch.\u201d", "fake3": "A knife technique for cutting leafy ingredients, such as spinach, lettuces, and herbs"} ,
 {"category": "French Terms", "question": "Mirepoix", "answer": "A mixture of aromatics containing 2 parts diced onions to 1 part diced celery and 1 part diced carrots.", "fake1": "Smooth, creamy soup made from crustaceans such as lobster and shrimp", "fake2": "A cylindrical or egg-shaped patty rolled in breadcrumbs and fried.", "fake3": "A knife technique where a julienned vegetable is stacked and cut from the end into a very small dice"} ,
 {"category": "French Terms", "question": "Mise en Place", "answer": "To get set up and have everything in you need for a recipe or meal in place before you start cooking.", "fake1": "A cone-shaped strainer constructed with a fine, metal mesh.", "fake2": "The art of preserving meats with salting, cooking, and curing methods.", "fake3": "A mixture of aromatics containing 2 parts diced onions to 1 part diced celery and 1 part diced carrots."} ,
 {"category": "French Terms", "question": "P\u00e2t\u00e9", "answer": "A mixture of meats, seafood, or vegetables, minced or ground with fat into a paste.", "fake1": "a type of warm sauce used in French cuisine.", "fake2": "A thick, fermented cream with a high fat content, giving it a richer texture.", "fake3": "a paste, consisting of butter and flour, used to thicken soups and sauces."} ,
@@ -63,13 +63,6 @@
 {"category": "Ingredients", "question": "Cilantro", "answer": "has a fragrant mix of parsley and citrus", "fake1": "has little aroma, but it is extremely hot to taste.", "fake2": "used in spice cookies and cakes. strong, pungent, and sweet.", "fake3": "has brilliant yellow color, and has been used as a dye, medicine, and flavoring since 600 BC."} ,
 {"category": "Ingredients", "question": "Cream of Tarter", "answer": "used to stabilize egg white foams. It is also a major ingredient in baking powder.", "fake1": "used in Indian curries, gin and sausages.", "fake2": "A necessary ingredient of curry powder", "fake3": "used as a thickening agent for sauces, fruit pie fillings and glazes"} ,
 {"category": "Ingredients", "question": "Fennel", "answer": "has an anise-like flavor but is more aromatic, sweeter and less pungent", "fake1": "the rich, brown, dried, unopened flower buds of Syzygium aromaticum, an evergreen tree in the myrtle family.", "fake2": "has brilliant yellow color, and has been used as a dye, medicine, and flavoring since 600 BC.", "fake3": "Add it to stews and marinades for a Mediterranean flavor."},
-{"category": "Food Safety",
-  "question": "What is the safest way to thaw frozen meat?",
-  "answer": "In the refrigerator",
-  "fake1": "On the counter at room temperature",
-  "fake2": "In hot water",
-  "fake3": "Outside in the sun"
-},
 {
   "category": "Food Safety",
   "question": "What is the minimum internal cooking temperature for poultry?",
@@ -96,27 +89,11 @@
 },
 {
   "category": "Food Safety",
-  "question": "Cross-contamination occurs when:",
-  "answer": "Raw meat juices touch ready-to-eat foods",
-  "fake1": "Food is cooked at a high temperature",
-  "fake2": "Different foods are stored separately",
-  "fake3": "Hands are washed after handling raw meat"
-},
-{
-  "category": "Food Safety",
   "question": "What should you do if you cut yourself while preparing food?",
   "answer": "Cover the wound with a bandage and wear gloves",
   "fake1": "Keep cooking and wash your hands later",
   "fake2": "Rinse the cut with water and continue preparing food",
   "fake3": "Ignore it unless it’s bleeding heavily"
-},
-{
-  "category": "Food Safety",
-  "question": "What is the best way to kill bacteria on kitchen surfaces?",
-  "answer": "Use a disinfectant or sanitizing solution",
-  "fake1": "Rinse with cold water",
-  "fake2": "Wipe with a dry paper towel",
-  "fake3": "Scrub with soap and a sponge only"
 },
 {
   "category": "Food Safety",
@@ -144,14 +121,6 @@
 },
 {
   "category": "Food Safety",
-  "question": "What temperature should a refrigerator be kept at to ensure food safety?",
-  "answer": "40°F or below",
-  "fake1": "45°F",
-  "fake2": "50°F",
-  "fake3": "35°F to 50°F"
-},
-{
-  "category": "Food Safety",
   "question": "What is the proper way to check if meat is fully cooked?",
   "answer": "Use a food thermometer",
   "fake1": "Cut it open and check the color",
@@ -176,10 +145,10 @@
 },
 {
   "category": "Food Safety",
-  "question": "How should you store raw meat in the refrigerator?",
+  "question": "Where in the refrigerator should you store raw meat?",
   "answer": "On the bottom shelf",
   "fake1": "On the top shelf",
-  "fake2": "Anywhere as long as it’s covered",
+  "fake2": "It doesn't matter",
   "fake3": "In the vegetable drawer"
 },
 {
@@ -200,9 +169,9 @@
 },
 {
   "category": "Food Safety",
-  "question": "What is the maximum number of days you should keep cooked leftovers in the refrigerator?",
+  "question": "What is the maximum amount of time you should keep cooked leftovers in the refrigerator?",
   "answer": "3-4 days",
-  "fake1": "1 week",
+  "fake1": "3 weeks",
   "fake2": "5-6 days",
   "fake3": "2 weeks"
 },
@@ -488,7 +457,7 @@
         "fake3": "Only prepare food that will be cooked at high temperatures"
     },
     {
-        "category": "Personal Hygiene",
+        "category": "Personal Hygiene2",
         "question": "Why is it important to keep fingernails short and clean in the kitchen?",
         "answer": "Long nails can hold dirt and bacteria",
         "fake1": "It prevents scratching food containers",
