@@ -1,5 +1,6 @@
 import SwiftUI
 struct LessonManager: View {
+    
     @EnvironmentObject private var userProgress: UserProgress
     @State private var userLevel: Int = 1
     

@@ -337,9 +337,9 @@
     },
       {
         "category": "Knife Skills",
-        "question": "What is the purpose of a chef’s knife?",
-        "answer": "It is a versatile knife used for chopping, slicing, and dicing",
-        "fake1": "It is only used for cutting meat",
+        "question": "What is the purpose of a carving knife?",
+        "answer": "It is used for cooked cuts of meat and poultry",
+        "fake1": "It is only used for cutting fruit",
         "fake2": "It is a specialized knife for filleting fish",
         "fake3": "It is only for slicing bread"
       },
@@ -365,15 +365,15 @@
         "answer": "Serrated knife",
         "fake1": "Paring knife",
         "fake2": "Boning knife",
-        "fake3": "Cleaver"
+        "fake3": "Butter knife"
       },
       {
         "category": "Knife Skills",
-        "question": "Why should you use a honing steel?",
-        "answer": "To realign the knife’s edge and keep it sharp",
-        "fake1": "To sharpen the knife by grinding down metal",
-        "fake2": "To clean the knife after cutting meat",
-        "fake3": "To remove rust from the blade"
+        "question": "How often should you sharpen your knife?",
+        "answer": "Every 1-2 months",
+        "fake1": "Every day",
+        "fake2": "Only when you need to use it",
+        "fake3": "Every year"
       },
       {
         "category": "Knife Skills",
@@ -388,7 +388,7 @@
         "question": "What type of knife is best for filleting fish?",
         "answer": "Boning knife",
         "fake1": "Santoku knife",
-        "fake2": "Serrated knife",
+        "fake2": "Butter knife",
         "fake3": "Cleaver"
       },
       {
@@ -449,7 +449,7 @@
         "fake3": "There’s no harm if your hands are clean"
     },
     {
-        "category": "Personal Hygiene",
+        "category": "Personal Hygiene2",
         "question": "If you have a cold, what should you do before working in the kitchen?",
         "answer": "Avoid working with food entirely",
         "fake1": "Take medicine and work as usual",
