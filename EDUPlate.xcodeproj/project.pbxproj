@@ -7,15 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		770405012D01014900E50641 /* f5.json in Resources */ = {isa = PBXBuildFile; fileRef = 770405002D01014900E50641 /* f5.json */; };
-		770405032D01149100E50641 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770405022D01149100E50641 /* TestView.swift */; };
-		770405072D02579600E50641 /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770405062D02579600E50641 /* FileManagerHelper.swift */; };
-		770CD4092D46B93B007F4E14 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770CD4082D46B93B007F4E14 /* LevelView.swift */; };
-		770CD40B2D46EFCA007F4E14 /* UserProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770CD40A2D46EFCA007F4E14 /* UserProgress.swift */; };
-		773D8C3D2D4EEDC50012E686 /* LessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D8C3C2D4EEDC50012E686 /* LessonManager.swift */; };
-		77B079E02D8B4DF6008E730C /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B079DF2D8B4DF6008E730C /* RecipeManager.swift */; };
-		77B4634A2CEB14EA007E631C /* TestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B463492CEB14EA007E631C /* TestListView.swift */; };
-		77B463502CEBCFD6007E631C /* TestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B4634F2CEBCFD6007E631C /* TestManager.swift */; };
+		770405012D01014900E50641 /* QuestionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 770405002D01014900E50641 /* QuestionData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,26 +28,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		770405002D01014900E50641 /* f5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = f5.json; sourceTree = "<group>"; };
-		770405022D01149100E50641 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		770405062D02579600E50641 /* FileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHelper.swift; sourceTree = "<group>"; };
-		770CD4082D46B93B007F4E14 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
-		770CD40A2D46EFCA007F4E14 /* UserProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgress.swift; sourceTree = "<group>"; };
-		773D8C3C2D4EEDC50012E686 /* LessonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonManager.swift; sourceTree = "<group>"; };
+		770405002D01014900E50641 /* QuestionData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuestionData.json; sourceTree = "<group>"; };
 		77A6BEFC2CEA7DE1008EE5A1 /* EDUPlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EDUPlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A6BF0C2CEA7DE2008EE5A1 /* EDUPlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EDUPlateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A6BF162CEA7DE2008EE5A1 /* EDUPlateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EDUPlateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		77B079DF2D8B4DF6008E730C /* RecipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManager.swift; sourceTree = "<group>"; };
-		77B463492CEB14EA007E631C /* TestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListView.swift; sourceTree = "<group>"; };
-		77B4634F2CEBCFD6007E631C /* TestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		773D8C3E2D510A890012E686 /* MainTabViews */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MainTabViews;
-			sourceTree = "<group>";
-		};
 		77A6BEFE2CEA7DE1008EE5A1 /* EDUPlate */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = EDUPlate;
@@ -74,16 +53,6 @@
 		77B079B22D628827008E730C /* CoreData */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		77B079E12D8B4EC1008E730C /* RecipeViews */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RecipeViews;
-			sourceTree = "<group>";
-		};
-		77B4633D2CEB11B9007E631C /* SkillViews */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SkillViews;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -116,14 +85,12 @@
 		77A6BEF32CEA7DE1008EE5A1 = {
 			isa = PBXGroup;
 			children = (
-				770405002D01014900E50641 /* f5.json */,
+				770405002D01014900E50641 /* QuestionData.json */,
 				77B079B22D628827008E730C /* CoreData */,
-				77A6BF2B2CEA7E55008EE5A1 /* Views */,
 				77A6BEFE2CEA7DE1008EE5A1 /* EDUPlate */,
 				77A6BF0F2CEA7DE2008EE5A1 /* EDUPlateTests */,
 				77A6BF192CEA7DE2008EE5A1 /* EDUPlateUITests */,
 				77A6BEFD2CEA7DE1008EE5A1 /* Products */,
-				77A6BF292CEA7E1F008EE5A1 /* Managers */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,39 +102,6 @@
 				77A6BF162CEA7DE2008EE5A1 /* EDUPlateUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		77A6BF292CEA7E1F008EE5A1 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				770CD4082D46B93B007F4E14 /* LevelView.swift */,
-				770405062D02579600E50641 /* FileManagerHelper.swift */,
-				773D8C3C2D4EEDC50012E686 /* LessonManager.swift */,
-				770CD40A2D46EFCA007F4E14 /* UserProgress.swift */,
-				77B079DF2D8B4DF6008E730C /* RecipeManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		77A6BF2B2CEA7E55008EE5A1 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				77B079E12D8B4EC1008E730C /* RecipeViews */,
-				77B463462CEB14B0007E631C /* TestViews */,
-				77B4633D2CEB11B9007E631C /* SkillViews */,
-				773D8C3E2D510A890012E686 /* MainTabViews */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		77B463462CEB14B0007E631C /* TestViews */ = {
-			isa = PBXGroup;
-			children = (
-				77B463492CEB14EA007E631C /* TestListView.swift */,
-				77B4634F2CEBCFD6007E631C /* TestManager.swift */,
-				770405022D01149100E50641 /* TestView.swift */,
-			);
-			path = TestViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,11 +120,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				773D8C3E2D510A890012E686 /* MainTabViews */,
 				77A6BEFE2CEA7DE1008EE5A1 /* EDUPlate */,
 				77B079B22D628827008E730C /* CoreData */,
-				77B079E12D8B4EC1008E730C /* RecipeViews */,
-				77B4633D2CEB11B9007E631C /* SkillViews */,
 			);
 			name = EDUPlate;
 			packageProductDependencies = (
@@ -294,7 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770405012D01014900E50641 /* f5.json in Resources */,
+				770405012D01014900E50641 /* QuestionData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,14 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770405032D01149100E50641 /* TestView.swift in Sources */,
-				77B4634A2CEB14EA007E631C /* TestListView.swift in Sources */,
-				773D8C3D2D4EEDC50012E686 /* LessonManager.swift in Sources */,
-				770405072D02579600E50641 /* FileManagerHelper.swift in Sources */,
-				770CD4092D46B93B007F4E14 /* LevelView.swift in Sources */,
-				77B079E02D8B4DF6008E730C /* RecipeManager.swift in Sources */,
-				77B463502CEBCFD6007E631C /* TestManager.swift in Sources */,
-				770CD40B2D46EFCA007F4E14 /* UserProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EDUPlate/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L8DXSF3YL4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -516,7 +439,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EDUPlate/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L8DXSF3YL4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

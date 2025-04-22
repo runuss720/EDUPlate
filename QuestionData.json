@@ -1,0 +1,495 @@
+[
+{"category": "Tools", "question": "spatula", "answer": "used to scrape bowls", "fake1": "a wavy pattern in some steel knives", "fake2": "used to flatten dough", "fake3": "protects a table from scorch marks"} ,
+{"category": "Tools", "question": "whisk", "answer": "used to whip or mix ingredients", "fake1": "Good for peeling an apple", "fake2": "used for making marmalades and preserves", "fake3": "used to lift ingredients during grilling or frying"} ,
+{"category": "Tools", "question": "grater", "answer": "used to create fine or coarse particles of cheese", "fake1": "used to drain liquid while serving", "fake2": "used to lift ingredients during grilling or frying", "fake3": "Drains water from cooked pasta or vegetables"} ,
+{"category": "Tools", "question": "rolling pin", "answer": "used to flatten dough", "fake1": "used to whip or mix ingredients", "fake2": "a wavy pattern in some steel knives", "fake3": "Good for peeling an apple"} ,
+{"category": "Tools", "question": "tongs", "answer": "used to lift ingredients during grilling or frying", "fake1": "used to scrape bowls", "fake2": "used to make pasta", "fake3": "Good for peeling an apple"} ,
+{"category": "Tools2", "question": "slotted spoon", "answer": "used to drain liquid while serving", "fake1": "used for making marmalades and preserves", "fake2": "used to scrape bowls", "fake3": "used to lift ingredients during grilling or frying"} ,
+{"category": "Tools2", "question": "Peeler", "answer": "Tool to remove the outer layer of fruits and vegetables", "fake1": "used to scrape bowls", "fake2": "used to whip or mix ingredients", "fake3": "Drains water from cooked pasta or vegetables"} ,
+{"category": "French Terms", "question": "Au Gratin", "answer": "A dish that is topped with breadcrumbs or cheese and browned on top", "fake1": "A parchment paper lid that sits directly on the surface of ingredients in a pot or pan.", "fake2": "The art of preserving meats with salting, cooking, and curing methods.", "fake3": "A quickly-cooked broth most often used to poach other foods, like seafood."} ,
+{"category": "French Terms", "question": "Bouquet Garni", "answer": "A bunch of herbs or leaves tied together with string to flavor dishes like soups", "fake1": "Chopped mushrooms saut\u00e9ed in butter with onions or shallots and herbs, such as parsley.", "fake2": "A concentrated sauce made from equal parts of Espagnole and brown stock", "fake3": "Foods containing strong alcohol (such as brandy, cognac, rum) that are ignited."} ,
+{"category": "French Terms", "question": "Beurre Noisette", "answer": "a type of warm sauce used in French cuisine.", "fake1": "A boneless piece of meat that is pounded with a mallet or rolled with a pin until thin.", "fake2": "Small strips of slab bacon, usually around 1/4-inch wide and thick.", "fake3": "A parchment paper lid that sits directly on the surface of ingredients in a pot or pan."} ,
+{"category": "French Terms", "question": "Beurre manie", "answer": "a paste, consisting of butter and flour, used to thicken soups and sauces.", "fake1": "A rago\u00fbt (stew) of white meat (veal\u2013de veau, chicken\u2013de poulet) that isn\u2019t browned during cooking", "fake2": "A cooking and food preservation method originally developed out of necessity before refrigeration was invented", "fake3": "A bunch of herbs or leaves tied together with string to flavor dishes like soups"} ,
+{"category": "French Terms", "question": "Chiffonade", "answer": "A knife technique for cutting leafy ingredients, such as spinach, lettuces, and herbs", "fake1": "a basic brown sauce, made from a mirepoix, brown roux, tomato puree and brown (veal or beef) stock.", "fake2": "A cooking and food preservation method originally developed out of necessity before refrigeration was invented", "fake3": "An emulsion of egg yolks, vinegar (traditional; some recipes use lemon juice), water, and butter."} ,
+{"category": "French Terms", "question": "Aioli", "answer": "a garlicky flavored mayonnaise.", "fake1": "a type of warm sauce used in French cuisine.", "fake2": "A delicate sauce made from a reduction of white wine, white vinegar, and shallots", "fake3": "A mixture of aromatics containing 2 parts diced onions to 1 part diced celery and 1 part diced carrots."} ,
+{"category": "French Terms", "question": "Amandine", "answer": "Describes dishes that are made or garnished with almonds", "fake1": "A light, smooth sauce made from pureed fruits or vegetables.", "fake2": "A cylindrical or egg-shaped patty rolled in breadcrumbs and fried.", "fake3": "A cooking and food preservation method originally developed out of necessity before refrigeration was invented"} ,
+{"category": "French Terms", "question": "Bain-marie", "answer": "A hot water bath.", "fake1": "A mixture of aromatics containing 2 parts diced onions to 1 part diced celery and 1 part diced carrots.", "fake2": "A mixture of meats, seafood, or vegetables, minced or ground with fat into a paste.", "fake3": "A bunch of herbs or leaves tied together with string to flavor dishes like soups"} ,
+{"category": "French Terms", "question": "B\u00e9chamel", "answer": "a creamy white sauce made from milk whisked into a white roux", "fake1": "a paste, consisting of butter and flour, used to thicken soups and sauces.", "fake2": "A knife technique of cutting food (usually, vegetables) into small, thin strips.", "fake3": "A cylindrical or egg-shaped patty rolled in breadcrumbs and fried."} ,
+{"category": "French Terms", "question": "Beurre Blanc", "answer": "A delicate sauce made from a reduction of white wine, white vinegar, and shallots", "fake1": "a paste, consisting of butter and flour, used to thicken soups and sauces.", "fake2": "A light, smooth sauce made from pureed fruits or vegetables.", "fake3": "A parchment paper lid that sits directly on the surface of ingredients in a pot or pan."} ,
+{"category": "French Terms", "question": "Bisque", "answer": "Smooth, creamy soup made from crustaceans such as lobster and shrimp", "fake1": "A mixture of meats, seafood, or vegetables, minced or ground with fat into a paste.", "fake2": "Chopped mushrooms saut\u00e9ed in butter with onions or shallots and herbs, such as parsley.", "fake3": "Stock that has been clarified (usually, using egg whites) and concentrated."} ,
+{"category": "French Terms", "question": "Blanquette", "answer": "A rago\u00fbt (stew) of white meat (veal\u2013de veau, chicken\u2013de poulet) that isn\u2019t browned during cooking", "fake1": "Describes dishes that are made or garnished with almonds", "fake2": "A knife technique where a julienned vegetable is stacked and cut from the end into a very small dice", "fake3": "To get set up and have everything in you need for a recipe or meal in place before you start cooking."} ,
+{"category": "French Terms", "question": "Bouillon", "answer": "A clear, seasoned broth, made from simmering meat, vegetables, and seasonings", "fake1": "A bite-sized, layered hors d\u2019oeuvre that translates to \u201ccouch.\u201d", "fake2": "Chopped mushrooms saut\u00e9ed in butter with onions or shallots and herbs, such as parsley.", "fake3": "A seafood dish, where fish or fillets saut\u00e9ed in butter, and finished with a brown butter, lemon, and parsley sauce."} ,
+{"category": "French Terms", "question": "Brunoise", "answer": "A knife technique where a julienned vegetable is stacked and cut from the end into a very small dice", "fake1": "A parchment paper lid that sits directly on the surface of ingredients in a pot or pan.", "fake2": "Stock that has been clarified (usually, using egg whites) and concentrated.", "fake3": "A knife technique for cutting leafy ingredients, such as spinach, lettuces, and herbs"} ,
+{"category": "French Terms", "question": "Canap\u00e9", "answer": "A bite-sized, layered hors d\u2019oeuvre that translates to \u201ccouch.\u201d", "fake1": "A delicate sauce made from a reduction of white wine, white vinegar, and shallots", "fake2": "Small strips of slab bacon, usually around 1/4-inch wide and thick.", "fake3": "Smooth, creamy soup made from crustaceans such as lobster and shrimp"} ,
+{"category": "French Terms", "question": "Cartouche", "answer": "A parchment paper lid that sits directly on the surface of ingredients in a pot or pan.", "fake1": "A cylindrical or egg-shaped patty rolled in breadcrumbs and fried.", "fake2": "A light, smooth sauce made from pureed fruits or vegetables.", "fake3": "A quickly-cooked broth most often used to poach other foods, like seafood."} ,
+{"category": "French Terms", "question": "Charcuterie", "answer": "The art of preserving meats with salting, cooking, and curing methods.", "fake1": "A knife technique of cutting food (usually, vegetables) into small, thin strips.", "fake2": "A rustic, stew-like dish where the meat is saut\u00e9ed without browning, braised, and served in a white sauce.", "fake3": "a garlicky flavored mayonnaise."} ,
+{"category": "French Terms", "question": "Chinois", "answer": "A cone-shaped strainer constructed with a fine, metal mesh.", "fake1": "A clear, seasoned broth, made from simmering meat, vegetables, and seasonings", "fake2": "a creamy white sauce made from milk whisked into a white roux", "fake3": "A knife technique where a julienned vegetable is stacked and cut from the end into a very small dice"} ,
+{"category": "French Terms", "question": "Confit", "answer": "A cooking and food preservation method originally developed out of necessity before refrigeration was invented", "fake1": "A boneless piece of meat that is pounded with a mallet or rolled with a pin until thin.", "fake2": "A rustic, stew-like dish where the meat is saut\u00e9ed without browning, braised, and served in a white sauce.", "fake3": "A bunch of herbs or leaves tied together with string to flavor dishes like soups"} ,
+{"category": "French Terms", "question": "Consomm\u00e9", "answer": "Stock that has been clarified (usually, using egg whites) and concentrated.", "fake1": "Foods that are wrapped in pastry (such as puff pastry, pie dough, or phyllo) and baked", "fake2": "A hot water bath.", "fake3": "a type of warm sauce used in French cuisine."} ,
+{"category": "French Terms", "question": "Coulis", "answer": "A light, smooth sauce made from pureed fruits or vegetables.", "fake1": "A hot water bath.", "fake2": "A cylindrical or egg-shaped patty rolled in breadcrumbs and fried.", "fake3": "A cone-shaped strainer constructed with a fine, metal mesh."} ,
+{"category": "French Terms", "question": "Court Bouillon", "answer": "A quickly-cooked broth most often used to poach other foods, like seafood.", "fake1": "A knife technique where a julienned vegetable is stacked and cut from the end into a very small dice", "fake2": "Foods that are wrapped in pastry (such as puff pastry, pie dough, or phyllo) and baked", "fake3": "A rustic, stew-like dish where the meat is saut\u00e9ed without browning, braised, and served in a white sauce."} ,
+{"category": "French Terms", "question": "Cr\u00e8me Fra\u00eeche", "answer": "A thick, fermented cream with a high fat content, giving it a richer texture.", "fake1": "To get set up and have everything in you need for a recipe or meal in place before you start cooking.", "fake2": "A hot water bath.", "fake3": "A boneless piece of meat that is pounded with a mallet or rolled with a pin until thin."} ,
+{"category": "French Terms", "question": "Croquette", "answer": "A cylindrical or egg-shaped patty rolled in breadcrumbs and fried.", "fake1": "A cone-shaped strainer constructed with a fine, metal mesh.", "fake2": "Foods that are wrapped in pastry (such as puff pastry, pie dough, or phyllo) and baked", "fake3": "An emulsion of egg yolks, vinegar (traditional; some recipes use lemon juice), water, and butter."} ,
+{"category": "French Terms", "question": "Demi-glace", "answer": "A concentrated sauce made from equal parts of Espagnole and brown stock", "fake1": "Foods that are wrapped in pastry (such as puff pastry, pie dough, or phyllo) and baked", "fake2": "A knife technique where a julienned vegetable is stacked and cut from the end into a very small dice", "fake3": "Smooth, creamy soup made from crustaceans such as lobster and shrimp"} ,
+{"category": "French Terms", "question": "Duxelles", "answer": "Chopped mushrooms saut\u00e9ed in butter with onions or shallots and herbs, such as parsley.", "fake1": "A cylindrical or egg-shaped patty rolled in breadcrumbs and fried.", "fake2": "A parchment paper lid that sits directly on the surface of ingredients in a pot or pan.", "fake3": "A bunch of herbs or leaves tied together with string to flavor dishes like soups"} ,
+{"category": "French Terms", "question": "en Croute", "answer": "Foods that are wrapped in pastry (such as puff pastry, pie dough, or phyllo) and baked", "fake1": "A mixture of meats, seafood, or vegetables, minced or ground with fat into a paste.", "fake2": "To get set up and have everything in you need for a recipe or meal in place before you start cooking.", "fake3": "An emulsion of egg yolks, vinegar (traditional; some recipes use lemon juice), water, and butter."} ,
+{"category": "French Terms", "question": "Escalope", "answer": "A boneless piece of meat that is pounded with a mallet or rolled with a pin until thin.", "fake1": "Small strips of slab bacon, usually around 1/4-inch wide and thick.", "fake2": "A knife technique of cutting food (usually, vegetables) into small, thin strips.", "fake3": "A rustic, stew-like dish where the meat is saut\u00e9ed without browning, braised, and served in a white sauce."} ,
+{"category": "French Terms", "question": "Espagnole", "answer": "a basic brown sauce, made from a mirepoix, brown roux, tomato puree and brown (veal or beef) stock.", "fake1": "To get set up and have everything in you need for a recipe or meal in place before you start cooking.", "fake2": "A bunch of herbs or leaves tied together with string to flavor dishes like soups", "fake3": "A seafood dish, where fish or fillets saut\u00e9ed in butter, and finished with a brown butter, lemon, and parsley sauce."} ,
+{"category": "French Terms2", "question": "Flamb\u00e9", "answer": "Foods containing strong alcohol (such as brandy, cognac, rum) that are ignited.", "fake1": "A mixture of aromatics containing 2 parts diced onions to 1 part diced celery and 1 part diced carrots.", "fake2": "A dish that is topped with breadcrumbs or cheese and browned on top", "fake3": "A bunch of herbs or leaves tied together with string to flavor dishes like soups"} ,
+{"category": "French Terms2", "question": "Fricass\u00e9e", "answer": "A rustic, stew-like dish where the meat is saut\u00e9ed without browning, braised, and served in a white sauce.", "fake1": "A cooking and food preservation method originally developed out of necessity before refrigeration was invented", "fake2": "Stock that has been clarified (usually, using egg whites) and concentrated.", "fake3": "A clear, seasoned broth, made from simmering meat, vegetables, and seasonings"} ,
+{"category": "French Terms", "question": "Hollandaise", "answer": "An emulsion of egg yolks, vinegar (traditional; some recipes use lemon juice), water, and butter.", "fake1": "a garlicky flavored mayonnaise.", "fake2": "Chopped mushrooms saut\u00e9ed in butter with onions or shallots and herbs, such as parsley.", "fake3": "A hot water bath."} ,
+{"category": "French Terms", "question": "Julienne", "answer": "A knife technique of cutting food (usually, vegetables) into small, thin strips.", "fake1": "A parchment paper lid that sits directly on the surface of ingredients in a pot or pan.", "fake2": "An emulsion of egg yolks, vinegar (traditional; some recipes use lemon juice), water, and butter.", "fake3": "A hot water bath."} ,
+{"category": "French Terms", "question": "Lardons", "answer": "Small strips of slab bacon, usually around 1/4-inch wide and thick.", "fake1": "a creamy white sauce made from milk whisked into a white roux", "fake2": "A mixture of aromatics containing 2 parts diced onions to 1 part diced celery and 1 part diced carrots.", "fake3": "A clear, seasoned broth, made from simmering meat, vegetables, and seasonings"} ,
+{"category": "French Terms2", "question": "(\u00e0 la) Meuni\u00e8re", "answer": "A seafood dish, where fish or fillets saut\u00e9ed in butter, and finished with a brown butter, lemon, and parsley sauce.", "fake1": "A mixture of meats, seafood, or vegetables, minced or ground with fat into a paste.", "fake2": "A bite-sized, layered hors d\u2019oeuvre that translates to \u201ccouch.\u201d", "fake3": "A knife technique for cutting leafy ingredients, such as spinach, lettuces, and herbs"} ,
+{"category": "French Terms", "question": "Mirepoix", "answer": "A mixture of aromatics containing 2 parts diced onions to 1 part diced celery and 1 part diced carrots.", "fake1": "Smooth, creamy soup made from crustaceans such as lobster and shrimp", "fake2": "A cylindrical or egg-shaped patty rolled in breadcrumbs and fried.", "fake3": "A knife technique where a julienned vegetable is stacked and cut from the end into a very small dice"} ,
+{"category": "French Terms", "question": "Mise en Place", "answer": "To get set up and have everything in you need for a recipe or meal in place before you start cooking.", "fake1": "A cone-shaped strainer constructed with a fine, metal mesh.", "fake2": "The art of preserving meats with salting, cooking, and curing methods.", "fake3": "A mixture of aromatics containing 2 parts diced onions to 1 part diced celery and 1 part diced carrots."} ,
+{"category": "French Terms", "question": "P\u00e2t\u00e9", "answer": "A mixture of meats, seafood, or vegetables, minced or ground with fat into a paste.", "fake1": "a type of warm sauce used in French cuisine.", "fake2": "A thick, fermented cream with a high fat content, giving it a richer texture.", "fake3": "a paste, consisting of butter and flour, used to thicken soups and sauces."} ,
+{"category": "Ingredients", "question": "Turmeric", "answer": "Comes from the root of Curcuma longa, a leafy plant in the ginger family.", "fake1": "has a mild, onion-like flavor, with a hint of garlic", "fake2": "used in Jamaican jerk seasoning and in Jamaican soups, stews, and curries.", "fake3": "Used extensively in Mexican cooking"} ,
+{"category": "Ingredients", "question": "Turmeric", "answer": "A necessary ingredient of curry powder", "fake1": "used in spice cookies and cakes. strong, pungent, and sweet.", "fake2": "has an anise-like flavor but is more aromatic, sweeter and less pungent", "fake3": "an aromatic and sweet herb bearing a slight resemblance to parsley with a trace of anise"} ,
+{"category": "Ingredients", "question": "Turmeric", "answer": "has brilliant yellow color, and has been used as a dye, medicine, and flavoring since 600 BC.", "fake1": "used to stabilize egg white foams. It is also a major ingredient in baking powder.", "fake2": "used in spice cookies and cakes. strong, pungent, and sweet.", "fake3": "used to flavor sauerkraut, sausage, cheese, cabbage, and soups"} ,
+{"category": "Ingredients", "question": "Coriander", "answer": "used in Indian curries, gin and sausages.", "fake1": "used in Jamaican jerk seasoning and in Jamaican soups, stews, and curries.", "fake2": "has brilliant yellow color, and has been used as a dye, medicine, and flavoring since 600 BC.", "fake3": "has a fragrant mix of parsley and citrus"} ,
+{"category": "Ingredients", "question": "Coriander", "answer": "Add it to stews and marinades for a Mediterranean flavor.", "fake1": "used in Jamaican jerk seasoning and in Jamaican soups, stews, and curries.", "fake2": "used to flavor sauerkraut, sausage, cheese, cabbage, and soups", "fake3": "traditionally used in curry blends and has an intense, pungent, sweet flavor."} ,
+{"category": "Ingredients", "question": "Cumin", "answer": "Used extensively in Mexican cooking", "fake1": "used in spice cookies and cakes. strong, pungent, and sweet.", "fake2": "used to stabilize egg white foams. It is also a major ingredient in baking powder.", "fake3": "has a fragrant mix of parsley and citrus"} ,
+{"category": "Ingredients", "question": "Clove", "answer": "the rich, brown, dried, unopened flower buds of Syzygium aromaticum, an evergreen tree in the myrtle family.", "fake1": "has a fragrant mix of parsley and citrus", "fake2": "A necessary ingredient of curry powder", "fake3": "an aromatic and sweet herb bearing a slight resemblance to parsley with a trace of anise"} ,
+{"category": "Ingredients", "question": "Clove", "answer": "used in spice cookies and cakes. strong, pungent, and sweet.", "fake1": "has an anise-like flavor but is more aromatic, sweeter and less pungent", "fake2": "used as a thickening agent for sauces, fruit pie fillings and glazes", "fake3": "used in Jamaican jerk seasoning and in Jamaican soups, stews, and curries."} ,
+{"category": "Ingredients", "question": "Cardamom", "answer": "traditionally used in curry blends and has an intense, pungent, sweet flavor.", "fake1": "an aromatic and sweet herb bearing a slight resemblance to parsley with a trace of anise", "fake2": "Used extensively in Mexican cooking", "fake3": "used to stabilize egg white foams. It is also a major ingredient in baking powder."} ,
+{"category": "Ingredients", "question": "Allspice", "answer": "used in Jamaican jerk seasoning and in Jamaican soups, stews, and curries.", "fake1": "has a fragrant mix of parsley and citrus", "fake2": "used as a thickening agent for sauces, fruit pie fillings and glazes", "fake3": "has brilliant yellow color, and has been used as a dye, medicine, and flavoring since 600 BC."} ,
+{"category": "Ingredients", "question": "Anise", "answer": "a licorice-like flavor popular in candies", "fake1": "used as a thickening agent for sauces, fruit pie fillings and glazes", "fake2": "the rich, brown, dried, unopened flower buds of Syzygium aromaticum, an evergreen tree in the myrtle family.", "fake3": "used to flavor sauerkraut, sausage, cheese, cabbage, and soups"} ,
+{"category": "Ingredients", "question": "Arrowroot", "answer": "used as a thickening agent for sauces, fruit pie fillings and glazes", "fake1": "used in spice cookies and cakes. strong, pungent, and sweet.", "fake2": "an aromatic and sweet herb bearing a slight resemblance to parsley with a trace of anise", "fake3": "traditionally used in curry blends and has an intense, pungent, sweet flavor."} ,
+{"category": "Ingredients", "question": "Caraway", "answer": "used to flavor sauerkraut, sausage, cheese, cabbage, and soups", "fake1": "Add it to stews and marinades for a Mediterranean flavor.", "fake2": "a licorice-like flavor popular in candies", "fake3": "has a mild, onion-like flavor, with a hint of garlic"} ,
+{"category": "Ingredients", "question": "Cayenne", "answer": "has little aroma, but it is extremely hot to taste.", "fake1": "has a fragrant mix of parsley and citrus", "fake2": "has brilliant yellow color, and has been used as a dye, medicine, and flavoring since 600 BC.", "fake3": "used to stabilize egg white foams. It is also a major ingredient in baking powder."} ,
+{"category": "Ingredients", "question": "Chervil", "answer": "an aromatic and sweet herb bearing a slight resemblance to parsley with a trace of anise", "fake1": "A necessary ingredient of curry powder", "fake2": "Comes from the root of Curcuma longa, a leafy plant in the ginger family.", "fake3": "a licorice-like flavor popular in candies"} ,
+{"category": "Ingredients", "question": "Chives", "answer": "has a mild, onion-like flavor, with a hint of garlic", "fake1": "a licorice-like flavor popular in candies", "fake2": "has an anise-like flavor but is more aromatic, sweeter and less pungent", "fake3": "the rich, brown, dried, unopened flower buds of Syzygium aromaticum, an evergreen tree in the myrtle family."} ,
+{"category": "Ingredients", "question": "Cilantro", "answer": "has a fragrant mix of parsley and citrus", "fake1": "has little aroma, but it is extremely hot to taste.", "fake2": "used in spice cookies and cakes. strong, pungent, and sweet.", "fake3": "has brilliant yellow color, and has been used as a dye, medicine, and flavoring since 600 BC."} ,
+{"category": "Ingredients", "question": "Cream of Tarter", "answer": "used to stabilize egg white foams. It is also a major ingredient in baking powder.", "fake1": "used in Indian curries, gin and sausages.", "fake2": "A necessary ingredient of curry powder", "fake3": "used as a thickening agent for sauces, fruit pie fillings and glazes"} ,
+{"category": "Ingredients", "question": "Fennel", "answer": "has an anise-like flavor but is more aromatic, sweeter and less pungent", "fake1": "the rich, brown, dried, unopened flower buds of Syzygium aromaticum, an evergreen tree in the myrtle family.", "fake2": "has brilliant yellow color, and has been used as a dye, medicine, and flavoring since 600 BC.", "fake3": "Add it to stews and marinades for a Mediterranean flavor."},
+{
+  "category": "Food Safety",
+  "question": "What is the minimum internal cooking temperature for poultry?",
+  "answer": "165°F",
+  "fake1": "145°F",
+  "fake2": "155°F",
+  "fake3": "175°F"
+},
+{
+  "category": "Food Safety",
+  "question": "How long can perishable food safely sit out at room temperature before it should be refrigerated or thrown away?",
+  "answer": "2 hours",
+  "fake1": "30 minutes",
+  "fake2": "1 hour",
+  "fake3": "4 hours"
+},
+{
+  "category": "Food Safety",
+  "question": "Which of the following is NOT a common symptom of foodborne illness?",
+  "answer": "Blurred vision",
+  "fake1": "Nausea",
+  "fake2": "Fever",
+  "fake3": "Vomiting"
+},
+{
+  "category": "Food Safety",
+  "question": "What should you do if you cut yourself while preparing food?",
+  "answer": "Cover the wound with a bandage and wear gloves",
+  "fake1": "Keep cooking and wash your hands later",
+  "fake2": "Rinse the cut with water and continue preparing food",
+  "fake3": "Ignore it unless it’s bleeding heavily"
+},
+{
+  "category": "Food Safety",
+  "question": "What is the primary cause of foodborne illness?",
+  "answer": "Poor personal hygiene",
+  "fake1": "Spoiled food",
+  "fake2": "Artificial preservatives",
+  "fake3": "Pesticides"
+},
+{
+  "category": "Food Safety",
+  "question": "Which type of cutting board is the safest option for raw meat?",
+  "answer": "Plastic",
+  "fake1": "Wood",
+  "fake2": "Glass",
+  "fake3": "Marble"
+},
+{
+  "category": "Food Safety",
+  "question": "Which of the following foods is most likely to cause food poisoning if eaten raw?",
+  "answer": "Chicken",
+  "fake1": "Carrots",
+  "fake2": "Rice",
+  "fake3": "Bread"
+},
+{
+  "category": "Food Safety",
+  "question": "What is the proper way to check if meat is fully cooked?",
+  "answer": "Use a food thermometer",
+  "fake1": "Cut it open and check the color",
+  "fake2": "Press it with a fork",
+  "fake3": "Smell it to see if it’s done"
+},
+{
+  "category": "Food Safety",
+  "question": "Which of the following is NOT a recommended way to cool hot food quickly?",
+  "answer": "Let it sit at room temperature for several hours",
+  "fake1": "Divide it into smaller portions",
+  "fake2": "Use an ice bath",
+  "fake3": "Refrigerate it in shallow containers"
+},
+{
+  "category": "Food Safety",
+  "question": "Which of these is a high-risk food for bacterial growth?",
+  "answer": "Cooked rice",
+  "fake1": "Unwashed apples",
+  "fake2": "Dried pasta",
+  "fake3": "Salted nuts"
+},
+{
+  "category": "Food Safety",
+  "question": "Where in the refrigerator should you store raw meat?",
+  "answer": "On the bottom shelf",
+  "fake1": "On the top shelf",
+  "fake2": "It doesn't matter",
+  "fake3": "In the vegetable drawer"
+},
+{
+  "category": "Food Safety",
+  "question": "Which of the following is the best way to wash fresh produce?",
+  "answer": "Rinse under running water",
+  "fake1": "Soak in soapy water",
+  "fake2": "Wipe with a dry paper towel",
+  "fake3": "Dip in bleach solution"
+},
+{
+  "category": "Food Safety",
+  "question": "Which food item should never be consumed if it has a bulging can?",
+  "answer": "Canned beans",
+  "fake1": "Dried beans",
+  "fake2": "Frozen vegetables",
+  "fake3": "Bottled water"
+},
+{
+  "category": "Food Safety",
+  "question": "What is the maximum amount of time you should keep cooked leftovers in the refrigerator?",
+  "answer": "3-4 days",
+  "fake1": "3 weeks",
+  "fake2": "5-6 days",
+  "fake3": "2 weeks"
+},
+{
+    "category": "Basic Cooking Techniques",
+    "question": "What technique involves cooking food using a small amount of oil or fat in a pan over medium-high heat",
+    "answer": "Sautéing",
+    "fake1": "Boiling",
+    "fake2": "Slow-cooking",
+    "fake3": "Roasting"
+  },
+  {
+    "category": "Basic Cooking Techniques",
+    "question": "A mixture that you soak meat or fish in, in order to add flavor to it",
+    "answer": "Marinade",
+    "fake1": "Oil",
+    "fake2": "Baking",
+    "fake3": "Deep-frying"
+  },
+  {
+    "category": "Basic Cooking Techniques",
+    "question": "What do you call using dry heat, typically in an oven or over an open flame to cook food?",
+    "answer": "Roasting",
+    "fake1": "Searing",
+    "fake2": "Broiling",
+    "fake3": "Deep-frying"
+  },
+  {
+    "category": "Basic Cooking Techniques",
+    "question": "The act of adding liquid to a hot pan to dissolve and incorporate the flavorful browned bits (fond) stuck to the bottom",
+    "answer": "Deglazing",
+    "fake1": "Sous vide",
+    "fake2": "Poaching",
+    "fake3": "Blanching"
+  },
+  {
+    "category": "Basic Cooking Techniques",
+    "question": "A cooking method that involves searing food at a high temperature and then slowly cooking it in liquid at a lower temperature.",
+    "answer": "Braising",
+    "fake1": "Poaching",
+    "fake2": "Boiling",
+    "fake3": "Roasting"
+  },
+  {
+    "category": "Basic Cooking Techniques",
+    "question": "A cooking technique where food is gently cooked in liquid just below the boiling point",
+    "answer": "Simmering",
+    "fake1": "Roasting",
+    "fake2": "Deglazing",
+    "fake3": "Baking"
+  },
+  {
+    "category": "Basic Cooking Techniques",
+    "question": "What foods are commonly poached?",
+    "answer": "Eggs",
+    "fake1": "Bread",
+    "fake2": "Ground Beef",
+    "fake3": "Steak"
+  },
+  {
+    "category": "Basic Cooking Techniques",
+    "question": "What cooking method involves submerging food in hot oil until crispy?",
+    "answer": "Deep-Frying",
+    "fake1": "Steaming",
+    "fake2": "Broiling",
+    "fake3": "Poaching"
+  },
+  {
+    "category": "Basic Cooking Techniques",
+    "question": "Which of the following involves cooking food using hot steam?",
+    "answer": "Steaming",
+    "fake1": "Roasting",
+    "fake2": "Torching",
+    "fake3": "Stewing"
+  },
+  {
+    "category": "Basic Cooking Techniques",
+    "question": "Which method involves quickly cooking food in boiling water, then transferring it to cold water?",
+    "answer": "Blanching",
+    "fake1": "Steaming",
+    "fake2": "Simmering",
+    "fake3": "Blending"
+  },
+    {
+      "category": "Grilling Techniques",
+      "question": "What is the best way to prevent food from sticking to the grill?",
+      "answer": "Oil the grates before cooking",
+      "fake1": "Use a high flame",
+      "fake2": "Only grill on foil",
+      "fake3": "Add extra salt to the food"
+    },
+    {
+      "category": "Grilling Techniques",
+      "question": "What is the proper way to check if a steak is done without cutting into it?",
+      "answer": "Use a meat thermometer",
+      "fake1": "Press it with a spatula",
+      "fake2": "Cut it open to check the color",
+      "fake3": "Wait for juices to run clear"
+    },
+    {
+      "category": "Grilling Techniques",
+      "question": "Which of the following meats should be cooked to at least 165°F for food safety?",
+      "answer": "Chicken",
+      "fake1": "Steak",
+      "fake2": "Pork chops",
+      "fake3": "Salmon"
+    },
+    {
+      "category": "Grilling Techniques",
+      "question": "Why should you let grilled meat rest before cutting into it?",
+      "answer": "To allow juices to redistribute",
+      "fake1": "To let it cool down for easier cutting",
+      "fake2": "To help it cook more evenly",
+      "fake3": "To make the surface crispier"
+    },
+    {
+      "category": "Grilling Techniques",
+      "question": "What is the main difference between direct and indirect grilling?",
+      "answer": "Direct grilling places food over high heat, while indirect grilling uses lower heat away from the flames",
+      "fake1": "Direct grilling is for vegetables, indirect grilling is for meat",
+      "fake2": "Indirect grilling requires a closed lid, while direct grilling does not",
+      "fake3": "Direct grilling uses charcoal, while indirect grilling uses gas"
+    },
+    {
+      "category": "Grilling Techniques",
+      "question": "Why should you avoid pressing down on burgers while grilling?",
+      "answer": "It forces juices out, making them dry",
+      "fake1": "It makes them cook unevenly",
+      "fake2": "It increases cooking time",
+      "fake3": "It can cause flare-ups"
+    },
+    {
+      "category": "Grilling Techniques",
+      "question": "What is the purpose of a grill lid when cooking?",
+      "answer": "To trap heat and cook food more evenly",
+      "fake1": "To keep the grill from cooling down too quickly",
+      "fake2": "To prevent food from drying out",
+      "fake3": "To prevent flames from touching the food"
+    },
+    {
+      "category": "Grilling Techniques",
+      "question": "How can you tell when charcoal is ready for grilling?",
+      "answer": "When it is covered in white ash",
+      "fake1": "When it is fully black and smoking",
+      "fake2": "When it starts sparking",
+      "fake3": "When it turns completely red"
+    },
+    {
+      "category": "Grilling Techniques",
+      "question": "What is the best way to achieve grill marks on meat?",
+      "answer": "Place it on the grill and avoid moving it too soon",
+      "fake1": "Continuously flip it back and forth",
+      "fake2": "Press it down firmly on the grates",
+      "fake3": "Use high heat and cook it quickly"
+    },
+    {
+      "category": "Grilling Techniques",
+      "question": "Which wood is best for smoking meats with a mild, slightly sweet flavor?",
+      "answer": "Applewood",
+      "fake1": "Mesquite",
+      "fake2": "Hickory",
+      "fake3": "Oak"
+    },
+      {
+        "category": "Knife Skills",
+        "question": "What is the purpose of a chef’s knife?",
+        "answer": "It is a versatile knife used for chopping, slicing, and dicing",
+        "fake1": "It is only used for cutting meat",
+        "fake2": "It is a specialized knife for filleting fish",
+        "fake3": "It is only for slicing bread"
+      },
+      {
+        "category": "Knife Skills",
+        "question": "What is the proper way to hold a chef’s knife?",
+        "answer": "Grip the handle with three fingers and rest your thumb and index finger on the blade",
+        "fake1": "Hold it with all fingers wrapped around the handle",
+        "fake2": "Grip it only at the very end of the handle",
+        "fake3": "Hold it loosely for quick motion"
+      },
+      {
+        "category": "Knife Skills",
+        "question": "What is the claw grip used for?",
+        "answer": "To safely hold food while cutting",
+        "fake1": "To sharpen a knife",
+        "fake2": "To slice meat more evenly",
+        "fake3": "To hold a knife while carrying it"
+      },
+      {
+        "category": "Knife Skills",
+        "question": "Which knife is best for slicing bread?",
+        "answer": "Serrated knife",
+        "fake1": "Paring knife",
+        "fake2": "Boning knife",
+        "fake3": "Cleaver"
+      },
+      {
+        "category": "Knife Skills",
+        "question": "Why should you use a honing steel?",
+        "answer": "To realign the knife’s edge and keep it sharp",
+        "fake1": "To sharpen the knife by grinding down metal",
+        "fake2": "To clean the knife after cutting meat",
+        "fake3": "To remove rust from the blade"
+      },
+      {
+        "category": "Knife Skills",
+        "question": "What does it mean to ‘julienne’ vegetables?",
+        "answer": "To cut them into thin, matchstick-sized strips",
+        "fake1": "To chop them into large chunks",
+        "fake2": "To dice them into small cubes",
+        "fake3": "To slice them into rings"
+      },
+      {
+        "category": "Knife Skills",
+        "question": "What type of knife is best for filleting fish?",
+        "answer": "Boning knife",
+        "fake1": "Santoku knife",
+        "fake2": "Serrated knife",
+        "fake3": "Cleaver"
+      },
+      {
+        "category": "Knife Skills",
+        "question": "Why is it important to use a sharp knife instead of a dull one?",
+        "answer": "A sharp knife requires less force and is safer to use",
+        "fake1": "A sharp knife cuts faster but is more dangerous",
+        "fake2": "A dull knife is better for cutting delicate foods",
+        "fake3": "A dull knife is easier to control"
+      },
+      {
+        "category": "Knife Skills",
+        "question": "Which cutting technique involves making a series of parallel cuts before slicing the food perpendicular to them?",
+        "answer": "Dicing",
+        "fake1": "Julienning",
+        "fake2": "Mincing",
+        "fake3": "Chopping"
+      },
+      {
+        "category": "Knife Skills",
+        "question": "What is the best surface to use for cutting to maintain a sharp knife edge?",
+        "answer": "Wood or plastic cutting board",
+        "fake1": "Glass cutting board",
+        "fake2": "Metal countertop",
+        "fake3": "Marble slab"
+      },
+
+    {
+        "category": "Personal Hygiene",
+        "question": "When should you wash your hands while working in the kitchen?",
+        "answer": "All of the above",
+        "fake1": "Before handling food",
+        "fake2": "After handling raw meat",
+        "fake3": "After touching your face or hair"
+    },
+    {
+        "category": "Personal Hygiene",
+        "question": "What is the best way to handle long hair in the kitchen?",
+        "answer": "Tie it back or wear a hairnet",
+        "fake1": "Leave it down",
+        "fake2": "Tuck it behind your ears",
+        "fake3": "Wear a hat"
+    },
+    {
+        "category": "Personal Hygiene",
+        "question": "If you sneeze while preparing food, what should you do next?",
+        "answer": "Wash your hands immediately",
+        "fake1": "Keep working if your hands didn’t touch your face",
+        "fake2": "Wipe your hands on your apron",
+        "fake3": "Keep working as normal"
+    },
+    {
+        "category": "Personal Hygiene",
+        "question": "Why is it important to avoid touching your face while cooking?",
+        "answer": "It spreads bacteria from your skin to food",
+        "fake1": "It makes you look unprofessional",
+        "fake2": "It could cause burns from hot surfaces",
+        "fake3": "There’s no harm if your hands are clean"
+    },
+    {
+        "category": "Personal Hygiene",
+        "question": "If you have a cold, what should you do before working in the kitchen?",
+        "answer": "Avoid working with food entirely",
+        "fake1": "Take medicine and work as usual",
+        "fake2": "Wash your hands frequently and wear a mask",
+        "fake3": "Only prepare food that will be cooked at high temperatures"
+    },
+    {
+        "category": "Personal Hygiene2",
+        "question": "Why is it important to keep fingernails short and clean in the kitchen?",
+        "answer": "Long nails can hold dirt and bacteria",
+        "fake1": "It prevents scratching food containers",
+        "fake2": "It looks more professional",
+        "fake3": "To make it easier to put on gloves"
+    },
+  
+    
+      {"category": "Spanish Cooking", "question": "Sofrito", "answer": "A mixture of sautéed onions, garlic, and tomatoes", "fake1": "A type of soup", "fake2": "A grilling technique", "fake3": "A type of pastry"},
+      {"category": "Spanish Cooking", "question": "Empanar", "answer": "Breading food before frying", "fake1": "Wrapping food in a dough", "fake2": "Cooking over an open flame", "fake3": "Marinating meat in citrus juice"},
+      {"category": "Spanish Cooking", "question": "Asado", "answer": "Grilled or roasted", "fake1": "Steamed", "fake2": "Fermented", "fake3": "Braised"},
+      {"category": "Spanish Cooking", "question": "Plancha", "answer": "Cooking on a flat-top grill or griddle", "fake1": "Deep-frying in oil", "fake2": "Stewing in broth", "fake3": "Baking in the oven"},
+      {"category": "Spanish Cooking", "question": "Escabeche", "answer": "A vinegar-based marinade or pickling method", "fake1": "A type of smoked meat", "fake2": "A technique for roasting peppers", "fake3": "A method for making cheese"},
+      {"category": "Spanish Cooking", "question": "Flambear", "answer": "Setting alcohol on fire to enhance flavor", "fake1": "Cooking food in a clay pot", "fake2": "Using a water bath to cook dishes evenly", "fake3": "Covering food in salt before baking"},
+      {"category": "Spanish Cooking", "question": "Hornear", "answer": "To bake", "fake1": "To boil", "fake2": "To grill", "fake3": "To steam"},
+      {"category": "Spanish Cooking", "question": "Churrasco", "answer": "A grilled or barbecued meat dish", "fake1": "A type of stew", "fake2": "A seafood soup", "fake3": "A type of flatbread"},
+      {"category": "Spanish Cooking", "question": "Rebozar", "answer": "Coating food in batter or breadcrumbs before frying", "fake1": "Blending ingredients to make a sauce", "fake2": "Simmering food in a pot for hours", "fake3": "Smoking meats over wood"},
+      {"category": "Spanish Cooking", "question": "Pochado", "answer": "Poached or gently cooked in liquid", "fake1": "Deep-fried until golden brown", "fake2": "Aged with spices for weeks", "fake3": "Stuffed with cheese and vegetables"},
+      {"category": "Spanish Cooking", "question": "Estofar", "answer": "Cooking food slowly in a covered pot with liquid", "fake1": "Frying food at a high temperature", "fake2": "Mixing ingredients in a blender", "fake3": "Smoking food over low heat"},
+      {"category": "Spanish Cooking", "question": "Caramelizar", "answer": "Slowly cooking sugar until it turns brown", "fake1": "Coating food in flour", "fake2": "Cooking food directly over a flame", "fake3": "Blending ingredients into a paste"},
+      
+      {"category": "Japanese Cooking", "question": "Yakimono", "answer": "Grilled or pan-fried dishes", "fake1": "Fermented vegetables", "fake2": "Steamed rice dishes", "fake3": "Cold noodle soups"},
+      {"category": "Japanese Cooking", "question": "Tempura", "answer": "Seafood or vegetables coated in a thin batter and deep-fried", "fake1": "Raw fish over rice", "fake2": "Simmered meat and vegetables", "fake3": "Pickled radish"},
+      {"category": "Japanese Cooking", "question": "Sashimi", "answer": "Sliced raw seafood", "fake1": "Grilled fish", "fake2": "Rice porridge", "fake3": "Fried tofu"},
+      {"category": "Japanese Cooking", "question": "Nimono", "answer": "Simmered dishes with broth", "fake1": "Stir-fried noodles", "fake2": "Breaded and fried pork", "fake3": "Raw seafood over rice"},
+      {"category": "Japanese Cooking", "question": "Teriyaki", "answer": "A cooking method using a sweet soy glaze", "fake1": "A soup-based dish", "fake2": "A deep-fried rice ball", "fake3": "A sushi rolling technique"},
+      {"category": "Japanese Cooking", "question": "Tataki", "answer": "Lightly seared fish or meat", "fake1": "A type of miso soup", "fake2": "A noodle dish with cold dipping sauce", "fake3": "A method of pickling vegetables"},
+      {"category": "Japanese Cooking", "question": "Katsu", "answer": "Breaded and deep-fried cutlets", "fake1": "A thickened sauce", "fake2": "A type of fish broth", "fake3": "A rolling technique for sushi"},
+      {"category": "Japanese Cooking", "question": "Shabu-shabu", "answer": "A hot pot dish with thinly sliced meat", "fake1": "A stir-frying technique", "fake2": "A type of soy-based dipping sauce", "fake3": "A fermented soybean dish"},
+      {"category": "Japanese Cooking", "question": "Tsukemono", "answer": "Japanese pickles", "fake1": "Fermented miso paste", "fake2": "A type of rice cake", "fake3": "Deep-fried tofu"},
+      {"category": "Japanese Cooking", "question": "Okonomiyaki", "answer": "A savory Japanese pancake", "fake1": "A sushi wrapping technique", "fake2": "A type of seafood stew", "fake3": "A sweet rice dessert"},
+      {"category": "Japanese Cooking", "question": "Furikake", "answer": "A rice seasoning mix", "fake1": "A method of grilling fish", "fake2": "A style of ramen broth", "fake3": "A type of fermented soybean"},
+      {"category": "Japanese Cooking", "question": "Yakitori", "answer": "Skewered grilled chicken", "fake1": "A type of sushi roll", "fake2": "A soup-based hot pot", "fake3": "A method of fermenting miso"}
+    
+]
